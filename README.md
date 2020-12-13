@@ -1,8 +1,8 @@
 # AMITT Disinformation Tactics, Techniques and Processes (TTP) Framework
 
-* [Framework diagram](matrix.md)
+* Incident creator TTPs: [Framework diagram](matrix.md)
+* Countermeasures, by: [tactic](counter_tactic_counts.md), [metatechnique](counter_metatag_counts.md), [resource](counter_resource_counts.md)
 * [List of incidents](incidents.md)
-* [Counters matrix](counter_tactic_counts.md)
 
 AMITT (Adversarial Misinformation and Influence Tactics and Techniques) is a framework designed for describing and understanding disinformation incidents.  AMITT is part of work on adapting information security (infosec) practices to help track and counter misinformation, and is designed to fit existing infosec practices and tools. 
 
@@ -32,7 +32,7 @@ The framework was created by finding and analysing a set of existing misinformat
 
 Countermeasures are shown grouped by:
 
-* Red team tactic stage and technique (see https://github.com/misinfosecproject/amitt_framework for descriptions of these) in directory [tactics](tactics), with a clickable grid for this in [counter_tactic_counts.md](counter_tactic_counts.md) 
+* Red team tactic stage and technique, with a clickable grid for this in [counter_tactic_counts.md](counter_tactic_counts.md) 
 * A higher-level label, "metatechnique",in directory [counter_metatag](counter_metatag), with a clickable grid for this in [counter_metatag_counts.md](counter_metatag_counts.md) (To be fair this is mostly so we can group and make sure we're getting the cleaning right.) 
 * The types of people who can respond [counter_resource_counts.md](counter_resource_counts.md).
 
@@ -40,8 +40,8 @@ Countermeasures are shown grouped by:
 
 The code to create all the HTML datasheets is in directory [HTML_GENERATING_CODE](HTML_GENERATING_CODE)
 
-* If you change something in the metadata file, go into generating_code, and type "python amitt.py" - this will update the metadata in all the datasheets, and create a datasheet each for any new objects you've added to the spreadsheet.
-* If you change anything in the countermeasures spreadsheet, typing "python counter.py" creates all html pages for countermeasures.
+* If you change something in the metadata file, go into generating_code, and type "python generate_amitt_ttps.py" - this will update the metadata in all the datasheets, and create a datasheet each for any new objects you've added to the spreadsheet.
+* If you change anything in the countermeasures spreadsheet, typing "python generate_amitt_counters.py" creates all html pages for countermeasures.
 
 ## Provenance
 

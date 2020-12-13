@@ -15,7 +15,7 @@ import os
 class Amitt:
 
     
-    def __init__(self, infile = 'amitt_metadata_v3.xlsx'):
+    def __init__(self, infile = '../AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx'):
         
         # Load metadata from file
         metadata = {}

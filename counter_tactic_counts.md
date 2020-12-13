@@ -3,19 +3,19 @@
 <table border="1">
 <tr>
 <td> </td>
-<td><a href="tactics/ALcounters.md">ALL</a></td>
-<td><a href="tactics/TA01counters.md">TA01 Strategic Planning</a></td>
-<td><a href="tactics/TA02counters.md">TA02 Objective Planning</a></td>
-<td><a href="tactics/TA03counters.md">TA03 Develop People</a></td>
-<td><a href="tactics/TA04counters.md">TA04 Develop Networks</a></td>
-<td><a href="tactics/TA05counters.md">TA05 Microtargeting</a></td>
-<td><a href="tactics/TA06counters.md">TA06 Develop Content</a></td>
-<td><a href="tactics/TA07counters.md">TA07 Channel Selection</a></td>
-<td><a href="tactics/TA08counters.md">TA08 Pump Priming</a></td>
-<td><a href="tactics/TA09counters.md">TA09 Exposure</a></td>
-<td><a href="tactics/TA10counters.md">TA10 Go Physical</a></td>
-<td><a href="tactics/TA11counters.md">TA11 Persistence</a></td>
-<td><a href="tactics/TA12counters.md">TA12 Measure Effectiveness</a></td>
+<td><a href="counter_tactics/ALcounters.md">ALL</a></td>
+<td><a href="counter_tactics/TA01counters.md">TA01 Strategic Planning</a></td>
+<td><a href="counter_tactics/TA02counters.md">TA02 Objective Planning</a></td>
+<td><a href="counter_tactics/TA03counters.md">TA03 Develop People</a></td>
+<td><a href="counter_tactics/TA04counters.md">TA04 Develop Networks</a></td>
+<td><a href="counter_tactics/TA05counters.md">TA05 Microtargeting</a></td>
+<td><a href="counter_tactics/TA06counters.md">TA06 Develop Content</a></td>
+<td><a href="counter_tactics/TA07counters.md">TA07 Channel Selection</a></td>
+<td><a href="counter_tactics/TA08counters.md">TA08 Pump Priming</a></td>
+<td><a href="counter_tactics/TA09counters.md">TA09 Exposure</a></td>
+<td><a href="counter_tactics/TA10counters.md">TA10 Go Physical</a></td>
+<td><a href="counter_tactics/TA11counters.md">TA11 Persistence</a></td>
+<td><a href="counter_tactics/TA12counters.md">TA12 Measure Effectiveness</a></td>
 </tr><tr>
 <td>ALL</td>
 <td>4</td>

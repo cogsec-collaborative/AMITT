@@ -11,7 +11,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 
 class Counter:
-    def __init__(self, infile = 'CountersPlaybook_MASTER.xlsx'):
+    def __init__(self, infile = '../AMITT_MASTER_DATA/AMITT_Counters_MASTER.xlsx'):
         
         # Load metadata from counters excelfile
         # FIXIT: Ungodly hack = please fix
@@ -61,7 +61,7 @@ class Counter:
     
     # Print list of counters for each square of the COA matrix
     # Write HTML version of framework diagram to markdown file
-    def write_tactics_markdown(self, outfile = '../tactic_counts.md'):
+    def write_tactics_markdown(self, outfile = '../counter_tactic_counts.md'):
 
         coacounts = pd.pivot_table(self.dfcounters[['Tactic', 'Response',
                                                     'ID']], index='Response', columns='Tactic', aggfunc=len, fill_value=0)
@@ -75,7 +75,7 @@ class Counter:
         #Table heading = Tactic names
         for col in coacounts.columns.get_level_values(1):
             tid = self.create_tactic_file(col)
-            html += '<td><a href="tactics/{0}counters.md">{1}</a></td>\n'.format(
+            html += '<td><a href="counter_tactics/{0}counters.md">{1}</a></td>\n'.format(
                 tid, col)
         html += '</tr><tr>\n'
 
@@ -98,8 +98,8 @@ class Counter:
         return
 
     def create_tactic_file(self, tname):
-        if not os.path.exists('../tactics'):
-            os.makedirs('../tactics')
+        if not os.path.exists('../counter_tactics'):
+            os.makedirs('../counter_tactics')
 
         tid = tname[:tname.find(' ')]
         html = '''# Tactic {} counters\n\n'''.format(tname)
@@ -127,7 +127,7 @@ class Counter:
                 html += '* {}: {} (needs {})\n'.format(c[1]['ID'], c[1]['Title'],
                                                     c[1]['Resources needed'])
         
-        datafile = '../tactics/{}counters.md'.format(tid)
+        datafile = '../counter_tactics/{}counters.md'.format(tid)
         print('Writing {}'.format(datafile))
         with open(datafile, 'w') as f:
             f.write(html)
@@ -156,7 +156,7 @@ class Counter:
         return(oid)
 
 
-    def write_metacounts_markdown(self, outfile = '../metatag_counts.md'):
+    def write_metacounts_markdown(self, outfile = '../counter_metatag_counts.md'):
 
         coltype = 'Response'
         rowtype = 'metatechnique'
@@ -179,12 +179,12 @@ class Counter:
         html += '<td>TOTALS</td></tr><tr>\n'
 
         # Data rows
-        datadir = '../{}'.format(rowname)
+        datadir = '../counters_{}'.format(rowname)
         if not os.path.exists(datadir):
             os.makedirs(datadir)
         for index, counts in mtcounts.iterrows(): 
             tid = self.create_object_file(index, rowtype, datadir)
-            html += '<td><a href="{0}/{1}counters.md">{2}</a></td>\n'.format(
+            html += '<td><a href="counter_{0}/{1}counters.md">{2}</a></td>\n'.format(
                 rowname, tid, index)
             for val in counts.values:
                 html += '<td>{}</td>\n'.format(val)
