@@ -6,17 +6,19 @@
 
 AMITT (Adversarial Misinformation and Influence Tactics and Techniques) is a framework designed for describing and understanding disinformation incidents.  AMITT is part of work on adapting information security (infosec) practices to help track and counter misinformation, and is designed to fit existing infosec practices and tools. 
 
-AMITT's style is based on the [MITRE ATT&amp;CK framework](https://github.com/mitre-attack/attack-website/); STIX templates for AMITT objects are available in the [AMITT_CTI repo](https://github.com/cogsec-collaborative/amitt_cti] - these make it easy for AMITT data to be passed between ISAOs and similar bodies using standards like TAXI. 
+AMITT's style is based on the [MITRE ATT&amp;CK framework](https://github.com/mitre-attack/attack-website/); STIX templates for AMITT objects are available in the [AMITT_CTI repo](https://github.com/cogsec-collaborative/amitt_cti) - these make it easy for AMITT data to be passed between ISAOs and similar bodies using standards like TAXI. 
 
 AMITT design documents are available in the AMITT_HISTORY folder, and in [The AMITT Design Guide](https://docs.google.com/document/d/1D1VM5l496pUjN8B5Pq6fAh9mgeeEaYTKHdAG5BEXBiA/edit#).   
 
 ## RAW DATA
 
-If you want to do your own thing with AMITT data, all the master data for it is in directory [AMITT_MASTER_DATA}(AMITT_MASTER_DATA). Look for [the TTP framework](AMITT_MASTER_DATA/amitt_metadata_v3.xlsx) and [countermeasures](AMITT_MASTER_DATA/CountersPlaybook_MASTER.xlsx) spreadsheets.
+If you want to do your own thing with AMITT data, all the master data for it is in directory [AMITT_MASTER_DATA](AMITT_MASTER_DATA). Look for 
+* [the TTP framework](AMITT_MASTER_DATA/amitt_metadata_v3.xlsx) spreadsheet. This contains disinformation creators' tactics, techniques, tasks and phases. 
+* [countermeasures](AMITT_MASTER_DATA/CountersPlaybook_MASTER.xlsx) spreadsheet. This contains defences and mitigations for disinformation, categorised by disinformation technique, resources needed, etc.  
 
 ## Red Team Tactics (TTP Framework) HTML pages
 
-The disinformation creating framework is shown in [Framework diagram](matrix.md). Its entities are:
+The disinformation "red team" framework is shown in [Framework diagram](matrix.md). Its entities are:
 * Tactics: stages that someone running a misinformation incident is likely to use
 * Techniques: activities that might be seen at each stage
 * Tasks: things that need to be done at each stage.  In Pablospeak, tasks are things you do, techniques are how you do them. 
@@ -28,11 +30,11 @@ The framework was created by finding and analysing a set of existing misinformat
 
 ## Blue Team Tactics (Countermeasures) HTML pages
 
-What you'll see in here is a [spreadsheet](GENERATING_CODE/CountersPlaybook_MASTER.xlsx).  In there are defences and mitigations for disinformation, categorised by disinformation technique, the resources needed for it etc.  There's also .  So far, we have:
+Countermeasures are shown grouped by:
 
-*  lists by tactic stage and technique (see https://github.com/misinfosecproject/amitt_framework for descriptions of these) in directory [tactics](tactics), with a clickable grid for this in [counter_tactic_counts.md](counter_tactic_counts.md) 
-* lists by a higher-level label, "metatechnique",in directory [counter_metatag](counter_metatag), with a clickable grid for this in [counter_metatag_counts.md](counter_metatag_counts.md) (To be fair this is mostly so we can group and make sure we're getting the cleaning right.) 
-* - lists of what each type of person can do in [counter_resource_counts.md](counter_resource_counts.md).
+* Red team tactic stage and technique (see https://github.com/misinfosecproject/amitt_framework for descriptions of these) in directory [tactics](tactics), with a clickable grid for this in [counter_tactic_counts.md](counter_tactic_counts.md) 
+* A higher-level label, "metatechnique",in directory [counter_metatag](counter_metatag), with a clickable grid for this in [counter_metatag_counts.md](counter_metatag_counts.md) (To be fair this is mostly so we can group and make sure we're getting the cleaning right.) 
+* The types of people who can respond [counter_resource_counts.md](counter_resource_counts.md).
 
 ## Updating the HTML pages
 
