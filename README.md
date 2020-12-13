@@ -49,7 +49,7 @@ The AMITT Framework and Countermeasures were created by the Credibility Coalitio
 
 AMITT is currently maintained by the [CogSecCollab](http://cogsec-collab.org/), who've used it in the CTI League's Covid19 responses, and tested it in trials with NATO, the EU, and several other countries' disinformation units.
 
-We would like to thank everyone who's contributed to, and continues to contribute to AMITT over the years.  We'd also love any and all suggestions for improvements, comments and offers of help - either reach out to us, or add to this repo's issues list. 
+We would like to thank everyone who's contributed to, and continues to contribute to AMITT over the years.  We'd also love any and all suggestions for improvements, comments and offers of help - either reach out to us, or add to this repo's [issues list](https://github.com/cogsec-collaborative/AMITT/issues). (We're also going back through the [original issues list](https://github.com/misinfosecproject/amitt_framework/issues) too)
 
 
 AMITT is licensed under [CC-BY-4.0](LICENSE.md)
