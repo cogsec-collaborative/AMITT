@@ -1,9 +1,9 @@
 # AMITT resource courses of action
 
-    <table border="1">
-    <tr>
-    <td> </td>
-    <td>ALL</td>
+<table border="1">
+<tr>
+<td> </td>
+<td>ALL</td>
 <td>D2 Deny</td>
 <td>D3 Disrupt</td>
 <td>D4 Degrade</td>

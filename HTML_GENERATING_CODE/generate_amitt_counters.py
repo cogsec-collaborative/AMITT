@@ -231,10 +231,10 @@ class Counter:
 
         html = '''# AMITT {} courses of action
 
-    <table border="1">
-    <tr>
-    <td> </td>
-    '''.format(rowtype)
+<table border="1">
+<tr>
+<td> </td>
+'''.format(rowtype)
 
         # Table heading row
         colvals = self.dfcounters[coltype].value_counts().sort_index().index
