@@ -203,11 +203,74 @@ class Counter:
         return
 
 
+    def create_resource_file(self, index, rowtype, datadir):
+        oid = index
+        counterrows = self.idresource[self.idresource['Res'] == index]['ID'].to_list()
+        html = '''# {} counters: {}\n\n'''.format(rowtype, index)
+        html += '## by action\n\n'
+        omatrix = self.dfcounters[self.dfcounters['ID'].isin(counterrows)].groupby('Response')
+        for resp, clist in omatrix:
+            html += '\n### {}\n'.format(resp)
+            for c in clist.iterrows():
+                html += '* {}: {} (needs {})\n'.format(c[1]['ID'], c[1]['Title'],
+                                                    c[1]['Resources needed'])
+
+        datafile = '{}/{}counters.md'.format(datadir, oid)
+        print('Writing {}'.format(datafile))
+        with open(datafile, 'w') as f:
+            f.write(html)
+            f.close()
+        return(oid, omatrix)
+
+
+    def write_resource_markdown(self, outfile = '../counter_resource_counts.md'):
+
+        coltype = 'Response'
+        rowtype = 'resource'
+        rowname = 'resource'
+
+        html = '''# AMITT {} courses of action
+
+    <table border="1">
+    <tr>
+    <td> </td>
+    '''.format(rowtype)
+
+        # Table heading row
+        colvals = self.dfcounters[coltype].value_counts().sort_index().index
+        for col in colvals:
+            html += '<td>{}</td>\n'.format(col)
+        html += '<td>TOTALS</td></tr><tr>\n'
+
+        # Data rows
+        datadir = '../counter_{}'.format(rowname)
+        if not os.path.exists(datadir):
+            os.makedirs(datadir)
+        for index in self.idresource['Res'].value_counts().sort_index().index:
+            (oid, omatrix) = self.create_resource_file(index, rowtype, datadir) #self
+            row = pd.DataFrame(omatrix.apply(len), index=colvals).fillna(' ')
+            html += '<td><a href="counter_{0}/{1}counters.md">{2}</a></td>\n'.format(
+                rowname, oid, index)
+            if len(row.columns) > 0:
+                for val in row[0].to_list():
+                    html += '<td>{}</td>\n'.format(val)
+            html += '<td>{}</td></tr>\n<tr>\n'.format('')
+
+        html += '</tr>\n</table>\n'           
+
+        with open(outfile, 'w') as f:
+            f.write(html)
+            print('updated {}'.format(outfile))
+
+        return
+
+
  
 def main():
     counter = Counter()
     counter.write_tactics_markdown()
     counter.write_metacounts_markdown()
+    counter.write_resource_markdown()
 
 
 if __name__ == "__main__":
