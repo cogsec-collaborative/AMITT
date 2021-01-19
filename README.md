@@ -14,7 +14,7 @@ AMITT design documents are available in the AMITT_HISTORY folder, and in [The AM
 
 If you want to do your own thing with AMITT data, all the master data for it is in directory [AMITT_MASTER_DATA](AMITT_MASTER_DATA). Look for 
 * [the TTP framework](AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx) spreadsheet. This contains disinformation creators' tactics, techniques, tasks and phases. 
-* [countermeasures](AMITT_MASTER_DATA/CountersPlaybook_MASTER.xlsx) spreadsheet. This contains defences and mitigations for disinformation, categorised by disinformation technique, resources needed, etc.  
+* [countermeasures](AMITT_MASTER_DATA/AMITT_Counters_MASTER.xlsx) spreadsheet. This contains defences and mitigations for disinformation, categorised by disinformation technique, resources needed, etc.  
 
 ## Red Team Tactics (TTP Framework) HTML pages
 
