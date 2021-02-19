@@ -290,7 +290,7 @@ class Amitt:
         counter_techniques = pd.merge(counter_techniques, self.df_techniques[['id', 'name']].rename(columns={'id': 'technique_id'}))
         row_string = '| [{0} {1}](../techniques/{0}.md) |\n'
         for index, row in counter_techniques.sort_values('id').iterrows():
-            table_string += row_string.format(row['id'], row['name'])
+            table_string += row_string.format(row['technique_id'], row['name'])
         return table_string
 
     def create_counter_incidents_string(self, counter_id):
