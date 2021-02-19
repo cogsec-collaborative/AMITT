@@ -102,7 +102,7 @@ class Amitt:
         self.num_tactics = len(self.df_tactics)
         self.max_num_techniques_per_tactic = max(df_techniques_per_tactic['technique_ids'].apply(len)) +2
         self.max_num_counters_per_tactic = max(df_counters_per_tactic['counter_ids'].apply(len)) +2
-        self.grid = self.create_display_grid()
+        self.grid = self.create_padded_techniques_tactics_table()
 
         # Create counters cross-tables
         self.cross_counterid_techniqueid = self.splitcol(self.df_counters[['id', 'techniques']], 
@@ -135,7 +135,7 @@ class Amitt:
         return(pd.Series(df.name.values,index=df.id).to_dict())
     
     
-    def create_display_grid(self, tofile=True):
+    def create_padded_techniques_tactics_table(self, tocsv=True):
         # Create the master grid that we make all the framework visuals from
         # cols = number of tactics
         # rows = max number of techniques per tactic + 2
@@ -150,11 +150,11 @@ class Amitt:
                 arr[index2+2][index] = technique
 
         #Save grid to file
-        if tofile:
-            matrixdir = '../matrices'
-            if not os.path.exists(matrixdir):
-                os.makedirs(matrixdir)
-            pd.DataFrame(arr).to_csv(matrixdir + '/matrix_arr.csv', index=False, header=False)
+        if tocsv:
+            csvdir = '../generated_csvs'
+            if not os.path.exists(csvdir):
+                os.makedirs(csvdir)
+            pd.DataFrame(arr).to_csv(csvdir + '/techniques_tactics_table.csv', index=False, header=False)
 
         return(arr)
 
@@ -198,8 +198,8 @@ class Amitt:
     def create_tactic_tasks_string(self, tactic_id):
 
         table_string = '''
-| Task |
-| ---- |
+| Tasks |
+| ----- |
 '''
         tactic_tasks = self.df_tasks[self.df_tasks['tactic_id']==tactic_id]
         task_string = '| [{0} {1}](../tasks/{0}.md) |\n'
@@ -223,13 +223,13 @@ class Amitt:
 
     def create_tactic_counters_string(self, tactic_id):
         table_string = '''
-| Response types | Counters |
-| -------------- | -------- |
+| Counters | Response types |
+| -------- | -------------- |
 '''
         tactic_counters = self.df_counters[self.df_counters['tactic_id']==tactic_id]
-        row_string = '| {0} | [{1} {2}](../counters/{1}.md) |\n'
+        row_string = '| [{0} {1}](../counters/{0}.md) | {2} |\n'
         for index, row in tactic_counters.sort_values(['responsetype', 'id']).iterrows():
-            table_string += row_string.format(row['responsetype'], row['id'], row['name'])
+            table_string += row_string.format(row['id'], row['name'], row['responsetype'])
         return table_string
 
 
@@ -247,8 +247,8 @@ class Amitt:
 
     def create_counter_tactics_string(self, counter_id):
         table_string = '''
-| Counters Tactics |
-| ---------------- |
+| Counters these Tactics |
+| ---------------------- |
 '''
         # tactic_counters = self.df_counters[self.df_counters['tactic_id']==tactic_id]
         # row_string = '| {0} | [{1} {2}](../counters/{1}.md) |\n'
@@ -258,13 +258,14 @@ class Amitt:
 
     def create_counter_techniques_string(self, counter_id):
         table_string = '''
-| Counters Techniques |
-| ------------------- |
+| Counters these Techniques |
+| ------------------------- |
 '''
-        # tactic_counters = self.df_counters[self.df_counters['tactic_id']==tactic_id]
-        # row_string = '| {0} | [{1} {2}](../counters/{1}.md) |\n'
-        # for index, row in tactic_counters.sort_values(['responsetype', 'id']).iterrows():
-        #     table_string += row_string.format(row['responsetype'], row['id'], row['name'])
+        counter_techniques = self.cross_counterid_techniqueid[self.cross_counterid_techniqueid['id']==counter_id]
+        counter_techniques = pd.merge(counter_techniques, self.df_techniques[['id', 'name']].rename(columns={'id': 'technique_id'}))
+        row_string = '| [{0} {1}](../techniques/{0}.md) |\n'
+        for index, row in counter_techniques.sort_values('id').iterrows():
+            table_string += row_string.format(row['id'], row['name'])
         return table_string
 
     def create_counter_incidents_string(self, counter_id):
@@ -419,7 +420,7 @@ class Amitt:
         return
 
 
-    def write_grid_markdown(self, outfile = '../matrix.md'):
+    def write_amitt_red_framework_file(self, outfile = '../amitt_red_framework.md'):
         # Write HTML version of framework diagram to markdown file
         # Needs phases, tactics, techniques, grid
 
@@ -456,7 +457,7 @@ class Amitt:
         return
 
 
-    def write_incidentlist_markdown(self, outfile='../incidents.md'):
+    def write_incidentlist_file(self, outfile='../incidents_list.md'):
         # Write HTML version of incident list to markdown file
 
         html = '''# AMITT Incidents:
@@ -486,7 +487,7 @@ class Amitt:
         return
 
 
-    def write_grid_message_generator(self, outfile='../matrix_to_message.html'):
+    def write_clickable_amitt_red_framework_file(self, outfile='../amitt_red_framework_clickable.html'):
         # Write clickable html version of the matrix grid to html file
 
         html = '''<!DOCTYPE html>
@@ -569,11 +570,14 @@ function handleTechniqueClick(box) {
 
     
     def generate_and_write_datafiles(self):
-        
+
         self.update_markdown_files()
-        self.write_grid_markdown()
-        self.write_incidentlist_markdown()
-        self.write_grid_message_generator()
+        self.write_incidentlist_file()
+        self.write_amitt_red_framework_file()
+        self.write_clickable_amitt_red_framework_file()
+        self.write_responsetype_tactics_table_file()
+        self.write_metatechniques_responsetype_table_file()
+        self.write_resources_responsetype_table_file()
         
         return
 
@@ -591,7 +595,7 @@ function handleTechniqueClick(box) {
     
     # Print list of counters for each square of the COA matrix
     # Write HTML version of framework diagram to markdown file
-    def write_responsetype_tactics_table_file(self, outfile = '../counter_tactic_counts.md'):
+    def write_responsetype_tactics_table_file(self, outfile = '../tactics_by_responsetype_table.md'):
         ''' fill the counter_tactics directory
 
         One file for every tactic, plus a file for "ALL" tactics
@@ -658,11 +662,12 @@ function handleTechniqueClick(box) {
         return(oid)
 
 
-    def write_metatechniques_responsetype_table_file(self, outfile = '../counter_metatag_counts.md'):
+    def write_metatechniques_responsetype_table_file(self, outfile = '../metatechniques_by_responsetype_table.md'):
 
         coltype = 'responsetype'
         rowtype = 'metatechnique'
         rowname = 'metatag'
+        datadir = '../metatechniques'
         mtcounts = pd.pivot_table(self.df_counters[[coltype, rowtype,'id']], 
                                   index=rowtype, columns=coltype, aggfunc=len, 
                                   fill_value=0) 
@@ -681,7 +686,6 @@ function handleTechniqueClick(box) {
         html += '<td>TOTALS</td></tr><tr>\n'
 
         # Data rows
-        datadir = '../counters_{}'.format(rowname)
         if not os.path.exists(datadir):
             os.makedirs(datadir)
         for index, counts in mtcounts.iterrows(): 
@@ -725,11 +729,12 @@ function handleTechniqueClick(box) {
         return(oid, omatrix)
 
 
-    def write_resources_responsetype_table_file(self, outfile = '../counter_resource_counts.md'):
+    def write_resources_responsetype_table_file(self, outfile = '../resources_by_responsetype_table.md'):
 
         coltype = 'responsetype'
         rowtype = 'resource'
         rowname = 'resource'
+        datadir = '../resources_needed'
 
         html = '''# AMITT {} courses of action
 
@@ -745,7 +750,6 @@ function handleTechniqueClick(box) {
         html += '<td>TOTALS</td></tr><tr>\n'
 
         # Data rows
-        datadir = '../counter_{}'.format(rowname)
         if not os.path.exists(datadir):
             os.makedirs(datadir)
         for index in self.cross_counterid_resource['resource'].value_counts().sort_index().index:
@@ -770,14 +774,7 @@ function handleTechniqueClick(box) {
 
 def main():
     amitt = Amitt()
-    amitt.update_markdown_files()
-    amitt.write_grid_markdown()
-    amitt.write_incidentlist_markdown()
-    amitt.write_grid_message_generator()
-    amitt.write_responsetype_tactics_table_file()
-    amitt.write_metatechniques_responsetype_table_file()
-    amitt.write_resources_responsetype_table_file()
-
+    amitt.generate_and_write_datafiles()
 
 
 if __name__ == "__main__":

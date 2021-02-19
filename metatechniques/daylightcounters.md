@@ -22,8 +22,8 @@
 * C00219: Add metadata to content - out of the control of the adversary (needs nan)
 
 ### D4 Degrade
-* C00184: Media exposure (needs nan)
 * C00085: Demuting content (needs nan)
+* C00184: Media exposure (needs nan)
 
 ### D6 Destroy
 * C00189: Ongoing analysis/monitoring of "flagged" profiles (needs nan)

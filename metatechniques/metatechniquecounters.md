@@ -15,8 +15,8 @@
 * C00174: Free and Fair Press (needs nan)
 
 ### D3 Disrupt
-* C00170: elevate information as a critical domain of statecraft (needs nan)
 * C00159: Campaign mindset and associated toolbox (needs nan)
+* C00170: elevate information as a critical domain of statecraft (needs nan)
 * C00196: Include the role of social media in the regulatory framework for media (needs government)
 * C00205: strong dialogue between the federal government and private sector to encourage better reporting (needs companies,government)
 * C00214: Create policy that makes social media police disinformation (needs government:policymakers)

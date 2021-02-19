@@ -1,49 +1,45 @@
 # AMITT Disinformation Tactics, Techniques and Processes (TTP) Framework
 
-* Incident creator TTPs: [Framework diagram](matrix.md)
-* Countermeasures, by: [tactic](counter_tactic_counts.md), [metatechnique](counter_metatag_counts.md), [resource](counter_resource_counts.md)
-* [List of incidents](incidents.md)
-
 AMITT (Adversarial Misinformation and Influence Tactics and Techniques) is a framework designed for describing and understanding disinformation incidents.  AMITT is part of work on adapting information security (infosec) practices to help track and counter misinformation, and is designed to fit existing infosec practices and tools. 
 
 AMITT's style is based on the [MITRE ATT&amp;CK framework](https://github.com/mitre-attack/attack-website/); STIX templates for AMITT objects are available in the [AMITT_CTI repo](https://github.com/cogsec-collaborative/amitt_cti) - these make it easy for AMITT data to be passed between ISAOs and similar bodies using standards like TAXI. 
 
 AMITT design documents are available in the AMITT_HISTORY folder, and in [The AMITT Design Guide](https://docs.google.com/document/d/1D1VM5l496pUjN8B5Pq6fAh9mgeeEaYTKHdAG5BEXBiA/edit#).   
 
-## RAW DATA
+## What's in this folder
 
-If you want to do your own thing with AMITT data, all the master data for it is in directory [AMITT_MASTER_DATA](AMITT_MASTER_DATA). Look for 
-* [the TTP framework](AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx) spreadsheet. This contains disinformation creators' tactics, techniques, tasks and phases. 
-* [countermeasures](AMITT_MASTER_DATA/AMITT_Counters_MASTER.xlsx) spreadsheet. This contains defences and mitigations for disinformation, categorised by disinformation technique, resources needed, etc.  
+The AMITT framework diagrams are: 
+* [AMITT Red Team Framework](amitt_red_framework.md) - Disinformation creator TTPs, listed by tactic stage. This is the classic "AMITT Framework" that's bundled with MISP.  The [clickable](amitt_red_framework_clickable.html) version is for rapidly creating lists of TTPs. 
 
-## Red Team Tactics (TTP Framework) HTML pages
+All the entities used to create the Red Team and Blue Team frameworks: 
+* [Phases](phases): higher-level groupings of tactics, created so we could check we didn't miss anything
+* [Tactics](tactics): stages that someone running a misinformation incident is likely to use
+* [Techniques](techniques): activities that might be seen at each stage
+* [Tasks](tasks): things that need to be done at each stage.  In Pablospeak, tasks are things you do, techniques are how you do them. 
+* [Counters](counters): countermeasures to AMITT TTPs.  
+* [Resources_needed](resources_needed): resources needed to run countermeasures - index is [resources_by_responsetype_table](resources_by_responsetype_table.md)
+* [Metatechniques](metatechniques): a higher-level grouping for countermeasures - index is [metatechniques_by_responsetype_table](metatechniques_by_responsetype_table.md)
+* [Incidents](incidents): incident descriptions used to create the AMITT frameworks - index is [incidents_list](incidents_list.md)
 
-The disinformation "red team" framework is shown in [Framework diagram](matrix.md). Its entities are:
-* Tactics: stages that someone running a misinformation incident is likely to use
-* Techniques: activities that might be seen at each stage
-* Tasks: things that need to be done at each stage.  In Pablospeak, tasks are things you do, techniques are how you do them. 
-* Phases: higher-level groupings of tactics, created so we could check we didn't miss anything
+There's a directory for each of these, containing a datasheet for each individual entity (e.g. [technique T0046 Search Engine Optimization](techniques/T0046.md)).  
 
-There's a directory for each of these entities, containing a datasheet for each individual entity (e.g. [technique T0046 Search Engine Optimization](techniques/T0046.md)).  The details above "DO NOT EDIT ABOVE THIS LINE" are generated from the code and spreadsheet in folder generating_code, which you can use to update framework metadata; you can add notes below "DO NOT EDIT ABOVE THIS LINE" and they won't be removed when you do metadata updates.  (Yes, this is an unholy hack, but it's one that lets us generate all the messages we need, and keep notes in the same place.)
+YOU CAN ADD INFORMATION TO THESE FILES.
+* The details above "DO NOT EDIT ABOVE THIS LINE" are generated and will be overwritten every time we run the update code; anything you write above that line will be lost
+* The details below "DO NOT EDIT ABOVE THIS LINE" are saved every time we run the update code. You can safely add notes below that line. 
 
-The framework was created by finding and analysing a set of existing misinformation [incidents](incidents.md), which also have room for more notes.
+[generated_csvs](generated_csvs) contains any CSV files we generate from the above tables. 
 
-## Blue Team Tactics (Countermeasures) HTML pages
 
-Countermeasures are shown grouped by:
+## Using the Raw Data file
 
-* Red team tactic stage and technique, with a clickable grid for this in [counter_tactic_counts.md](counter_tactic_counts.md) 
-* A higher-level label, "metatechnique",in directory [counter_metatag](counter_metatag), with a clickable grid for this in [counter_metatag_counts.md](counter_metatag_counts.md) (To be fair this is mostly so we can group and make sure we're getting the cleaning right.) 
-* The types of people who can respond [counter_resource_counts.md](counter_resource_counts.md).
+If you want to do your own thing with AMITT data, all the master data for it is in directory [AMITT_MASTER_DATA](AMITT_MASTER_DATA). Look for the [AMITT_TTPs_MASTER.xlsx](AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx) spreadsheet. This contains disinformation creators' tactics, techniques, tasks, phases, and counters. 
 
-## Updating the HTML pages
+The [AMITT TTP Guide](https://docs.google.com/document/d/1Kc0O7owFyGiYs8N8wSq17gRUPEDQsD5lLUL_3KGCgRE/edit#) has more detailed information on each technique. 
 
-The code to create all the HTML datasheets is in directory [HTML_GENERATING_CODE](HTML_GENERATING_CODE)
+The code to create all the HTML datasheets is in directory [HTML_GENERATING_CODE](HTML_GENERATING_CODE). If you have your own version of this repository and update AMITT_TTPs_MASTER.xlsx, typing "python generate_amitt_ttps.py" will update all the files above from it. 
 
-* If you change something in the metadata file, go into generating_code, and type "python generate_amitt_ttps.py" - this will update the metadata in all the datasheets, and create a datasheet each for any new objects you've added to the spreadsheet.
-* If you change anything in the countermeasures spreadsheet, typing "python generate_amitt_counters.py" creates all html pages for countermeasures.
 
-## Provenance
+## Who's Responsible for AMITT
 
 The AMITT Framework and Countermeasures were created by the Credibility Coalition's [Misinfosec working group](https://github.com/credcoalition/community-site/wiki/Working-Groups). The Framework was started in December 2018 and refined in a Credibility Coalition Misinfosec seminar; the collection of potential disinformation countermeasures was started at a Credibility Coalition Misinfosec seminar in November 2019.  
 

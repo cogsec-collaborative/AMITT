@@ -4,8 +4,8 @@
 
 
 ### D2 Deny
-* C00074: Identify identical content and mass deplatform (needs platform_admin,platform_admin:socialmedia)
 * C00016: Social media as a privilege not right (needs nan)
+* C00074: Identify identical content and mass deplatform (needs platform_admin,platform_admin:socialmedia)
 
 ### D3 Disrupt
 * C00043: Detect hijacked accounts and reallocate them  (needs platform_admin,activists,civil_society,money)

@@ -20,8 +20,8 @@
 * C00194: Provide an alternative to Russian information by expanding and improving local content. (needs nan)
 
 ### D4 Degrade
-* C00088: Poison pill recasting of message (needs nan)
 * C00086: Distract from noise with addictive content (needs nan)
+* C00088: Poison pill recasting of message (needs nan)
 
 ### D5 Deceive
 * C00090: Fake engagement system (needs nan)
