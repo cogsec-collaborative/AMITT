@@ -279,7 +279,7 @@ class Amitt:
         #     table_string += row_string.format(row['responsetype'], row['id'], row['name'])
         return table_string
 
-    def create_tactic_file(self, tactic_id):
+    def create_counter_tactic_file(self, tactic_id, datadir):
         ''' create a file summarising the counter techniques for a given tactic name
 
         Inside this file is:
@@ -289,8 +289,8 @@ class Amitt:
         For all counters that are listed for this tactic
         '''
 
-        if not os.path.exists('../counter_tactics'):
-            os.makedirs('../counter_tactics')
+        if not os.path.exists(datadir):
+            os.makedirs(datadir)
 
         # Populate a list of counters for this tactic, listed by response type
         html = '''# Tactic {} {} counters\n\n'''.format(tactic_id, self.tactics[tactic_id])
@@ -606,6 +606,9 @@ function handleTechniqueClick(box) {
         For all counters that are listed for this tactic
         '''
 
+        datadirname = 'counter_tactics'
+        datadir = '../' + datadirname
+
         coacounts = pd.pivot_table(self.df_counters[['tactic_id', 'responsetype',
                                                     'id']], index='responsetype', columns='tactic_id', aggfunc=len, fill_value=0)
 
@@ -617,9 +620,9 @@ function handleTechniqueClick(box) {
 '''
         #Table heading = tactic names
         for col in coacounts.columns.get_level_values(1):
-            tid = self.create_tactic_file(col)
-            html += '<td><a href="counter_tactics/{0}counters.md">{1}</a></td>\n'.format(
-                tid, col)
+            tid = self.create_counter_tactic_file(col, datadir)
+            html += '<td><a href="{0}/{1}counters.md">{2}</a></td>\n'.format(
+                datadir, tid, col)
         html += '</tr><tr>\n'
 
         # number of counters per response type
@@ -667,7 +670,8 @@ function handleTechniqueClick(box) {
         coltype = 'responsetype'
         rowtype = 'metatechnique'
         rowname = 'metatag'
-        datadir = '../metatechniques'
+        datadirname = 'metatechniques'
+        datadir = '../' + datadirname
         mtcounts = pd.pivot_table(self.df_counters[[coltype, rowtype,'id']], 
                                   index=rowtype, columns=coltype, aggfunc=len, 
                                   fill_value=0) 
@@ -690,8 +694,8 @@ function handleTechniqueClick(box) {
             os.makedirs(datadir)
         for index, counts in mtcounts.iterrows(): 
             tid = self.create_object_file(index, rowtype, datadir)
-            html += '<td><a href="counter_{0}/{1}counters.md">{2}</a></td>\n'.format(
-                rowname, tid, index)
+            html += '<td><a href="{0}/{1}counters.md">{2}</a></td>\n'.format(
+                datadirname, tid, index)
             for val in counts.values:
                 html += '<td>{}</td>\n'.format(val)
             html += '</tr>\n<tr>\n'
@@ -734,7 +738,8 @@ function handleTechniqueClick(box) {
         coltype = 'responsetype'
         rowtype = 'resource'
         rowname = 'resource'
-        datadir = '../resources_needed'
+        datadirname = 'resources_needed'
+        datadir = '../' + datadirname
 
         html = '''# AMITT {} courses of action
 
@@ -755,8 +760,8 @@ function handleTechniqueClick(box) {
         for index in self.cross_counterid_resource['resource'].value_counts().sort_index().index:
             (oid, omatrix) = self.create_resource_file(index, rowtype, datadir) #self
             row = pd.DataFrame(omatrix.apply(len), index=colvals).fillna(' ')
-            html += '<td><a href="counter_{0}/{1}counters.md">{2}</a></td>\n'.format(
-                rowname, oid, index)
+            html += '<td><a href="{0}/{1}counters.md">{2}</a></td>\n'.format(
+                datadirname, oid, index)
             if len(row.columns) > 0:
                 for val in row[0].to_list():
                     html += '<td>{}</td>\n'.format(val)

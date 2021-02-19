@@ -3,18 +3,18 @@
 <table border="1">
 <tr>
 <td> </td>
-<td><a href="counter_tactics/TA01counters.md">TA01</a></td>
-<td><a href="counter_tactics/TA02counters.md">TA02</a></td>
-<td><a href="counter_tactics/TA03counters.md">TA03</a></td>
-<td><a href="counter_tactics/TA04counters.md">TA04</a></td>
-<td><a href="counter_tactics/TA05counters.md">TA05</a></td>
-<td><a href="counter_tactics/TA06counters.md">TA06</a></td>
-<td><a href="counter_tactics/TA07counters.md">TA07</a></td>
-<td><a href="counter_tactics/TA08counters.md">TA08</a></td>
-<td><a href="counter_tactics/TA09counters.md">TA09</a></td>
-<td><a href="counter_tactics/TA10counters.md">TA10</a></td>
-<td><a href="counter_tactics/TA11counters.md">TA11</a></td>
-<td><a href="counter_tactics/TA12counters.md">TA12</a></td>
+<td><a href="../counter_tactics/TA01counters.md">TA01</a></td>
+<td><a href="../counter_tactics/TA02counters.md">TA02</a></td>
+<td><a href="../counter_tactics/TA03counters.md">TA03</a></td>
+<td><a href="../counter_tactics/TA04counters.md">TA04</a></td>
+<td><a href="../counter_tactics/TA05counters.md">TA05</a></td>
+<td><a href="../counter_tactics/TA06counters.md">TA06</a></td>
+<td><a href="../counter_tactics/TA07counters.md">TA07</a></td>
+<td><a href="../counter_tactics/TA08counters.md">TA08</a></td>
+<td><a href="../counter_tactics/TA09counters.md">TA09</a></td>
+<td><a href="../counter_tactics/TA10counters.md">TA10</a></td>
+<td><a href="../counter_tactics/TA11counters.md">TA11</a></td>
+<td><a href="../counter_tactics/TA12counters.md">TA12</a></td>
 </tr><tr>
 <td>ALL</td>
 <td>4</td>
