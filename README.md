@@ -18,9 +18,9 @@ All the entities used to create the Red Team and Blue Team frameworks:
 * [Techniques](techniques): activities that might be seen at each stage
 * [Tasks](tasks): things that need to be done at each stage.  In Pablospeak, tasks are things you do, techniques are how you do them. 
 * [Counters](counters): countermeasures to AMITT TTPs.  
-* [Resources_needed](resources_needed): resources needed to run countermeasures - index is [resources_by_responsetype_table](resources_by_responsetype_table.md)
-* [Metatechniques](metatechniques): a higher-level grouping for countermeasures - index is [metatechniques_by_responsetype_table](metatechniques_by_responsetype_table.md)
-* [Incidents](incidents): incident descriptions used to create the AMITT frameworks - index is [incidents_list](incidents_list.md)
+* [Resources_needed](resources_by_responsetype_table.md): resources needed to run countermeasures
+* [Metatechniques](metatechniques_by_responsetype_table.md): a higher-level grouping for countermeasures
+* [Incidents](incidents_list.md): incident descriptions used to create the AMITT frameworks
 
 There's a directory for each of these, containing a datasheet for each individual entity (e.g. [technique T0046 Search Engine Optimization](techniques/T0046.md)).  
 
