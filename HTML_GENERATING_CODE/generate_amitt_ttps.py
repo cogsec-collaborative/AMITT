@@ -455,10 +455,10 @@ class Amitt:
 <tr>
 '''
 
-        for col in range(self.num_tactics):
-            html += '<td><a href="phases/{0}.md">{0} {1}</a></td>\n'.format(
-                self.padded_techniques_tactics_table[0][col], self.phases[self.padded_techniques_tactics_table[0][col]])
-        html += '</tr>\n'
+        # for col in range(self.num_tactics):
+        #     html += '<td><a href="phases/{0}.md">{0} {1}</a></td>\n'.format(
+        #         self.padded_techniques_tactics_table[0][col], self.phases[self.padded_techniques_tactics_table[0][col]])
+        # html += '</tr>\n'
 
         html += '<tr style="background-color:blue;color:white;">\n'
         for col in range(self.num_tactics):
@@ -491,10 +491,10 @@ class Amitt:
 <tr>
 '''
 
-        for col in range(self.num_tactics):
-            html += '<td><a href="phases/{0}.md">{0} {1}</a></td>\n'.format(
-                self.padded_counters_tactics_table[0][col], self.phases[self.padded_counters_tactics_table[0][col]])
-        html += '</tr>\n'
+        # for col in range(self.num_tactics):
+        #     html += '<td><a href="phases/{0}.md">{0} {1}</a></td>\n'.format(
+        #         self.padded_counters_tactics_table[0][col], self.phases[self.padded_counters_tactics_table[0][col]])
+        # html += '</tr>\n'
 
         html += '<tr style="background-color:blue;color:white;">\n'
         for col in range(self.num_tactics):

@@ -2,19 +2,6 @@
 
 <table border="1">
 <tr>
-<td><a href="phases/P01.md">P01 Planning</a></td>
-<td><a href="phases/P01.md">P01 Planning</a></td>
-<td><a href="phases/P02.md">P02 Preparation</a></td>
-<td><a href="phases/P02.md">P02 Preparation</a></td>
-<td><a href="phases/P02.md">P02 Preparation</a></td>
-<td><a href="phases/P02.md">P02 Preparation</a></td>
-<td><a href="phases/P02.md">P02 Preparation</a></td>
-<td><a href="phases/P03.md">P03 Execution</a></td>
-<td><a href="phases/P03.md">P03 Execution</a></td>
-<td><a href="phases/P03.md">P03 Execution</a></td>
-<td><a href="phases/P03.md">P03 Execution</a></td>
-<td><a href="phases/P04.md">P04 Evaluation</a></td>
-</tr>
 <tr style="background-color:blue;color:white;">
 <td><a href="tactics/TA01.md">TA01 Strategic Planning</a></td>
 <td><a href="tactics/TA02.md">TA02 Objective Planning</a></td>
