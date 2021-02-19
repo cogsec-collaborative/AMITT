@@ -10,6 +10,7 @@ AMITT design documents are available in the AMITT_HISTORY folder, and in [The AM
 
 The AMITT framework diagrams are: 
 * [AMITT Red Team Framework](amitt_red_framework.md) - Disinformation creator TTPs, listed by tactic stage. This is the classic "AMITT Framework" that's bundled with MISP.  The [clickable](amitt_red_framework_clickable.html) version is for rapidly creating lists of TTPs. 
+* [AMITT Blue Team Framework](amitt_blue_framework.md) - Disinformation responder TTPs, listed by tactic stage. These are countermeasures, listed by the earliest tactic stages they're likely to be used in. 
 
 All the entities used to create the Red Team and Blue Team frameworks: 
 * [Phases](phases): higher-level groupings of tactics, created so we could check we didn't miss anything
