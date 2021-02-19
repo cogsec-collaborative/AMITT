@@ -1,17 +1,18 @@
 # {name}
 
-* Type: Tactic
+* **Type:** Tactic
 
-* Name: {name}
+* **Name:** {name}
 
-* Id: {id}
+* **Id:** {id}
 
-* Summary: {summary}
+* **Summary:** {summary}
 
-* Phase: {phase}
+* **Phase:** {phase}
 
-* Tasks:
+
 {tasks}
 
-* Techniques: 
 {techniques}
+
+{counters}

@@ -2,6 +2,23 @@
 
 Create a page for each of the AMITT counter objects. 
 Don't worry about creating notes etc for these - they'll be in the generating spreadsheet
+
+Reads 1 excel file: ../AMITT_MASTER_DATA/AMITT_Counters_MASTER.xlsx with sheets
+* AMITT_objects: tactics, responses, actors, techniques
+* Countermeasures
+* 
+
+Creates markdown files
+* ../counter_tactic_counts.md
+* ../counter_tactics/{}counters.md
+* ../counter_metatag_counts.md
+* ../counter_metatag/{1}counters.md
+* ../counter_resource_counts.md
+* ../counter_resource/{1}counters.md
+* 
+* {}/{}counters.md
+* 
+
 '''
 
 import pandas as pd
@@ -13,20 +30,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 class Counter:
     def __init__(self, infile = '../AMITT_MASTER_DATA/AMITT_Counters_MASTER.xlsx'):
         
-        # Load metadata from counters excelfile
-        # FIXIT: Ungodly hack = please fix
-        xlsx = pd.ExcelFile(infile)
-        allamitts = xlsx.parse(['AMITT_objects'])
-        dfa = allamitts['AMITT_objects']
-        self.dftactics = dfa[3:15].copy()
-        self.dfresponses = dfa[18:25].copy()
-        self.dfactors = dfa[28:36].copy()
-        self.dftechniques = dfa[39:100].copy()
-
-        # Get counters data
-        self.dfcounters = pd.read_excel(infile, sheet_name='Countermeasures')
         
-        # Create cross-tables
+        # Create counters cross-tables
         crossidtechs = self.splitcol(self.dfcounters[['ID', 'Techniques']], 
                                      'Techniques', 'Techs', '\n')
         crossidtechs = crossidtechs[crossidtechs['Techs'].notnull()]
@@ -61,7 +66,7 @@ class Counter:
     
     # Print list of counters for each square of the COA matrix
     # Write HTML version of framework diagram to markdown file
-    def write_tactics_markdown(self, outfile = '../counter_tactic_counts.md'):
+    def write_counters_tactics_markdown(self, outfile = '../counter_tactic_counts.md'):
 
         coacounts = pd.pivot_table(self.dfcounters[['Tactic', 'Response',
                                                     'ID']], index='Response', columns='Tactic', aggfunc=len, fill_value=0)
@@ -113,12 +118,12 @@ class Counter:
                                                     c[1]['Resources needed'])
 
         html += '\n## by technique\n\n'
-        tactecs = self.dftechniques[self.dftechniques['super'] == tid]['Id'].to_list()
+        tactecs = self.techniques[self.techniques['phase'] == tid]['Id'].to_list()
         for tech in [tid] + tactecs:
             if tech == tid:
                 html += '\n### {}\n'.format(tech)
             else:
-                techname = self.dftechniques[self.dftechniques['Id']==tech]['key']
+                techname = self.techniques[self.techniques['Id']==tech]['longname']
                 html += '\n### {}\n'.format(techname)
                 
             taccounts = self.idtechnique[self.idtechnique['TID'] == tech]
@@ -156,7 +161,7 @@ class Counter:
         return(oid)
 
 
-    def write_metacounts_markdown(self, outfile = '../counter_metatag_counts.md'):
+    def write_counters_metacounts_markdown(self, outfile = '../counter_metatag_counts.md'):
 
         coltype = 'Response'
         rowtype = 'metatechnique'
@@ -223,7 +228,7 @@ class Counter:
         return(oid, omatrix)
 
 
-    def write_resource_markdown(self, outfile = '../counter_resource_counts.md'):
+    def write_counters_resource_markdown(self, outfile = '../counter_resource_counts.md'):
 
         coltype = 'Response'
         rowtype = 'resource'
@@ -268,9 +273,9 @@ class Counter:
  
 def main():
     counter = Counter()
-    counter.write_tactics_markdown()
-    counter.write_metacounts_markdown()
-    counter.write_resource_markdown()
+    counter.write_counters_tactics_markdown()
+    counter.write_counters_metacounts_markdown()
+    counter.write_counters_resource_markdown()
 
 
 if __name__ == "__main__":

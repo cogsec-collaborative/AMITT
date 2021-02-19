@@ -1,20 +1,19 @@
 # {name}
 
-* Type: {type}
+* **Type:** {type}
 
-* Name: {name}
+* **Name:** {name}
 
-* Id: {id}
+* **Id:** {id}
 
-* Summary: {summary}
+* **Summary:** {summary}
 
-* Year started: {yearstarted}
+* **Year started:** {yearstarted}
 
-* From country / To country: {fromcountry} / {tocountry}
+* **Countries:** {fromcountry} , {tocountry}
 
-* Found via: {foundvia}
+* **Found via:** {foundvia}
 
-* Date added: {dateadded}
-
-* Techniques used: 
+* **Date added:** {dateadded}
+ 
 {techniques}

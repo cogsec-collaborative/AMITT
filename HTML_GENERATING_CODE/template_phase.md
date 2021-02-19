@@ -1,10 +1,10 @@
 # {name}
 
-* Type: Phase
+* **Type:** Phase
 
-* Name: {name}
+* **Name:** {name}
 
-* Id: {id}
+* **Id:** {id}
 
-* Summary: {summary}
+* **Summary:** {summary}
 

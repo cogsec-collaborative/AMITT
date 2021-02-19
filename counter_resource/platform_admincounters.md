@@ -4,9 +4,9 @@
 
 
 ### D2 Deny
+* C00055: Empower existing regulators to govern social media (needs government:policymakers,government,platform_admin)
 * C00074: Identify identical content and mass deplatform (needs platform_admin,platform_admin:socialmedia)
 * C00098: Revocation of "verified" (needs platform_admin)
-* C00055: Empower existing regulators to govern social media (needs government:policymakers,government,platform_admin)
 * C00122: Content moderation. Censorship? (needs platform_admin)
 * C00217: Registries alert when large batches of newsy URLs get registered together (needs platform_admin)
 * C00218: Censorship (needs platform_admin)

@@ -12,7 +12,7 @@
 * C00147: Make amplification of social media ports expire (e.g. can't like/ retweet after n days) (needs platform_algorithms)
 
 ### D4 Degrade
-* C00148: Add random links to network graphs (needs platform_algorithms)
 * C00101: Create participant friction (needs platform_algorithms)
 * C00141: "Hey this story is old" popup when messaging with old URL (needs platform_algorithms)
 * C00142: "This has been disproved - do you want to forward it" (needs platform_algorithms)
+* C00148: Add random links to network graphs (needs platform_algorithms)

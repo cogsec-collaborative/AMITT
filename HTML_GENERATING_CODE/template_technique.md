@@ -1,14 +1,15 @@
 # {name}
 
-* Type: Technique
+* **Type**: Technique
 
-* Name: {name}
+* **Name**: {name}
 
-* Id: {id}
+* **Id**: {id}
 
-* Summary: {summary}
+* **Summary**: {summary}
 
-* Tactic: {tactic}
+* **Tactic**: {tactic}
 
-* Incidents:
 {incidents}
+
+{counters}

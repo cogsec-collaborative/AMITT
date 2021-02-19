@@ -1,11 +1,11 @@
 # {name}
 
-* Type: Task
+* **Type:** Task
 
-* Name: {name}
+* **Name:** {name}
 
-* Id: {id}
+* **Id:** {id}
 
-* Summary: {summary}
+* **Summary:** {summary}
 
-* Tactic: {tactic}
+* **Tactic:** {tactic}

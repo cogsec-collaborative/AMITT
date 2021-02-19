@@ -4,9 +4,9 @@
 
 
 ### D2 Deny
+* C00010: Enhanced privacy regulation for social media (needs government:policymakers)
 * C00012: Platform regulation (needs government:policymakers)
 * C00055: Empower existing regulators to govern social media (needs government:policymakers,government,platform_admin)
-* C00010: Enhanced privacy regulation for social media (needs government:policymakers)
 * C00063: Ban political microtargeting (needs government:policymakers)
 
 ### D3 Disrupt

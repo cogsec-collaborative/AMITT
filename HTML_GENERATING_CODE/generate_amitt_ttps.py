@@ -1,15 +1,69 @@
 ''' Manage AMITT metadata
 
-Create a page for each of the AMITT objects, if it doesn't already exist.
-If it does exist, update the metadata on it, and preserve any hand-
-created notes below the metadata area in it.
+The AMITT github repo at https://github.com/cogsec-collaborative/AMITT serves multiple purposes:
+* Holds the master copy of AMITT (in excel file AMITT_TTPs_MASTER.xlsx)
+* Holds detailed notes on each phase, tactic, technique, incident, task and counter in
+  AMITT.  These notes are markdown pages that people are free to suggest edits to, using git's 
+  fork mechanisms. 
+* Holds a list of suggested changes to AMITT, in the github repo's issues list
+* Provides a set of indexed views of AMITT objects, to make exploring AMITT easier
 
-* todo: add all framework comments to the repo issues list
+The file in this code updates the github repo contents, after the master spreadsheet is updated. 
+It creates this: 
+* A html page for each AMITT TTP object (creator and counter), if it doesn't already exist.  
+  If a html page does exist, update the metadata on it, and preserve any hand-created 
+  notes below the metadata area in it.
+* A html page for each AMITT phase, tactic, and task.
+* A html page for each incident used to create AMITT
+* A grid view of all the AMITT creator techniques
+* A grid view of all the AMITT counter techniques
+* Indexes for the counter techniques, by tactic, resource and metatag
+
+Here are the file inputs and outputs associated with that work: 
+
+Reads 1 excel file: ../AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx with sheets: 
+* phases
+* techniques
+* tasks
+* incidents
+* incidenttechniques
+* tactics
+* countermeasures
+* actors
+* responsetypes
+
+Reads template files:
+* template_phase.md
+* template_tactic.md
+* template_task.md
+* template_technique.md
+* template_incident.md
+
+Creates markdown files: 
+* ../matrix.md
+* ../incidents.md
+* ../counter_tactic_counts.md
+* ../counter_metatag_counts.md
+* ../counter_resource_counts.md
+* ../counter_tactics/*counters.md
+* ../counter_metatag/*counters.md
+* ../counter_resource/*counters.md
+
+Updates markdown files:
+* ../phases/*.md
+* ../tactics/*.md
+* ../techniques/*.md
+* ../incidents/*.md
+* ../tasks/*.md
+
+todo: 
+* add all framework comments to the repo issues list
 '''
 
 import pandas as pd
 import numpy as np
 import os
+from sklearn.feature_extraction.text import CountVectorizer
 
 
 class Amitt:
@@ -24,22 +78,42 @@ class Amitt:
             metadata[sheetname] = xlsx.parse(sheetname)
 
         # Create individual tables and dictionaries
-        self.phases = metadata['phases']
-        self.techniques = metadata['techniques']
-        self.tasks = metadata['tasks']
-        self.incidents = metadata['incidents']
+        self.df_phases = metadata['phases']
+        self.df_techniques = metadata['techniques']
+        self.df_tasks = metadata['tasks']
+        self.df_incidents = metadata['incidents']
+        self.df_counters = metadata['countermeasures'].sort_values('id')
+        self.df_counters[['tactic_id', 'tactic_name']] = self.df_counters['tactic'].str.split(' ', 1, expand=True)
+        self.df_actors = metadata['actors']
+        self.df_responsetypes = metadata['responsetypes']
         self.it = self.create_incident_technique_crosstable(metadata['incidenttechniques'])
+        self.df_tactics = metadata['tactics']
 
-        tactechs = self.techniques.groupby('tactic')['id'].apply(list).reset_index().rename({'id':'techniques'}, axis=1)
-        self.tactics = metadata['tactics'].merge(tactechs, left_on='id', right_on='tactic', how='left').fillna('').drop('tactic', axis=1)
+        # Add columns containing lists of techniques and counters to the tactics dataframe
+        df_techniques_per_tactic = self.df_techniques.groupby('tactic_id')['id'].apply(list).reset_index().rename({'id':'technique_ids'}, axis=1)
+        df_counters_per_tactic = self.df_counters.groupby('tactic_id')['id'].apply(list).reset_index().rename({'id':'counter_ids'}, axis=1)
+        self.df_tactics = self.df_tactics.merge(df_techniques_per_tactic, left_on='id', right_on='tactic_id', how='left').fillna('').drop('tactic_id', axis=1)
+        self.df_tactics = self.df_tactics.merge(df_counters_per_tactic, left_on='id', right_on='tactic_id', how='left').fillna('').drop('tactic_id', axis=1)
 
-        self.phasedict = self.make_object_dict(self.phases)
-        self.tacdict   = self.make_object_dict(self.tactics)
-        self.techdict  = self.make_object_dict(self.techniques)
+        self.phases      = self.make_object_dictionary(self.df_phases)
+        self.tactics     = self.make_object_dictionary(self.df_tactics)
+        self.techniques  = self.make_object_dictionary(self.df_techniques)
 
-        self.ngridrows = max(tactechs['techniques'].apply(len)) +2
-        self.ngridcols = len(self.tactics)
+        self.num_tactics = len(self.df_tactics)
+        self.max_num_techniques_per_tactic = max(df_techniques_per_tactic['technique_ids'].apply(len)) +2
+        self.max_num_counters_per_tactic = max(df_counters_per_tactic['counter_ids'].apply(len)) +2
         self.grid = self.create_display_grid()
+
+        # Create counters cross-tables
+        self.cross_counterid_techniqueid = self.splitcol(self.df_counters[['id', 'techniques']], 
+                                                         'techniques', 'technique', '\n')
+        self.cross_counterid_techniqueid = self.cross_counterid_techniqueid[self.cross_counterid_techniqueid['technique'].notnull()]
+        self.cross_counterid_techniqueid['technique_id'] = self.cross_counterid_techniqueid['technique'].str.split(' ').str[0]
+        self.cross_counterid_techniqueid.drop('technique', axis=1, inplace=True)
+        
+        self.cross_counterid_resource = self.splitcol(self.df_counters[['id', 'resources_needed']], 
+                                                        'resources_needed', 'resource', ',')
+        self.cross_counterid_resource = self.cross_counterid_resource[self.cross_counterid_resource['resource'].notnull()]
 
 
     def create_incident_technique_crosstable(self, it_metadata):
@@ -47,17 +121,17 @@ class Amitt:
 
         it = it_metadata
         it.index=it['id']
-        it = it['techniques'].str.split(',').apply(lambda x: pd.Series(x)).stack().reset_index(level=1, drop=True).to_frame('technique').reset_index().merge(it.drop('id', axis=1).reset_index()).drop('techniques', axis=1)
-        it = it.merge(self.incidents[['id','name']], 
-                      left_on='incident', right_on='id',
-                      suffixes=['','_incident']).drop('incident', axis=1)
-        it = it.merge(self.techniques[['id','name']], 
-                      left_on='technique', right_on='id',
-                      suffixes=['','_technique']).drop('technique', axis=1)
+        it = it['technique_ids'].str.split(',').apply(lambda x: pd.Series(x)).stack().reset_index(level=1, drop=True).to_frame('technique_id').reset_index().merge(it.drop('id', axis=1).reset_index()).drop('technique_ids', axis=1)
+        it = it.merge(self.df_incidents[['id','name']], 
+                      left_on='incident_id', right_on='id',
+                      suffixes=['','_incident']).drop('incident_id', axis=1)
+        it = it.merge(self.df_techniques[['id','name']], 
+                      left_on='technique_id', right_on='id',
+                      suffixes=['','_technique']).drop('technique_id', axis=1)
         return(it)
 
 
-    def make_object_dict(self, df):
+    def make_object_dictionary(self, df):
         return(pd.Series(df.name.values,index=df.id).to_dict())
     
     
@@ -66,13 +140,13 @@ class Amitt:
         # cols = number of tactics
         # rows = max number of techniques per tactic + 2
 
-        arr = [['' for i in range(self.ngridcols)] for j in range(self.ngridrows)] 
-        for index, tactic in self.tactics.iterrows():
-            arr[0][index] = tactic['phase']
+        arr = [['' for i in range(self.num_tactics)] for j in range(self.max_num_techniques_per_tactic)] 
+        for index, tactic in self.df_tactics.iterrows():
+            arr[0][index] = tactic['phase_id']
             arr[1][index] = tactic['id']
-            if tactic['techniques'] == '':
+            if tactic['technique_ids'] == '':
                 continue
-            for index2, technique in enumerate(tactic['techniques']):
+            for index2, technique in enumerate(tactic['technique_ids']):
                 arr[index2+2][index] = technique
 
         #Save grid to file
@@ -85,7 +159,15 @@ class Amitt:
         return(arr)
 
 
-    def create_incidentstring(self, techniqueid):
+    def splitcol(self, df, col, newcol, divider=','):
+        # Thanks https://stackoverflow.com/questions/17116814/pandas-how-do-i-split-text-in-a-column-into-multiple-rows?noredirect=1
+        return (df.join(df[col]
+                        .str.split(divider, expand=True).stack()
+                        .reset_index(drop=True,level=1)
+                        .rename(newcol)).drop(col, axis=1))
+
+    
+    def create_technique_incidents_string(self, techniqueid):
 
         incidentstr = '''
 | Incident | Descriptions given for this incident |
@@ -99,7 +181,7 @@ class Amitt:
         return incidentstr
 
 
-    def create_techstring(self, incidentid):
+    def create_incident_techniques_string(self, incidentid):
 
         techstr = '''
 | Technique | Description given for this incident |
@@ -113,43 +195,155 @@ class Amitt:
         return techstr
 
 
-    def create_taskstring(self, tacticid):
+    def create_tactic_tasks_string(self, tactic_id):
 
-        taskstr = '''
+        table_string = '''
 | Task |
 | ---- |
 '''
-        tasklist = self.tasks[self.tasks['tactic']==tacticid]
-        taskrow = '| [{0} {1}](../tasks/{0}.md) |\n'
-        for index, row in tasklist.sort_values('id').iterrows():
-            taskstr += taskrow.format(row['id'], row['name'])
-        return taskstr
+        tactic_tasks = self.df_tasks[self.df_tasks['tactic_id']==tactic_id]
+        task_string = '| [{0} {1}](../tasks/{0}.md) |\n'
+        for index, row in tactic_tasks.sort_values('id').iterrows():
+            table_string += task_string.format(row['id'], row['name'])
+        return table_string
 
 
-    def create_techtacstring(self, tacticid):
+    def create_tactic_techniques_string(self, tactic_id):
 
-        techstr = '''
-| Technique |
-| --------- |
+        table_string = '''
+| Techniques |
+| ---------- |
 '''
-        techlist = self.techniques[self.techniques['tactic']==tacticid]
-        techrow = '| [{0} {1}](../techniques/{0}.md) |\n'
-        for index, row in techlist.sort_values('id').iterrows():
-            techstr += techrow.format(row['id'], row['name'])
-        return techstr
+        tactic_techniques = self.df_techniques[self.df_techniques['tactic_id']==tactic_id]
+        row_string = '| [{0} {1}](../techniques/{0}.md) |\n'
+        for index, row in tactic_techniques.sort_values('id').iterrows():
+            table_string += row_string.format(row['id'], row['name'])
+        return table_string
 
 
-    def generate_datasheets(self):
-        # Generate datafiles
+    def create_tactic_counters_string(self, tactic_id):
+        table_string = '''
+| Response types | Counters |
+| -------------- | -------- |
+'''
+        tactic_counters = self.df_counters[self.df_counters['tactic_id']==tactic_id]
+        row_string = '| {0} | [{1} {2}](../counters/{1}.md) |\n'
+        for index, row in tactic_counters.sort_values(['responsetype', 'id']).iterrows():
+            table_string += row_string.format(row['responsetype'], row['id'], row['name'])
+        return table_string
+
+
+    def create_technique_counters_string(self, technique_id):
+        table_string = '''
+| Counters |
+| -------- |
+'''
+        technique_counters = self.cross_counterid_techniqueid[self.cross_counterid_techniqueid['technique_id']==technique_id]
+        technique_counters = pd.merge(technique_counters, self.df_counters[['id', 'name']])
+        row_string = '| [{0} {1}](../counters/{0}.md) |\n'
+        for index, row in technique_counters.sort_values('id').iterrows():
+            table_string += row_string.format(row['id'], row['name'])
+        return table_string
+
+    def create_counter_tactics_string(self, counter_id):
+        table_string = '''
+| Counters Tactics |
+| ---------------- |
+'''
+        # tactic_counters = self.df_counters[self.df_counters['tactic_id']==tactic_id]
+        # row_string = '| {0} | [{1} {2}](../counters/{1}.md) |\n'
+        # for index, row in tactic_counters.sort_values(['responsetype', 'id']).iterrows():
+        #     table_string += row_string.format(row['responsetype'], row['id'], row['name'])
+        return table_string
+
+    def create_counter_techniques_string(self, counter_id):
+        table_string = '''
+| Counters Techniques |
+| ------------------- |
+'''
+        # tactic_counters = self.df_counters[self.df_counters['tactic_id']==tactic_id]
+        # row_string = '| {0} | [{1} {2}](../counters/{1}.md) |\n'
+        # for index, row in tactic_counters.sort_values(['responsetype', 'id']).iterrows():
+        #     table_string += row_string.format(row['responsetype'], row['id'], row['name'])
+        return table_string
+
+    def create_counter_incidents_string(self, counter_id):
+        table_string = '''
+| Seen in incidents |
+| ----------------- |
+'''
+        # tactic_counters = self.df_counters[self.df_counters['tactic_id']==tactic_id]
+        # row_string = '| {0} | [{1} {2}](../counters/{1}.md) |\n'
+        # for index, row in tactic_counters.sort_values(['responsetype', 'id']).iterrows():
+        #     table_string += row_string.format(row['responsetype'], row['id'], row['name'])
+        return table_string
+
+    def create_tactic_file(self, tactic_id):
+        ''' create a file summarising the counter techniques for a given tactic name
+
+        Inside this file is:
+        * A list of counters, sorted by response type
+        * A list of counters that have no technique id
+        * A list of counters, sorted by technique id
+        For all counters that are listed for this tactic
+        '''
+
+        if not os.path.exists('../counter_tactics'):
+            os.makedirs('../counter_tactics')
+
+        # Populate a list of counters for this tactic, listed by response type
+        html = '''# Tactic {} {} counters\n\n'''.format(tactic_id, self.tactics[tactic_id])
+        
+        html += '## by action\n\n'
+        for resp, counters in self.df_counters[self.df_counters['tactic_id'] == tactic_id].groupby('responsetype'):
+            html += '\n### {}\n'.format(resp)
+            
+            for c in counters.iterrows():
+                html += '* {}: {} (needs {})\n'.format(c[1]['id'], c[1]['name'],
+                                                    c[1]['resources_needed'])
+
+        # Populate a list of counters for this tactic, listed by technique
+        html += '\n## by technique\n\n'
+        tactecs = self.df_techniques[self.df_techniques['tactic_id'] == tactic_id]['id'].to_list()
+        for tech in [tactic_id] + tactecs:
+            if tech == tactic_id:
+                html += '\n### {}\n'.format(tech)
+            else:
+                html += '\n### {} {}\n'.format(tech, self.techniques[tech])
+                
+            taccounts = self.cross_counterid_techniqueid[self.cross_counterid_techniqueid['technique_id'] == tech]
+#            html += '\n{}\n'.format(taccounts)
+            for c in self.df_counters[self.df_counters['id'].isin(taccounts['id'])].iterrows():
+                html += '* {}: {} (needs {})\n'.format(c[1]['id'], c[1]['name'],
+                                                    c[1]['resources_needed'])
+        
+        # Write the file containing the countermeasures summary for this tactic
+        datafile = '../counter_tactics/{}counters.md'.format(tactic_id)
+        print('Writing {}'.format(datafile))
+        with open(datafile, 'w') as f:
+            f.write(html)
+            f.close()
+        return(tactic_id)
+
+
+
+    def update_markdown_files(self):
+        ''' Create or update all the editable markdown files in the repo
+
+        Reads in any user-written text before updating the header information above it
+        Does this for phase, tactic, technique, task, incident and counter objects
+        '''
+
         warntext = 'DO NOT EDIT ABOVE THIS LINE - PLEASE ADD NOTES BELOW'
         warnlen = len(warntext)
         
         metadata = {
-            'phase': self.phases,
-            'tactic': self.tactics,
-            'technique': self.techniques,
-            'task': self.tasks,
-            'incident': self.incidents
+            'phase': self.df_phases,
+            'tactic': self.df_tactics,
+            'technique': self.df_techniques,
+            'task': self.df_tasks,
+            'incident': self.df_incidents,
+            'counter': self.df_counters
         }
         
         for entity, df in metadata.items():
@@ -184,16 +378,26 @@ class Amitt:
                     metatext = template.format(id=row['id'], name=row['name'], summary=row['summary'])
                 if entity == 'tactic':
                     metatext = template.format(id=row['id'], name=row['name'],
-                                               phase=row['phase'], summary=row['summary'],
-                                               tasks=self.create_taskstring(row['id']),
-                                               techniques=self.create_techtacstring(row['id']))
+                                               phase=row['phase_id'], summary=row['summary'],
+                                               tasks=self.create_tactic_tasks_string(row['id']),
+                                               techniques=self.create_tactic_techniques_string(row['id']),
+                                               counters=self.create_tactic_counters_string(row['id']))
                 if entity == 'task':
                     metatext = template.format(id=row['id'], name=row['name'],
-                                               tactic=row['tactic'], summary=row['summary'])
+                                               tactic=row['tactic_id'], summary=row['summary'])
                 if entity == 'technique':
                     metatext = template.format(id=row['id'], name=row['name'],
-                                               tactic=row['tactic'], summary=row['summary'],
-                                               incidents=self.create_incidentstring(row['id']))
+                                               tactic=row['tactic_id'], summary=row['summary'],
+                                               incidents=self.create_technique_incidents_string(row['id']),
+                                               counters=self.create_technique_counters_string(row['id']))
+                if entity == 'counter':
+                    metatext = template.format(id=row['id'], name=row['name'],
+                                               tactic=row['tactic_id'], summary=row['summary'],
+                                               playbooks=row['playbooks'], metatechnique=row['metatechnique'],
+                                               resources_needed=row['resources_needed'],
+                                               tactics=self.create_counter_tactics_string(row['id']),
+                                               techniques=self.create_counter_techniques_string(row['id']),
+                                               incidents=self.create_counter_incidents_string(row['id']))
                 if entity == 'incident':
                     metatext = template.format(id=row['id'], name=row['name'],
                                                type=row['type'], summary=row['summary'],
@@ -202,7 +406,7 @@ class Amitt:
                                                tocountry=row['To country'],
                                                foundvia=row['Found via'],
                                                dateadded=row['When added'],
-                                               techniques=self.create_techstring(row['id']))
+                                               techniques=self.create_incident_techniques_string(row['id']))
 
                 # Make sure the user data goes in
                 if (metatext + warntext) != oldmetatext:
@@ -217,7 +421,7 @@ class Amitt:
 
     def write_grid_markdown(self, outfile = '../matrix.md'):
         # Write HTML version of framework diagram to markdown file
-        # Needs phasedict, tacdict, techdict, grid
+        # Needs phases, tactics, techniques, grid
 
         html = '''# AMITT Latest Framework:
 
@@ -225,24 +429,24 @@ class Amitt:
 <tr>
 '''
 
-        for col in range(self.ngridcols):
+        for col in range(self.num_tactics):
             html += '<td><a href="phases/{0}.md">{0} {1}</a></td>\n'.format(
-                self.grid[0][col], self.phasedict[self.grid[0][col]])
+                self.grid[0][col], self.phases[self.grid[0][col]])
         html += '</tr>\n'
 
         html += '<tr style="background-color:blue;color:white;">\n'
-        for col in range(self.ngridcols):
+        for col in range(self.num_tactics):
             html += '<td><a href="tactics/{0}.md">{0} {1}</a></td>\n'.format(
-                self.grid[1][col], self.tacdict[self.grid[1][col]])
+                self.grid[1][col], self.tactics[self.grid[1][col]])
         html += '</tr>\n<tr>\n'
 
-        for row in range(2,self.ngridrows):
-            for col in range(self.ngridcols):
+        for row in range(2,self.max_num_techniques_per_tactic):
+            for col in range(self.num_tactics):
                 if self.grid[row][col] == '':
                     html += '<td> </td>\n'
                 else:
                     html += '<td><a href="techniques/{0}.md">{0} {1}</a></td>\n'.format(
-                        self.grid[row][col], self.techdict[self.grid[row][col]])
+                        self.grid[row][col], self.techniques[self.grid[row][col]])
             html += '</tr>\n<tr>\n'
         html += '</tr>\n</table>\n'
 
@@ -269,7 +473,7 @@ class Amitt:
             html += '<th>{}</th>\n'.format(col)
         html += '</tr>\n'
 
-        for index, row in self.incidents[self.incidents['name'].notnull()].iterrows():
+        for index, row in self.df_incidents[self.df_incidents['name'].notnull()].iterrows():
             html += '<tr>\n'
             html += '<td><a href="incidents/{0}.md">{0}</a></td>\n'.format(row['id'])
             for col in cols:
@@ -313,27 +517,27 @@ function handleTechniqueClick(box) {
 '''
 
         html += '<tr bgcolor=fuchsia>\n'
-        for col in range(self.ngridcols):
-            html += '<td>{0} {1}</td>\n'.format(self.grid[0][col], self.phasedict[self.grid[0][col]])
+        for col in range(self.num_tactics):
+            html += '<td>{0} {1}</td>\n'.format(self.grid[0][col], self.phases[self.grid[0][col]])
         html += '</tr>\n'
 
         html += '<tr bgcolor=aqua>\n'
-        for col in range(self.ngridcols):
-            html += '<td>{0} {1}</td>\n'.format(self.grid[1][col], self.tacdict[self.grid[1][col]])
+        for col in range(self.num_tactics):
+            html += '<td>{0} {1}</td>\n'.format(self.grid[1][col], self.tactics[self.grid[1][col]])
         html += '</tr>\n'
 
         liststr = ''
         html += '<tr>\n'
-        for row in range(2,self.ngridrows):
-            for col in range(self.ngridcols):
+        for row in range(2,self.max_num_techniques_per_tactic):
+            for col in range(self.num_tactics):
                 techid = self.grid[row][col]
                 if techid == '':
                     html += '<td bgcolor=white> </td>\n'
                 else:
                     html += '<td id="{0}">{0} {1}<input type="checkbox" id="{0}check"  onclick="handleTechniqueClick(\'{0}\')"></td>\n'.format(
-                        techid, self.techdict[techid])
+                        techid, self.techniques[techid])
                     liststr += '<li id="{0}text" style="display:none">{0}: {1}</li>\n'.format(
-                        techid, self.techdict[techid])
+                        techid, self.techniques[techid])
 
             html += '</tr>\n<tr>\n'
         html += '</tr>\n</table>\n<hr>\n'
@@ -351,32 +555,229 @@ function handleTechniqueClick(box) {
 
         
     def print_technique_incidents(self):
-        for id_technique in self.techniques['id'].to_list():
+        for id_technique in self.df_techniques['id'].to_list():
             print('{}\n{}'.format(id_technique, 
                                   self.create_incidentstring(id_technique)))
         return
 
 
     def print_incident_techniques(self):
-        for id_incident in self.incidents['id'].to_list():
+        for id_incident in self.df_incidents['id'].to_list():
             print('{}\n{}'.format(id_incident, 
                                   self.create_techstring(id_incident)))
         return
 
     
-    def generate_datafiles(self):
+    def generate_and_write_datafiles(self):
         
-        self.generate_datasheets()
+        self.update_markdown_files()
         self.write_grid_markdown()
         self.write_incidentlist_markdown()
         self.write_grid_message_generator()
         
         return
 
- 
+        
+    def analyse_counter_text(self, col='name'):
+        # Analyse text in counter descriptions
+        alltext = (' ').join(self.df_counters[col].to_list()).lower()
+        count_vect = CountVectorizer(stop_words='english')
+        word_counts = count_vect.fit_transform([alltext])
+        dfw = pd.DataFrame(word_counts.A, columns=count_vect.get_feature_names()).transpose()
+        dfw.columns = ['count']
+        dfw = dfw.sort_values(by='count', ascending=False)
+        return(dfw)   
+
+    
+    # Print list of counters for each square of the COA matrix
+    # Write HTML version of framework diagram to markdown file
+    def write_responsetype_tactics_table_file(self, outfile = '../counter_tactic_counts.md'):
+        ''' fill the counter_tactics directory
+
+        One file for every tactic, plus a file for "ALL" tactics
+        Inside each file:
+        * A list of counters, sorted by response type
+        * A list of counters that have no technique id
+        * A list of counters, sorted by technique id
+        For all counters that are listed for this tactic
+        '''
+
+        coacounts = pd.pivot_table(self.df_counters[['tactic_id', 'responsetype',
+                                                    'id']], index='responsetype', columns='tactic_id', aggfunc=len, fill_value=0)
+
+        html = '''# AMITT Courses of Action matrix:
+
+<table border="1">
+<tr>
+<td> </td>
+'''
+        #Table heading = tactic names
+        for col in coacounts.columns.get_level_values(1):
+            tid = self.create_tactic_file(col)
+            html += '<td><a href="counter_tactics/{0}counters.md">{1}</a></td>\n'.format(
+                tid, col)
+        html += '</tr><tr>\n'
+
+        # number of counters per response type
+        for responsetype, counts in coacounts.iterrows(): 
+            html += '<td>{}</td>\n'.format(responsetype)
+            for val in counts.values:
+                html += '<td>{}</td>\n'.format(val)
+            html += '</tr>\n<tr>\n'
+        
+        # Total per tactic
+        html += '<td>TOTALS</td>\n'
+        for val in coacounts.sum().values:
+                html += '<td>{}</td>\n'.format(val)
+        html += '</tr>\n</table>\n'           
+
+        with open(outfile, 'w') as f:
+            f.write(html)
+            print('updated {}'.format(outfile))
+        return
+
+
+    def create_object_file(self, index, rowtype, datadir):
+
+        oid = index
+        html = '''# {} counters: {}\n\n'''.format(rowtype, index)
+
+        html += '## by action\n\n'
+        for resp, clist in self.df_counters[self.df_counters[rowtype] == index].groupby('responsetype'):
+            html += '\n### {}\n'.format(resp)
+
+            for c in clist.iterrows():
+                html += '* {}: {} (needs {})\n'.format(c[1]['id'], c[1]['name'],
+                                                    c[1]['resources_needed'])
+
+        datafile = '{}/{}counters.md'.format(datadir, oid)
+        print('Writing {}'.format(datafile))
+        with open(datafile, 'w') as f:
+            f.write(html)
+            f.close()
+        return(oid)
+
+
+    def write_metatechniques_responsetype_table_file(self, outfile = '../counter_metatag_counts.md'):
+
+        coltype = 'responsetype'
+        rowtype = 'metatechnique'
+        rowname = 'metatag'
+        mtcounts = pd.pivot_table(self.df_counters[[coltype, rowtype,'id']], 
+                                  index=rowtype, columns=coltype, aggfunc=len, 
+                                  fill_value=0) 
+        mtcounts['TOTALS'] = mtcounts.sum(axis=1)
+
+        html = '''# AMITT {} courses of action
+
+<table border="1">
+<tr>
+<td> </td>
+    '''.format(rowtype)
+
+        # Table heading row
+        for col in mtcounts.columns.get_level_values(1)[:-1]:
+            html += '<td>{}</td>\n'.format(col)
+        html += '<td>TOTALS</td></tr><tr>\n'
+
+        # Data rows
+        datadir = '../counters_{}'.format(rowname)
+        if not os.path.exists(datadir):
+            os.makedirs(datadir)
+        for index, counts in mtcounts.iterrows(): 
+            tid = self.create_object_file(index, rowtype, datadir)
+            html += '<td><a href="counter_{0}/{1}counters.md">{2}</a></td>\n'.format(
+                rowname, tid, index)
+            for val in counts.values:
+                html += '<td>{}</td>\n'.format(val)
+            html += '</tr>\n<tr>\n'
+
+        # Column sums
+        html += '<td>TOTALS</td>\n'
+        for val in mtcounts.sum().values:
+                html += '<td>{}</td>\n'.format(val)
+        html += '</tr>\n</table>\n'           
+
+        with open(outfile, 'w') as f:
+            f.write(html)
+            print('updated {}'.format(outfile))
+
+        return
+
+
+    def create_resource_file(self, index, rowtype, datadir):
+        oid = index
+        counterrows = self.cross_counterid_resource[self.cross_counterid_resource['resource'] == index]['id'].to_list()
+        html = '''# {} counters: {}\n\n'''.format(rowtype, index)
+        html += '## by action\n\n'
+        omatrix = self.df_counters[self.df_counters['id'].isin(counterrows)].groupby('responsetype')
+        for resp, clist in omatrix:
+            html += '\n### {}\n'.format(resp)
+            for c in clist.iterrows():
+                html += '* {}: {} (needs {})\n'.format(c[1]['id'], c[1]['name'],
+                                                    c[1]['resources_needed'])
+
+        datafile = '{}/{}counters.md'.format(datadir, oid)
+        print('Writing {}'.format(datafile))
+        with open(datafile, 'w') as f:
+            f.write(html)
+            f.close()
+        return(oid, omatrix)
+
+
+    def write_resources_responsetype_table_file(self, outfile = '../counter_resource_counts.md'):
+
+        coltype = 'responsetype'
+        rowtype = 'resource'
+        rowname = 'resource'
+
+        html = '''# AMITT {} courses of action
+
+<table border="1">
+<tr>
+<td> </td>
+'''.format(rowtype)
+
+        # Table heading row
+        colvals = self.df_counters[coltype].value_counts().sort_index().index
+        for col in colvals:
+            html += '<td>{}</td>\n'.format(col)
+        html += '<td>TOTALS</td></tr><tr>\n'
+
+        # Data rows
+        datadir = '../counter_{}'.format(rowname)
+        if not os.path.exists(datadir):
+            os.makedirs(datadir)
+        for index in self.cross_counterid_resource['resource'].value_counts().sort_index().index:
+            (oid, omatrix) = self.create_resource_file(index, rowtype, datadir) #self
+            row = pd.DataFrame(omatrix.apply(len), index=colvals).fillna(' ')
+            html += '<td><a href="counter_{0}/{1}counters.md">{2}</a></td>\n'.format(
+                rowname, oid, index)
+            if len(row.columns) > 0:
+                for val in row[0].to_list():
+                    html += '<td>{}</td>\n'.format(val)
+            html += '<td>{}</td></tr>\n<tr>\n'.format('')
+
+        html += '</tr>\n</table>\n'           
+
+        with open(outfile, 'w') as f:
+            f.write(html)
+            print('updated {}'.format(outfile))
+
+        return
+
+
+
 def main():
     amitt = Amitt()
-    amitt.generate_datafiles()
+    amitt.update_markdown_files()
+    amitt.write_grid_markdown()
+    amitt.write_incidentlist_markdown()
+    amitt.write_grid_message_generator()
+    amitt.write_responsetype_tactics_table_file()
+    amitt.write_metatechniques_responsetype_table_file()
+    amitt.write_resources_responsetype_table_file()
+
 
 
 if __name__ == "__main__":
