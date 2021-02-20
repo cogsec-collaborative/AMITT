@@ -24,7 +24,7 @@ All the entities used to create the Red Team and Blue Team frameworks:
 
 There's a directory for each of these, containing a datasheet for each individual entity (e.g. [technique T0046 Search Engine Optimization](techniques/T0046.md)).  
 
-YOU CAN ADD INFORMATION TO THESE FILES.
+**YOU CAN ADD INFORMATION TO THESE FILES.**
 * The details above "DO NOT EDIT ABOVE THIS LINE" are generated and will be overwritten every time we run the update code; anything you write above that line will be lost
 * The details below "DO NOT EDIT ABOVE THIS LINE" are saved every time we run the update code. You can safely add notes below that line. 
 
