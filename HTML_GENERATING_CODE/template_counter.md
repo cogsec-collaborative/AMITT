@@ -1,10 +1,4 @@
-# {name}
-
-* **Type**: Counter TTP
-
-* **Name**: {name}
-
-* **Id**: {id}
+# {type} {id}: {name}
 
 * **Summary**: {summary}
 

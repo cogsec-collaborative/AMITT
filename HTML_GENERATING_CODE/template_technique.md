@@ -1,14 +1,8 @@
-# {name}
-
-* **Type**: Technique
-
-* **Name**: {name}
-
-* **Id**: {id}
+# {type} {id}: {name}
 
 * **Summary**: {summary}
 
-* **Tactic**: {tactic}
+* **Belongs to tactic stage**: {tactic}
 
 {incidents}
 

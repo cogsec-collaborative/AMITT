@@ -1,12 +1,8 @@
-# {name}
-
-* **Type:** {type}
-
-* **Name:** {name}
-
-* **Id:** {id}
+# {type} {id}: {name}
 
 * **Summary:** {summary}
+
+* **incident type**: {incidenttype}
 
 * **Year started:** {yearstarted}
 

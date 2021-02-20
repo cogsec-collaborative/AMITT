@@ -29,7 +29,8 @@ Reads 1 excel file: ../AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx with sheets:
 * incidenttechniques
 * tactics
 * countermeasures
-* actors
+* actortypes
+* resources
 * responsetypes
 
 Reads template files:
@@ -94,10 +95,14 @@ class Amitt:
         self.df_incidents = metadata['incidents']
         self.df_counters = metadata['countermeasures'].sort_values('id')
         self.df_counters[['tactic_id', 'tactic_name']] = self.df_counters['tactic'].str.split(' ', 1, expand=True)
-        self.df_actors = metadata['actors']
+        self.df_counters[['metatechnique_id', 'metatechnique_name']] = self.df_counters['metatechnique'].str.split(' ', 1, expand=True)
+        self.df_detections = metadata['detections']
+        self.df_detections[['tactic_id', 'tactic_name']] = self.df_detections['tactic'].str.split(' ', 1, expand=True)
+#        self.df_detections[['metatechnique_id', 'metatechnique_name']] = self.df_detections['metatechnique'].str.split(' ', 1, expand=True)
+        self.df_actortypes = metadata['actortypes']
+        self.df_resources = metadata['resources']
         self.df_responsetypes = metadata['responsetypes']
         self.df_metatechniques = metadata['metatechniques']
-        self.df_detections = metadata['detections']
         self.it = self.create_incident_technique_crosstable(metadata['incidenttechniques'])
         self.df_tactics = metadata['tactics']
 
@@ -111,6 +116,7 @@ class Amitt:
         self.tactics     = self.make_object_dictionary(self.df_tactics)
         self.techniques  = self.make_object_dictionary(self.df_techniques)
         self.counters    = self.make_object_dictionary(self.df_counters)
+        self.metatechniques = self.make_object_dictionary(self.df_metatechniques)
 
         self.num_tactics = len(self.df_tactics)
         self.max_num_techniques_per_tactic = max(df_techniques_per_tactic['technique_ids'].apply(len)) +2
@@ -270,6 +276,18 @@ class Amitt:
         return table_string
 
 
+    def create_metatechnique_counters_string(self, metatechnique_id):
+        table_string = '''
+| Counters | Response types |
+| -------- | -------------- |
+'''
+        metatechnique_counters = self.df_counters[self.df_counters['metatechnique_id']==metatechnique_id]
+        row_string = '| [{0} {1}](../counters/{0}.md) | {2} |\n'
+        for index, row in metatechnique_counters.sort_values(['responsetype', 'id']).iterrows():
+            table_string += row_string.format(row['id'], row['name'], row['responsetype'])
+        return table_string
+
+
     def create_technique_counters_string(self, technique_id):
         table_string = '''
 | Counters |
@@ -364,6 +382,75 @@ class Amitt:
         return(tactic_id)
 
 
+    def create_object_file(self, index, rowtype, datadir):
+
+        oid = index
+        html = '''# {} counters: {}\n\n'''.format(rowtype, index)
+
+        html += '## by action\n\n'
+        for resp, clist in self.df_counters[self.df_counters[rowtype] == index].groupby('responsetype'):
+            html += '\n### {}\n'.format(resp)
+
+            for c in clist.iterrows():
+                html += '* {}: {} (needs {})\n'.format(c[1]['id'], c[1]['name'],
+                                                    c[1]['resources_needed'])
+
+        datafile = '{}/{}counters.md'.format(datadir, oid)
+        print('Writing {}'.format(datafile))
+        with open(datafile, 'w') as f:
+            f.write(html)
+            f.close()
+        return(oid)
+
+
+    def write_object_index_to_file(self, objectname, objectcols, dfobject, outfile):
+        ''' Write HTML version of incident list to markdown file
+
+        Assumes that dfobject has columns named 'id' and 'name'
+        '''
+
+        html = '''# AMITT {}:
+
+<table border="1">
+<tr>
+'''.format(objectname.capitalize())
+
+        # Create header row
+        html += '<th>{}</th>\n'.format('id')
+        html += ''.join(['<th>{}</th>\n'.format(col) for col in objectcols])
+        html += '</tr>\n'
+
+        # Add row for each object
+        for index, row in dfobject[dfobject['name'].notnull()].iterrows():
+            html += '<tr>\n'
+            html += '<td><a href="{0}/{1}.md">{1}</a></td>\n'.format(objectname, row['id'])
+            html += ''.join(['<td>{}</td>\n'.format(row[col]) for col in objectcols])
+            html += '</tr>\n'
+        html += '</table>\n'
+
+        # Write file
+        with open(outfile, 'w') as f:
+            f.write(html)
+            print('updated {}'.format(outfile))
+        return
+
+    def write_object_indexes_to_file(self):
+        ''' Create an index file for each object type.
+        '''
+        self.write_object_index_to_file(
+            'response types', ['name', 'summary'],
+            self.df_responsetypes, '../responsetype_index.md')
+        self.write_object_index_to_file(
+            'metatechniques', ['name', 'summary'],
+            self.df_metatechniques, '../metatechniques_index.md')
+        self.write_object_index_to_file(
+            'actortypes', ['name', 'summary'],
+            self.df_actortypes, '../actortypes_index.md')
+        self.write_object_index_to_file(
+            'detections', ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
+            self.df_detections, '../detections_index.md')
+
+        return
 
     def update_markdown_files(self):
         ''' Create or update all the editable markdown files in the repo
@@ -381,22 +468,45 @@ class Amitt:
             'technique': self.df_techniques,
             'task': self.df_tasks,
             'incident': self.df_incidents,
-            'counter': self.df_counters
+            'counter': self.df_counters,
+            'metatechnique': self.df_metatechniques,
+            'actortype': self.df_actortypes,
+            #'responsetype': self.df_responsetypes,
+            #'detection': self.df_detections
         }
         
-        for entity, df in metadata.items():
-            entities = entity + 's'
-            entitydir = '../{}'.format(entities)
-            if not os.path.exists(entitydir):
-                os.makedirs(entitydir)
+        indexrows = {
+            'phase': ['name', 'summary'],
+            'tactic': ['name', 'summary', 'phase_id'],
+            'technique': ['name', 'summary', 'tactic_id'],
+            'task': ['name', 'summary', 'tactic_id'],
+            'incident': ['name', 'type', 'Year Started', 'To country', 'Found via'],
+            'counter': ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
+            'detection': ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
+            'responsetype': ['name', 'summary'],
+            'metatechnique': ['name', 'summary'],
+            'actortype': ['name', 'summary']
+        }
+        
+        for objecttype, df in metadata.items():
 
-            template = open('template_{}.md'.format(entity)).read()
+            # Create objecttype directory if needed.  Create index file for objecttype
+            objecttypeplural = objecttype + 's'
+            objecttypedir = '../{}'.format(objecttypeplural)
+            if not os.path.exists(objecttypedir):
+                os.makedirs(objecttypedir)
+            self.write_object_index_to_file(objecttypeplural, indexrows[objecttype],
+                                            metadata[objecttype], 
+                                            '../{}_index.md'.format(objecttypeplural))
+
+            # Update or create file for every object with this objecttype type
+            template = open('template_{}.md'.format(objecttype)).read()
             for index, row in df[df['name'].notnull()].iterrows():
 
                 # First read in the file - if it exists - and grab everything 
                 # below the "do not write about this line". Will write this 
                 # out below new metadata. 
-                datafile = '../{}/{}.md'.format(entities, row['id'])
+                datafile = '../{}/{}.md'.format(objecttypeplural, row['id'])
                 oldmetatext = ''
                 if os.path.exists(datafile):
                     with open(datafile) as f:
@@ -412,39 +522,46 @@ class Amitt:
                     usertext = ''
 
                 # Now populate datafiles with new metadata plus old userdata
-                if entity == 'phase':
-                    metatext = template.format(id=row['id'], name=row['name'], summary=row['summary'])
-                if entity == 'tactic':
-                    metatext = template.format(id=row['id'], name=row['name'],
+                if objecttype == 'phase':
+                    metatext = template.format(type='Phase', id=row['id'], name=row['name'], summary=row['summary'])
+                if objecttype == 'tactic':
+                    metatext = template.format(type = 'Tactic', id=row['id'], name=row['name'],
                                                phase=row['phase_id'], summary=row['summary'],
                                                tasks=self.create_tactic_tasks_string(row['id']),
                                                techniques=self.create_tactic_techniques_string(row['id']),
                                                counters=self.create_tactic_counters_string(row['id']))
-                if entity == 'task':
-                    metatext = template.format(id=row['id'], name=row['name'],
+                if objecttype == 'task':
+                    metatext = template.format(type='Task', id=row['id'], name=row['name'],
                                                tactic=row['tactic_id'], summary=row['summary'])
-                if entity == 'technique':
-                    metatext = template.format(id=row['id'], name=row['name'],
+                if objecttype == 'technique':
+                    metatext = template.format(type = 'Technique', id=row['id'], name=row['name'],
                                                tactic=row['tactic_id'], summary=row['summary'],
                                                incidents=self.create_technique_incidents_string(row['id']),
                                                counters=self.create_technique_counters_string(row['id']))
-                if entity == 'counter':
-                    metatext = template.format(id=row['id'], name=row['name'],
+                if objecttype == 'counter':
+                    metatext = template.format(type = 'Counter', id=row['id'], name=row['name'],
                                                tactic=row['tactic_id'], summary=row['summary'],
                                                playbooks=row['playbooks'], metatechnique=row['metatechnique'],
                                                resources_needed=row['resources_needed'],
                                                tactics=self.create_counter_tactics_string(row['id']),
                                                techniques=self.create_counter_techniques_string(row['id']),
                                                incidents=self.create_counter_incidents_string(row['id']))
-                if entity == 'incident':
-                    metatext = template.format(id=row['id'], name=row['name'],
-                                               type=row['type'], summary=row['summary'],
+                if objecttype == 'incident':
+                    metatext = template.format(type = 'Incident', id=row['id'], name=row['name'],
+                                               incidenttype=row['type'], summary=row['summary'],
                                                yearstarted=row['Year Started'], 
                                                fromcountry=row['From country'],
                                                tocountry=row['To country'],
                                                foundvia=row['Found via'],
                                                dateadded=row['When added'],
                                                techniques=self.create_incident_techniques_string(row['id']))
+                if objecttype == 'actortype':
+                    metatext = template.format(type = 'Actor Type', id=row['id'], name=row['name'], 
+                                               summary=row['summary'])
+                if objecttype == 'metatechnique':
+                    metatext = template.format(type='Metatechnique', id=row['id'], name=row['name'], 
+                                               summary=row['summary'],
+                                               counters=self.create_metatechnique_counters_string(row['id']))
 
                 # Make sure the user data goes in
                 if (metatext + warntext) != oldmetatext:
@@ -529,84 +646,6 @@ class Amitt:
             print('updated {}'.format(outfile))
         return
 
-
-    def write_object_indexes_to_file(self):
-        ''' Create an index file for each object type.
-        '''
-
-        self.write_object_index_to_file(
-            'phases', ['name', 'summary'],
-            self.df_phases, '../phases_index.md')
-
-        self.write_object_index_to_file(
-            'tactics', ['name', 'summary', 'phase_id'],
-            self.df_tactics, '../tactics_index.md')
-
-        self.write_object_index_to_file(
-            'techniques', ['name', 'summary', 'tactic_id'],
-            self.df_techniques, '../techniques_index.md')
-
-        self.write_object_index_to_file(
-            'tasks', ['name', 'summary', 'tactic_id'],
-            self.df_tasks, '../tasks_index.md')
-
-        self.write_object_index_to_file(
-            'response types', ['name', 'summary'],
-            self.df_responsetypes, '../responsetype_index.md')
-
-        self.write_object_index_to_file(
-            'metatechniques', ['name', 'summary'],
-            self.df_metatechniques, '../metatechniques_index.md')
-
-        self.write_object_index_to_file(
-            'actors', ['name', 'summary'],
-            self.df_actors, '../actors_index.md')
-
-        self.write_object_index_to_file(
-            'detections', ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
-            self.df_detections, '../detections_index.md')
-
-        self.write_object_index_to_file(
-            'counters', ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
-            self.df_counters, '../counters_index.md')
-
-        self.write_object_index_to_file(
-            'incidents', ['name', 'type', 'Year Started', 'To country', 'Found via'],
-            self.df_incidents, '../incidents_index.md')
-
-        return
-
-
-    def write_object_index_to_file(self, objectname, objectcols, dfobject, outfile):
-        ''' Write HTML version of incident list to markdown file
-
-        Assumes that dfobject has columns named 'id' and 'name'
-        '''
-
-        html = '''# AMITT {}:
-
-<table border="1">
-<tr>
-'''.format(objectname.capitalize())
-
-        # Create header row
-        html += '<th>{}</th>\n'.format('id')
-        html += ''.join(['<th>{}</th>\n'.format(col) for col in objectcols])
-        html += '</tr>\n'
-
-        # Add row for each object
-        for index, row in dfobject[dfobject['name'].notnull()].iterrows():
-            html += '<tr>\n'
-            html += '<td><a href="{0}/{1}.md">{1}</a></td>\n'.format(objectname, row['id'])
-            html += ''.join(['<td>{}</td>\n'.format(row[col]) for col in objectcols])
-            html += '</tr>\n'
-        html += '</table>\n'
-
-        # Write file
-        with open(outfile, 'w') as f:
-            f.write(html)
-            print('updated {}'.format(outfile))
-        return
 
 
     def write_clickable_amitt_red_framework_file(self, outfile='../amitt_red_framework_clickable.html'):
@@ -767,31 +806,10 @@ function handleTechniqueClick(box) {
         return
 
 
-    def create_object_file(self, index, rowtype, datadir):
-
-        oid = index
-        html = '''# {} counters: {}\n\n'''.format(rowtype, index)
-
-        html += '## by action\n\n'
-        for resp, clist in self.df_counters[self.df_counters[rowtype] == index].groupby('responsetype'):
-            html += '\n### {}\n'.format(resp)
-
-            for c in clist.iterrows():
-                html += '* {}: {} (needs {})\n'.format(c[1]['id'], c[1]['name'],
-                                                    c[1]['resources_needed'])
-
-        datafile = '{}/{}counters.md'.format(datadir, oid)
-        print('Writing {}'.format(datafile))
-        with open(datafile, 'w') as f:
-            f.write(html)
-            f.close()
-        return(oid)
-
-
     def write_metatechniques_responsetype_table_file(self, outfile = '../metatechniques_by_responsetype_table.md'):
 
         coltype = 'responsetype'
-        rowtype = 'metatechnique'
+        rowtype = 'metatechnique_id'
         rowname = 'metatag'
         datadirname = 'metatechniques'
         datadir = '../' + datadirname
@@ -816,9 +834,8 @@ function handleTechniqueClick(box) {
         if not os.path.exists(datadir):
             os.makedirs(datadir)
         for index, counts in mtcounts.iterrows(): 
-            tid = self.create_object_file(index, rowtype, datadir)
-            html += '<td><a href="{0}/{1}counters.md">{2}</a></td>\n'.format(
-                datadirname, tid, index)
+            html += '<td><a href="{0}/{1}.md">{1} {2}</a></td>\n'.format(
+                datadirname, index, self.metatechniques[index])
             for val in counts.values:
                 html += '<td>{}</td>\n'.format(val)
             html += '</tr>\n<tr>\n'

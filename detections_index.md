@@ -545,210 +545,214 @@ For example, other ways of deplatforming people include attacking their sources 
 </tr>
 <tr>
 <td><a href="detections/F00067.md">F00067</a></td>
-<td></td>
 <td>Data forensics</td>
 <td></td>
-<td>I00029,I00045</td>
 <td></td>
+<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00068.md">F00068</a></td>
-<td></td>
 <td>Resonance analysis</td>
+<td>a developing methodology for identifying statistical differences in how social groups use language and quantifying how common those statistical differences are within a larger population. In essence, it hypothesizes how much affinity might exist for a specific group within a general population, based on the language its members employ</td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00069.md">F00069</a></td>
-<td></td>
 <td>Track Russian media and develop analytic methods.</td>
+<td>To effectively counter Russian propaganda, it will be critical to track Russian influence efforts. The information requirements are varied and include the following: • Identify fake-news stories and their sources. • Understand narrative themes and content that pervade various Russian media sources. • Understand the broader Russian strategy that underlies tactical propaganda messaging.</td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00070.md">F00070</a></td>
-<td></td>
 <td>Full spectrum analytics</td>
 <td></td>
 <td></td>
 <td>ALL</td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00071.md">F00071</a></td>
-<td></td>
 <td>Network analysis Identify/cultivate/support influencers</td>
+<td>Local influencers detected via Twitter networks are likely local influencers in other online and off-line channels as well. In addition, the content and themes gleaned from Russia and Russia-supporting populations, as well as anti-Russia activists, likely swirl in other online and off-line mediums as well.</td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00072.md">F00072</a></td>
-<td></td>
 <td>network analysis to identify central users in the pro-Russia activist community.</td>
+<td>It is possible that some of these are bots or trolls and could be flagged for suspension for violating Twitter’s terms of service.</td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00073.md">F00073</a></td>
-<td></td>
 <td>collect intel/recon on black/covert content creators/manipulators</td>
+<td>Players at the level of covert attribution, referred to as “black” in the grayscale of deniability, produce content on user-generated media, such as YouTube, but also add fear-mongering commentary to and amplify content produced by others and supply exploitable content to data dump websites. These activities are conducted by a network of trolls, bots, honeypots, and hackers. </td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00074.md">F00074</a></td>
-<td></td>
 <td>identify relevant fence-sitter communities</td>
+<td>brand ambassador programs could be used with influencers across a variety of social media channels. It could also target other prominent experts, such as academics, business leaders, and other potentially prominent people. Authorities must ultimately take care in implementing such a program given the risk that contact with U.S. or NATO authorities might damage influencer reputations. Engagements must consequently be made with care, and, if possible, government interlocutors should work through local NGOs.</td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00075.md">F00075</a></td>
-<td></td>
 <td>leverage open-source information</td>
+<td>significant amounts of quality open-source information are now available and should be leveraged to build products and analysis prior to problem prioritization in the areas of observation, attribution, and intent. Successfully distinguishing the gray zone campaign signal through the global noise requires action through the entirety of the national security community. Policy, process, and tools must all adapt and evolve to detect, discern, and act upon a new type of signal</td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00076.md">F00076</a></td>
-<td></td>
 <td>Monitor/collect audience engagement data connected to “useful idiots”</td>
+<td>Target audience connected to "useful idiots rather than the specific profiles because - The active presence of such sources complicates targeting of Russian propaganda, given that it is often difficult to discriminate between authentic views and opinions on the internet and those disseminated by the Russian state.
+</td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00077.md">F00077</a></td>
-<td></td>
 <td>Model for bot account behavior</td>
-<td></td>
+<td>Bot account: action based, people. Unsure which AMITT techniques.</td>
 <td></td>
 <td>TA03 Develop People</td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00078.md">F00078</a></td>
-<td></td>
 <td>Monitor account level activity in social networks</td>
-<td></td>
+<td>All techniques benefit from careful analysis and monitoring of activities on social network.</td>
 <td></td>
 <td>TA03 Develop People</td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00079.md">F00079</a></td>
-<td></td>
 <td>Network anomaly detection</td>
 <td></td>
 <td></td>
 <td>TA05 Microtargeting</td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00080.md">F00080</a></td>
-<td></td>
 <td>Hack the polls/ content yourself</td>
-<td></td>
+<td>Two wrongs don't make a right? But if you hack your own polls, you do learn how it could be done, and learn what to look for</td>
 <td></td>
 <td>TA07 Channel Selection</td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00081.md">F00081</a></td>
-<td></td>
 <td>Need way for end user to report operations</td>
 <td></td>
 <td></td>
 <td>TA09 Exposure</td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00082.md">F00082</a></td>
-<td></td>
 <td>Control the US "slang" translation boards</td>
 <td></td>
 <td></td>
 <td>TA11 Persistence</td>
+<td>D3 Disrupt</td>
 </tr>
 <tr>
 <td><a href="detections/F00083.md">F00083</a></td>
-<td></td>
 <td>Build and own meme generator, then track and watermark contents</td>
 <td></td>
 <td></td>
 <td>TA11 Persistence</td>
+<td>D5 Deceive</td>
 </tr>
 <tr>
 <td><a href="detections/F00084.md">F00084</a></td>
-<td></td>
 <td>Track individual bad actors</td>
 <td></td>
 <td></td>
 <td>TA03 Develop People</td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00085.md">F00085</a></td>
-<td></td>
 <td>detection of a weak signal through global noise</td>
+<td>Gray zone threats are challenging given that warning requires detection of a weak signal through global noise and across threat vectors and regional boundaries.Three interconnected gray zone elements characterize the nature of the activity: 
+Temporality: The nature of gray zone threats truly requires a “big picture view” over long timescales and across regions and functional topics.
+Attribution: requiring an “almost certain” or “nearly certain analytic assessment before acting costs time and analytic effort
+Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, the purpose of countering gray zone threats is to deter adversaries from fulfilling their intent to act. While attribution is one piece of the puzzle, closing the space around intent often means synthesizing multiple relevant indicators and warnings, including the state’s geopolitical ambitions, military ties, trade and investment, level of corruption, and media landscape, among others.</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td><a href="detections/F00086.md">F00086</a></td>
-<td></td>
 <td>Outpace Competitor Intelligence Capabilities</td>
-<td></td>
+<td>Develop an intelligence-based understanding of foreign actors’ motivations, psychologies, and societal and geopolitical contexts. Leverage artificial intelligence to identify patterns and infer competitors’ intent</td>
 <td></td>
 <td>TA02 Objective planning</td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00087.md">F00087</a></td>
-<td>metatechnique</td>
 <td>Improve Indications and Warning</td>
+<td>United States has not adequately adapted its information indicators and thresholds for warning policymakers to account for gray zone tactics. Competitors have undertaken a marked shift to slow-burn, deceptive, non-military, and indirect challenges to U.S. interests. Relative to traditional security indicators and warnings, these are more numerous and harder to detect and make it difficult for analysts to infer intent.</td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00088.md">F00088</a></td>
-<td>metatechnique</td>
 <td>Revitalize an “active measures working group,”</td>
+<td>Recognize campaigns from weak signals, including rivals’ intent, capability, impact, interactive effects, and impact on U.S. interests... focus on adversarial covert action aspects of campaigning.</td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00089.md">F00089</a></td>
-<td>daylight</td>
 <td>target/name/flag "grey zone" website content</td>
-<td></td>
+<td>"Gray zone" is second level of content producers and circulators, composed of outlets with uncertain attribution. This category covers conspiracy websites, far-right or far-left websites, news aggregators, and data dump websites</td>
 <td></td>
 <td>TA04 Develop Networks</td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00090.md">F00090</a></td>
-<td>metatechnique</td>
 <td>Match Punitive Tools with Third-Party Inducements</td>
-<td></td>
+<td>Bring private sector and civil society into accord on U.S. interests</td>
 <td></td>
 <td>TA01 Strategic Planning</td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00091.md">F00091</a></td>
-<td>metatechnique</td>
 <td>Partner to develop analytic methods & tools</td>
+<td>This might include working with relevant technology firms to ensure that contracted analytic support is available. Contracted support is reportedly valuable because technology to monitor social media data is continually evolving, and such firms can provide the expertise to help identify and analyze trends, and they can more effectively stay abreast of the changing systems and develop new models as they are required</td>
 <td></td>
 <td></td>
-<td></td>
+<td>D1 Detect</td>
 </tr>
 <tr>
 <td><a href="detections/F00092.md">F00092</a></td>
 <td>daylight</td>
 <td>Warn social media companies about an ongoing campaign (e.g. antivax sites). </td>
 <td></td>
-<td>I00002</td>
 <td>TA09 </td>
+<td>D1 Detect</td>
 </tr>
 </table>

@@ -34,7 +34,7 @@
 <tr>
 <td><a href="metatechniques/M006.md">M006</a></td>
 <td>scoring</td>
-<td></td>
+<td>Use a rating system</td>
 </tr>
 <tr>
 <td><a href="metatechniques/M007.md">M007</a></td>
@@ -59,7 +59,7 @@
 <tr>
 <td><a href="metatechniques/M011.md">M011</a></td>
 <td>verification</td>
-<td></td>
+<td>Verify objects, content, connections etc. Includes fact-checking</td>
 </tr>
 <tr>
 <td><a href="metatechniques/M012.md">M012</a></td>
@@ -69,6 +69,11 @@
 <tr>
 <td><a href="metatechniques/M013.md">M013</a></td>
 <td>targeting</td>
-<td></td>
+<td>Target the components of a disinformation campaign</td>
+</tr>
+<tr>
+<td><a href="metatechniques/M014.md">M014</a></td>
+<td>reduce resources</td>
+<td>Reduce the resources available to disinformation creators</td>
 </tr>
 </table>

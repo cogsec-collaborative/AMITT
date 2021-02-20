@@ -1,14 +1,8 @@
-# {name}
-
-* **Type:** Tactic
-
-* **Name:** {name}
-
-* **Id:** {id}
+# {type} {id}: {name}
 
 * **Summary:** {summary}
 
-* **Phase:** {phase}
+* **Belongs to phase:** {phase}
 
 
 {tasks}
