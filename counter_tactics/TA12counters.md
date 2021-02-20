@@ -8,10 +8,10 @@
 
 ### D4 Degrade
 * C00148: Add random links to network graphs (needs platform_algorithms)
-* C00149: Poison the monitoring & evaluation data (needs nan)
+* C00149: Poison the monitoring & evaluation data (needs )
 
 ## by technique
 
 
 ### TA12
-* C00149: Poison the monitoring & evaluation data (needs nan)
+* C00149: Poison the monitoring & evaluation data (needs )

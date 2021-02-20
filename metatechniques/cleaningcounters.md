@@ -4,7 +4,7 @@
 
 
 ### D2 Deny
-* C00016: Social media as a privilege not right (needs nan)
+* C00016: Social media as a privilege not right (needs )
 * C00074: Identify identical content and mass deplatform (needs platform_admin,platform_admin:socialmedia)
 
 ### D3 Disrupt

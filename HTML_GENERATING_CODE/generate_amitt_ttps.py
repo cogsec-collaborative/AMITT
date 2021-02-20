@@ -38,16 +38,20 @@ Reads template files:
 * template_task.md
 * template_technique.md
 * template_incident.md
+* template_counter.md
 
 Creates markdown files: 
-* ../matrix.md
-* ../incidents.md
+* ../amitt_blue_framework.md
+* ../amitt_red_framework.md
+* ../amitt_red_framework_clickable.md
+* ../incidents_list.md
 * ../counter_tactic_counts.md
-* ../counter_metatag_counts.md
-* ../counter_resource_counts.md
+* ../metatechniques_by_responsetype.md
+* ../resources_by_responsetype.md
+* ../tactics_by_responsetype.md
 * ../counter_tactics/*counters.md
-* ../counter_metatag/*counters.md
-* ../counter_resource/*counters.md
+* ../metatechniques/*.md
+* ../resources_needed/*.md
 
 Updates markdown files:
 * ../phases/*.md
@@ -55,6 +59,11 @@ Updates markdown files:
 * ../techniques/*.md
 * ../incidents/*.md
 * ../tasks/*.md
+* ../counters/*.md
+
+Creates CSVs
+* ../generated_csvs/counters_tactics_table.csv
+* ../generated_csvs/techniques_tactics_table.csv
 
 todo: 
 * add all framework comments to the repo issues list
@@ -76,6 +85,7 @@ class Amitt:
         xlsx = pd.ExcelFile(infile)
         for sheetname in xlsx.sheet_names:
             metadata[sheetname] = xlsx.parse(sheetname)
+            metadata[sheetname].fillna('', inplace=True)
 
         # Create individual tables and dictionaries
         self.df_phases = metadata['phases']
@@ -86,6 +96,8 @@ class Amitt:
         self.df_counters[['tactic_id', 'tactic_name']] = self.df_counters['tactic'].str.split(' ', 1, expand=True)
         self.df_actors = metadata['actors']
         self.df_responsetypes = metadata['responsetypes']
+        self.df_metatechniques = metadata['metatechniques']
+        self.df_detections = metadata['detections']
         self.it = self.create_incident_technique_crosstable(metadata['incidenttechniques'])
         self.df_tactics = metadata['tactics']
 
@@ -518,30 +530,79 @@ class Amitt:
         return
 
 
-    def write_incidentlist_file(self, outfile='../incidents_list.md'):
-        # Write HTML version of incident list to markdown file
+    def write_object_indexes_to_file(self):
+        ''' Create an index file for each object type.
+        '''
 
-        html = '''# AMITT Incidents:
+        self.write_object_index_to_file(
+            'phases', ['name', 'summary'],
+            self.df_phases, '../phases_index.md')
+
+        self.write_object_index_to_file(
+            'tactics', ['name', 'summary', 'phase_id'],
+            self.df_tactics, '../tactics_index.md')
+
+        self.write_object_index_to_file(
+            'techniques', ['name', 'summary', 'tactic_id'],
+            self.df_techniques, '../techniques_index.md')
+
+        self.write_object_index_to_file(
+            'tasks', ['name', 'summary', 'tactic_id'],
+            self.df_tasks, '../tasks_index.md')
+
+        self.write_object_index_to_file(
+            'response types', ['name', 'summary'],
+            self.df_responsetypes, '../responsetype_index.md')
+
+        self.write_object_index_to_file(
+            'metatechniques', ['name', 'summary'],
+            self.df_metatechniques, '../metatechniques_index.md')
+
+        self.write_object_index_to_file(
+            'actors', ['name', 'summary'],
+            self.df_actors, '../actors_index.md')
+
+        self.write_object_index_to_file(
+            'detections', ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
+            self.df_detections, '../detections_index.md')
+
+        self.write_object_index_to_file(
+            'counters', ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
+            self.df_counters, '../counters_index.md')
+
+        self.write_object_index_to_file(
+            'incidents', ['name', 'type', 'Year Started', 'To country', 'Found via'],
+            self.df_incidents, '../incidents_index.md')
+
+        return
+
+
+    def write_object_index_to_file(self, objectname, objectcols, dfobject, outfile):
+        ''' Write HTML version of incident list to markdown file
+
+        Assumes that dfobject has columns named 'id' and 'name'
+        '''
+
+        html = '''# AMITT {}:
 
 <table border="1">
 <tr>
-'''
+'''.format(objectname.capitalize())
 
-        cols = ['name', 'type', 'Year Started', 'From country', 'To country',
-                'Found via']
-
+        # Create header row
         html += '<th>{}</th>\n'.format('id')
-        for col in cols:
-            html += '<th>{}</th>\n'.format(col)
+        html += ''.join(['<th>{}</th>\n'.format(col) for col in objectcols])
         html += '</tr>\n'
 
-        for index, row in self.df_incidents[self.df_incidents['name'].notnull()].iterrows():
+        # Add row for each object
+        for index, row in dfobject[dfobject['name'].notnull()].iterrows():
             html += '<tr>\n'
-            html += '<td><a href="incidents/{0}.md">{0}</a></td>\n'.format(row['id'])
-            for col in cols:
-                    html += '<td>{}</td>\n'.format(row[col])
+            html += '<td><a href="{0}/{1}.md">{1}</a></td>\n'.format(objectname, row['id'])
+            html += ''.join(['<td>{}</td>\n'.format(row[col]) for col in objectcols])
             html += '</tr>\n'
         html += '</table>\n'
+
+        # Write file
         with open(outfile, 'w') as f:
             f.write(html)
             print('updated {}'.format(outfile))
@@ -633,7 +694,7 @@ function handleTechniqueClick(box) {
     def generate_and_write_datafiles(self):
 
         self.update_markdown_files()
-        self.write_incidentlist_file()
+        self.write_object_indexes_to_file()
         self.write_amitt_red_framework_file()
         self.write_amitt_blue_framework_file()
         self.write_clickable_amitt_red_framework_file()

@@ -11,6 +11,16 @@
 <td>D6 Destroy</td>
 <td>D7 Deter</td>
 <td>TOTALS</td></tr><tr>
+<td><a href="resources_needed/counters.md"></a></td>
+<td>4</td>
+<td>34</td>
+<td>42</td>
+<td>19</td>
+<td>3</td>
+<td>2</td>
+<td>13</td>
+<td></td></tr>
+<tr>
 <td><a href="resources_needed/DHScounters.md">DHS</a></td>
 <td> </td>
 <td> </td>
