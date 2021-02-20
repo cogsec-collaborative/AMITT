@@ -187,7 +187,7 @@
 </tr>
 <tr>
 <td><a href="counters/C00024.md">C00024</a></td>
-<td>Promote constructive narratives i.e. not polarising.  Pro-life, pro-choice, or pro-USA?</td>
+<td>Promote constructive narratives i.e. not polarising. Pro-life, pro-choice, or pro-USA?</td>
 <td></td>
 <td>M001 - resilience</td>
 <td>TA01 Strategic Planning</td>
@@ -253,7 +253,7 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 </tr>
 <tr>
 <td><a href="counters/C00032.md">C00032</a></td>
-<td>Hijack content and link to truth- based info  (platform) </td>
+<td>Hijack content and link to truth- based info (platform) </td>
 <td></td>
 <td>M002 - diversion</td>
 <td>TA02 Objective Planning</td>
@@ -556,7 +556,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00073.md">C00073</a></td>
 <td>Educate on how to handle info pollution. Push out targeted education on why it's pollution</td>
-<td>Strategic planning included as innoculating population has strategic value.  Example is the "Learn to Discern" Program, funded by the Canadian government, operated in Ukraine from July 2015 to March 2016. The program trained 15,000 Ukrainians in ‘’safe, informed media consumption techniques,’’ including avoiding emotional manipulation, verifying sources, identifying hate speech, verifying expert credentials, detecting censorship, and debunking news, photos, and videos."</td>
+<td>Strategic planning included as innoculating population has strategic value. Example is the "Learn to Discern" Program, funded by the Canadian government, operated in Ukraine from July 2015 to March 2016. The program trained 15,000 Ukrainians in ‘’safe, informed media consumption techniques,’’ including avoiding emotional manipulation, verifying sources, identifying hate speech, verifying expert credentials, detecting censorship, and debunking news, photos, and videos."</td>
 <td>M001 - resilience</td>
 <td>TA06 Develop Content</td>
 <td>D2 Deny</td>
@@ -853,7 +853,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00112.md">C00112</a></td>
 <td>"Prove they are not an op!"</td>
-<td>This applies to the entirety of the matrix as I read this as "create  awareness around the use of all of these techniques"</td>
+<td>This applies to the entirety of the matrix as I read this as "create awareness around the use of all of these techniques"</td>
 <td>M004 - friction</td>
 <td>TA08 Pump Priming</td>
 <td>D2 Deny</td>
@@ -1109,7 +1109,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00148.md">C00148</a></td>
 <td>Add random links to network graphs</td>
-<td>If creators are using network analysis to determine how to attack networks, then adding random extra links to those networks might throw that analysis out enough to change attack outcomes.  Unsure which AMITT techniques.</td>
+<td>If creators are using network analysis to determine how to attack networks, then adding random extra links to those networks might throw that analysis out enough to change attack outcomes. Unsure which AMITT techniques.</td>
 <td>M008 - data pollution</td>
 <td>TA12 Measure Effectiveness</td>
 <td>D4 Degrade</td>
@@ -1245,7 +1245,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00167.md">C00167</a></td>
 <td>Deploy Information and Narrative-Building in Service of Statecraft</td>
-<td>Promote a narrative of transparency, truthfulness, liberal values, and democracy. Implement a compelling narrative via effective mechanisms of communication.  Continually reassess U.S. messages, mechanisms, and audiences over time. Counteract efforts to manipulate media, undermine free markets, and suppress political freedoms via public diplomacy</td>
+<td>Promote a narrative of transparency, truthfulness, liberal values, and democracy. Implement a compelling narrative via effective mechanisms of communication. Continually reassess U.S. messages, mechanisms, and audiences over time. Counteract efforts to manipulate media, undermine free markets, and suppress political freedoms via public diplomacy</td>
 <td>M010 - countermessaging</td>
 <td>TA06 Develop Content</td>
 <td>D2 Deny</td>

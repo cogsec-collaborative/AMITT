@@ -352,7 +352,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <tr>
 <td><a href="detections/F00043.md">F00043</a></td>
 <td>Monitor for creation of fake known personas</td>
-<td></td>
+<td>Platform companies and some information security companies (e.g. ZeroFox) do this. </td>
 <td></td>
 <td>TA07 Channel Selection</td>
 <td>D1 Detect</td>
@@ -490,7 +490,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <tr>
 <td><a href="detections/F00060.md">F00060</a></td>
 <td>Identify susceptible influencers</td>
-<td>I assume this was a transcript error. Otherwise, "Identify Susceptible Influences" as in the various methods of influences that may work against a victim could also be a technique.  Nope, wasn't a transcript error: original note says influencers, as in find people of influence that might be targetted. </td>
+<td>I assume this was a transcript error. Otherwise, "Identify Susceptible Influences" as in the various methods of influences that may work against a victim could also be a technique. Nope, wasn't a transcript error: original note says influencers, as in find people of influence that might be targetted. </td>
 <td></td>
 <td>TA10 Go Physical</td>
 <td>D1 Detect</td>
@@ -750,7 +750,7 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <tr>
 <td><a href="detections/F00092.md">F00092</a></td>
 <td>daylight</td>
-<td>Warn social media companies about an ongoing campaign (e.g. antivax sites). </td>
+<td>Warn social media companies about an ongoing campaign (e.g. antivax sites).  Anyone with datasets or data summaries can help with this</td>
 <td></td>
 <td>TA09 </td>
 <td>D1 Detect</td>

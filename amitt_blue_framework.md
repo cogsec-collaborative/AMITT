@@ -74,7 +74,7 @@
 </tr>
 <tr>
 <td><a href="counters/C00006.md">C00006 Charge for social media</a></td>
-<td><a href="counters/C00032.md">C00032 Hijack content and link to truth- based info  (platform) </a></td>
+<td><a href="counters/C00032.md">C00032 Hijack content and link to truth- based info (platform) </a></td>
 <td><a href="counters/C00039.md">C00039 Standard reporting for false profiles</a></td>
 <td><a href="counters/C00053.md">C00053 Delete old accounts / Remove unused social media accounts</a></td>
 <td><a href="counters/C00068.md">C00068 Expose online funding as fake</a></td>
@@ -325,7 +325,7 @@
 <td> </td>
 </tr>
 <tr>
-<td><a href="counters/C00024.md">C00024 Promote constructive narratives i.e. not polarising.  Pro-life, pro-choice, or pro-USA?</a></td>
+<td><a href="counters/C00024.md">C00024 Promote constructive narratives i.e. not polarising. Pro-life, pro-choice, or pro-USA?</a></td>
 <td> </td>
 <td> </td>
 <td> </td>

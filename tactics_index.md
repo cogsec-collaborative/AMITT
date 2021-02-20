@@ -50,7 +50,7 @@
 <tr>
 <td><a href="tactics/TA07.md">TA07</a></td>
 <td>Channel Selection</td>
-<td>Set up specific delivery, amplification and manipulation channels for incident, including channels to attack. Each channel serves as an atomic surface (test bed) location/site for adversary to hide/conceal the work/content that goes into setting up for this channel and/or other specific platforms.  Contributes to building out a connected ecosystem where this channel can operate as part of a whole campaign/incident</td>
+<td>Set up specific delivery, amplification and manipulation channels for incident, including channels to attack. Each channel serves as an atomic surface (test bed) location/site for adversary to hide/conceal the work/content that goes into setting up for this channel and/or other specific platforms. Contributes to building out a connected ecosystem where this channel can operate as part of a whole campaign/incident</td>
 <td>P02</td>
 </tr>
 <tr>

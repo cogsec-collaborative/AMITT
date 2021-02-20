@@ -159,7 +159,7 @@ Asset needed to direct/control/manage "conversation" connected to launching new 
 <tr>
 <td><a href="techniques/T0022.md">T0022</a></td>
 <td>Conspiracy narratives</td>
-<td>"Conspiracy narratives appeal to the human desire for explanatory order, by invoking the participation of poweful (often sinister) actors in pursuit of their own political goals. These narratives are especially appealing when an audience is low-information, marginalized or otherwise inclined to reject the prevailing explanation. Conspiracy narratives are an important component of the ""firehose of falsehoods"" model.   
+<td>"Conspiracy narratives appeal to the human desire for explanatory order, by invoking the participation of poweful (often sinister) actors in pursuit of their own political goals. These narratives are especially appealing when an audience is low-information, marginalized or otherwise inclined to reject the prevailing explanation. Conspiracy narratives are an important component of the ""firehose of falsehoods"" model. 
 
 Example: QAnon: conspiracy theory is an explanation of an event or situation that invokes a conspiracy by sinister and powerful actors, often political in motivation, when other explanations are more probable "</td>
 <td>TA06</td>
@@ -402,8 +402,8 @@ Examples of tertiary sites include Russia Insider, The Duran, geopolitica.ru, Mi
 <td><a href="techniques/T0059.md">T0059</a></td>
 <td>Play the long game</td>
 <td>Play the long game can mean a couple of things:
-1.  To plan messaging and allow it to grow organically without conducting your own amplification.  This is methodical and slow and requires years for the message to take hold (e.g. China and its constant messaging that Taiwan and Hong Kong are part of one China).
-2.  To develop a series of seemingly disconnected messaging narratives that eventually combine into a new narrative.</td>
+1. To plan messaging and allow it to grow organically without conducting your own amplification. This is methodical and slow and requires years for the message to take hold (e.g. China and its constant messaging that Taiwan and Hong Kong are part of one China).
+2. To develop a series of seemingly disconnected messaging narratives that eventually combine into a new narrative.</td>
 <td>TA11</td>
 </tr>
 <tr>
