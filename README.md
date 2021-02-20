@@ -24,7 +24,7 @@ All the entities used to create the Red Team and Blue Team frameworks:
 
 There's a directory for each of these, containing a datasheet for each individual entity (e.g. [technique T0046 Search Engine Optimization](techniques/T0046.md)).  
 
-YOU CAN ADD INFORMATION TO THESE FILES.
+**YOU CAN ADD INFORMATION TO THESE FILES.**
 * The details above "DO NOT EDIT ABOVE THIS LINE" are generated and will be overwritten every time we run the update code; anything you write above that line will be lost
 * The details below "DO NOT EDIT ABOVE THIS LINE" are saved every time we run the update code. You can safely add notes below that line. 
 
@@ -33,20 +33,25 @@ YOU CAN ADD INFORMATION TO THESE FILES.
 
 ## Using the Raw Data file
 
-If you want to do your own thing with AMITT data, all the master data for it is in directory [AMITT_MASTER_DATA](AMITT_MASTER_DATA). Look for the [AMITT_TTPs_MASTER.xlsx](AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx) spreadsheet. This contains disinformation creators' tactics, techniques, tasks, phases, and counters. 
+If you want to do your own thing with AMITT data, these will help:
+* all the master data for it is in directory [AMITT_MASTER_DATA](AMITT_MASTER_DATA). Look for the [AMITT_TTPs_MASTER.xlsx](AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx) spreadsheet. This contains disinformation creators' tactics, techniques, tasks, phases, and counters. 
 
-The [AMITT TTP Guide](https://docs.google.com/document/d/1Kc0O7owFyGiYs8N8wSq17gRUPEDQsD5lLUL_3KGCgRE/edit#) has more detailed information on each technique. 
+* The [AMITT TTP Guide](https://docs.google.com/document/d/1Kc0O7owFyGiYs8N8wSq17gRUPEDQsD5lLUL_3KGCgRE/edit#) has more detailed information on each technique. 
 
-The code to create all the HTML datasheets is in directory [HTML_GENERATING_CODE](HTML_GENERATING_CODE). If you have your own version of this repository and update AMITT_TTPs_MASTER.xlsx, typing "python generate_amitt_ttps.py" will update all the files above from it. 
+* The code to create all the HTML datasheets is in directory [HTML_GENERATING_CODE](HTML_GENERATING_CODE): you'll need generate_amitt_ttps.py and all the template files. 
+
+If you have your own version of this repository and update AMITT_TTPs_MASTER.xlsx, typing "python generate_amitt_ttps.py" will update all the files above from it. 
 
 
 ## Who's Responsible for AMITT
 
-AMITT is currently maintained by the [CogSecCollab](http://cogsec-collab.org/), who've used it in the CTI League's Covid19 responses, and tested it in trials with NATO, the EU, and several other countries' disinformation units.
+* **[CogSecCollab](http://cogsec-collab.org/)** maintains and updates the AMITT family of models: AMITT-STIX, the AMITT Red framework (of disinformation creation), and the AMITT Blue framework (of disinformation countermeasures and mitigations). We've used AMITT in the CTI League's Covid19 responses, and tested it in trials with NATO, the EU, and several other countries' disinformation units. Pablo Breuer and SJ Terp are the current design authorities for the AMITT models.
 
-The AMITT Framework and Countermeasures were created by the Credibility Coalition's [Misinfosec working group](https://github.com/credcoalition/community-site/wiki/Working-Groups). The Framework was started in December 2018 and refined in a Credibility Coalition Misinfosec seminar; the collection of potential disinformation countermeasures was started at a Credibility Coalition Misinfosec seminar in November 2019.  
+* **MisinfosecWG**, aka the Credibility Coalition's [Misinfosec working group](https://github.com/credcoalition/community-site/wiki/Working-Groups) created the original AMITT frameworks. The Red Framework was started in December 2018, and refined in a Credibility Coalition Misinfosec seminar; the Blue Framework was started as a collection of potential disinformation countermeasures, at a Coalition Misinfosec seminar in November 2019. CogSecCollab is the nonprofit that spun out of MisinfosecWG. 
 
-We would like to thank everyone who's contributed to, and continues to contribute to AMITT over the years.  We'd also love any and all suggestions for improvements, comments and offers of help - either reach out to us, or add to this repo's [issues list](https://github.com/cogsec-collaborative/AMITT/issues). (We're also going back through the [original issues list](https://github.com/misinfosecproject/amitt_framework/issues) too)
+* **Everyone who contributes to AMITT** (and there are many of you). Thank you to everyone who contributes to AMITT, and has contributed to AMITT over the years.  
+
+* **You**.  We love any and all suggestions for improvements, comments and offers of help - either reach out to us, or add to this repo's [issues list](https://github.com/cogsec-collaborative/AMITT/issues). (We're also going back through the [original issues list](https://github.com/misinfosecproject/amitt_framework/issues))
 
 
 AMITT is licensed under [CC-BY-4.0](LICENSE.md)
