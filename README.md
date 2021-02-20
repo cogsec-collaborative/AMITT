@@ -21,7 +21,7 @@ All the entities used to create the Red Team and Blue Team frameworks:
 * [Actors](actors_index.md): resources needed to run countermeasures
 * [Response types](responsetype_index.md): the course-of-action categories we used to create counters
 * [Metatechniques](metatechniques_index.md): a higher-level grouping for countermeasures
-* [Incidents](incidents_list.md): incident descriptions used to create the AMITT frameworks
+* [Incidents](incidents_index.md): incident descriptions used to create the AMITT frameworks
 
 There's a directory for each of these, containing a datasheet for each individual entity (e.g. [technique T0046 Search Engine Optimization](techniques/T0046.md)).  There's also a directory [generated_csvs](generated_csvs) containing any CSV files we generate from the above tables. 
 
