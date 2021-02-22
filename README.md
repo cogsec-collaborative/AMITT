@@ -49,7 +49,7 @@ If you have your own version of this repository and update AMITT_TTPs_MASTER.xls
 
 * **Everyone who contributes to AMITT** (and there are many of you). Thank you to everyone who contributes to AMITT, and has contributed to AMITT over the years.  
 
-* **You**.  We love any and all suggestions for improvements, comments and offers of help - either reach out to us, or add to this repo's [issues list](https://github.com/cogsec-collaborative/AMITT/issues). (We're also going back through the [original issues list](https://github.com/misinfosecproject/amitt_framework/issues))
+* **You**.  We love any and all suggestions for improvements, comments and offers of help - either reach out to us using [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdZuyKFp1UZzk6qUE4IN1O14HaJ-F4TH9thxR3hrRU-Mu7QUQ/viewform), or if you're comfortable with Github, add to this repo's [issues list](https://github.com/cogsec-collaborative/AMITT/issues) or fork the repo with corrections. (We're also going back through the [original issues list](https://github.com/misinfosecproject/amitt_framework/issues))
 
 
 AMITT is licensed under [CC-BY-4.0](LICENSE.md)
