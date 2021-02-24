@@ -21,33 +21,33 @@
 </tr>
 <tr>
 <td><a href="../tactics/TA02.md">TA02 Objective Planning</a></td>
-<td>2</td>
-<td>5</td>
+<td>3</td>
+<td>7</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
-<td>8</td>
+<td>11</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA03.md">TA03 Develop People</a></td>
 <td>9</td>
-<td>6</td>
+<td>5</td>
 <td>1</td>
 <td>1</td>
 <td>1</td>
 <td>1</td>
-<td>19</td>
+<td>18</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA04.md">TA04 Develop Networks</a></td>
 <td>6</td>
-<td>2</td>
+<td>1</td>
 <td>2</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
-<td>11</td>
+<td>10</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA05.md">TA05 Microtargeting</a></td>
@@ -61,8 +61,8 @@
 </tr>
 <tr>
 <td><a href="../tactics/TA06.md">TA06 Develop Content</a></td>
-<td>13</td>
-<td>8</td>
+<td>12</td>
+<td>9</td>
 <td>5</td>
 <td>2</td>
 <td>0</td>
@@ -132,11 +132,11 @@
 <tr>
 <td>TOTALS</td>
 <td>59</td>
-<td>65</td>
+<td>66</td>
 <td>28</td>
 <td>4</td>
 <td>2</td>
 <td>14</td>
-<td>172</td>
+<td>173</td>
 </tr>
 </table>

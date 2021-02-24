@@ -72,12 +72,12 @@
 <tr>
 <td><a href="../metatechniques/M007.md">M007 metatechnique</a></td>
 <td>2</td>
-<td>8</td>
+<td>9</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>3</td>
-<td>13</td>
+<td>14</td>
 </tr>
 <tr>
 <td><a href="../metatechniques/M008.md">M008 data pollution</a></td>
@@ -152,11 +152,11 @@
 <tr>
 <td>TOTALS</td>
 <td>59</td>
-<td>65</td>
+<td>66</td>
 <td>28</td>
 <td>4</td>
 <td>2</td>
 <td>14</td>
-<td>172</td>
+<td>173</td>
 </tr>
 </table>

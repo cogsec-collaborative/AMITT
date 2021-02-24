@@ -147,8 +147,8 @@
 </tr>
 <tr>
 <td><a href="counters/C00028.md">C00028</a></td>
-<td>Blockchain audit log and validation with collaborative decryption to post comments</td>
-<td>Use blockchain technology to require collaborative validation before posts or comments are submitted.
+<td>Make information provenance available</td>
+<td>Blockchain audit log and validation with collaborative decryption to post comments.  Use blockchain technology to require collaborative validation before posts or comments are submitted.
 
 This could be used to adjust upvote weight via a trust factor of people and organisations you trust, or other criteria.</td>
 <td>M011 - verification</td>
@@ -184,7 +184,7 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>Hijack content and link to truth- based info (platform) </td>
 <td></td>
 <td>M002 - diversion</td>
-<td>TA02 Objective Planning</td>
+<td>TA06 Develop Content</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -341,10 +341,10 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 </tr>
 <tr>
 <td><a href="counters/C00060.md">C00060</a></td>
-<td>Enhanced legal enforcement against for-profit follower/engagement factories</td>
+<td>Legal action against for-profit engagement factories</td>
 <td></td>
 <td>M013 - targeting</td>
-<td>TA04 Develop Networks</td>
+<td>TA02 Objective Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -405,8 +405,10 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 </tr>
 <tr>
 <td><a href="counters/C00070.md">C00070</a></td>
-<td>Block access to platform. DDOS an attacker.</td>
-<td>TA02*: DDOS at the critical time (ie. midterm-2018 elections DDOS against troll farms) to deny an adversary's time-bound objective.
+<td>Block access to disinformation resources</td>
+<td>Resources = accounts, channels etc.  Block access to platform. DDOS an attacker.
+
+TA02*: DDOS at the critical time (ie. midterm-2018 elections DDOS against troll farms) to deny an adversary's time-bound objective.
 
 T0008: A quick response to a proto-viral story will affect it's ability to spread and raise questions about their legitimacy.
 
@@ -414,7 +416,7 @@ Hashtag: Against the platform, by drowning the hashtag.
 
 T0046 - Search Engine Optimization: Sub-optimal website performance affect its search engine rank, which I interpret as "blocking access to a platform".</td>
 <td>M005 - removal</td>
-<td>TA06 Develop Content</td>
+<td>TA02 Objective Planning</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
@@ -1103,7 +1105,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>compatriot policy</td>
 <td>protect the interests of this population and, more importantly, influence the population to support pro-Russia causes and effectively influence the politics of its neighbors</td>
 <td>M013 - targeting</td>
-<td>TA03 Develop People</td>
+<td>TA02 Objective Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -1308,8 +1310,8 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00207.md">C00207</a></td>
-<td>tit-for-tat campaign</td>
-<td>As used by Saudis? </td>
+<td>Run a competing disinformation campaign - not recommended</td>
+<td>E.g. Saudi tit-for-tat campaign </td>
 <td>M013 - targeting</td>
 <td>TA02 Objective Planning</td>
 <td>D7 Deter</td>
@@ -1400,6 +1402,14 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Include PACE plans - Primary, Alternate, Contingency, Emergency</td>
 <td>M007 - metatechnique</td>
 <td>TA01 Strategic Planning</td>
+<td>D3 Disrupt</td>
+</tr>
+<tr>
+<td><a href="counters/C00222.md">C00222</a></td>
+<td>Tabletop simulations</td>
+<td></td>
+<td>M007 - metatechnique</td>
+<td>TA02 Objective Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 </table>

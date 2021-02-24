@@ -36,7 +36,7 @@
 <td><a href="counters/C00035.md">C00035 Friction</a></td>
 <td><a href="counters/C00051.md">C00051 Phishing prevention education etc</a></td>
 <td><a href="counters/C00065.md">C00065 Ban political ads</a></td>
-<td><a href="counters/C00070.md">C00070 Block access to platform. DDOS an attacker.</a></td>
+<td><a href="counters/C00032.md">C00032 Hijack content and link to truth- based info (platform) </a></td>
 <td><a href="counters/C00098.md">C00098 Revocation of "verified"</a></td>
 <td><a href="counters/C00113.md">C00113 Debunk and defuse a fake expert / credentials. Attack audience quality of fake expert</a></td>
 <td><a href="counters/C00123.md">C00123 Bot control</a></td>
@@ -46,7 +46,7 @@
 </tr>
 <tr>
 <td><a href="counters/C00010.md">C00010 Enhanced privacy regulation for social media</a></td>
-<td><a href="counters/C00028.md">C00028 Blockchain audit log and validation with collaborative decryption to post comments</a></td>
+<td><a href="counters/C00028.md">C00028 Make information provenance available</a></td>
 <td><a href="counters/C00036.md">C00036 Infiltrate the in-group to discredit leaders (divide)</a></td>
 <td><a href="counters/C00052.md">C00052 Infiltrate platforms</a></td>
 <td><a href="counters/C00066.md">C00066 Co-opt a hashtag and drown it out (hijack it back)</a></td>
@@ -102,7 +102,7 @@
 </tr>
 <tr>
 <td><a href="counters/C00016.md">C00016 Censorship - not recommended</a></td>
-<td><a href="counters/C00032.md">C00032 Hijack content and link to truth- based info (platform) </a></td>
+<td><a href="counters/C00060.md">C00060 Legal action against for-profit engagement factories</a></td>
 <td><a href="counters/C00043.md">C00043 Detect hijacked accounts and reallocate them </a></td>
 <td><a href="counters/C00059.md">C00059 Verification of project before posting (counters funding campaigns)</a></td>
 <td><a href="counters/C00216.md">C00216 Use advertiser controls to stem flow of funds to bad actors</a></td>
@@ -116,9 +116,9 @@
 </tr>
 <tr>
 <td><a href="counters/C00017.md">C00017 Repair broken social connections</a></td>
-<td><a href="counters/C00207.md">C00207 tit-for-tat campaign</a></td>
+<td><a href="counters/C00070.md">C00070 Block access to disinformation resources</a></td>
 <td><a href="counters/C00044.md">C00044 Keep people from posting to social media immediately</a></td>
-<td><a href="counters/C00060.md">C00060 Enhanced legal enforcement against for-profit follower/engagement factories</a></td>
+<td><a href="counters/C00062.md">C00062 Free open library sources worldwide</a></td>
 <td> </td>
 <td><a href="counters/C00077.md">C00077 Active defence: replay "develop people"</a></td>
 <td><a href="counters/C00105.md">C00105 Buy more advertising than the adversary to shift influence and algorithms</a></td>
@@ -130,9 +130,9 @@
 </tr>
 <tr>
 <td><a href="counters/C00019.md">C00019 Reduce effect of division-enablers</a></td>
-<td> </td>
+<td><a href="counters/C00164.md">C00164 compatriot policy</a></td>
 <td><a href="counters/C00045.md">C00045 S4d detection and re-allocation approaches</a></td>
-<td><a href="counters/C00062.md">C00062 Free open library sources worldwide</a></td>
+<td><a href="counters/C00152.md">C00152 “name and shame”</a></td>
 <td> </td>
 <td><a href="counters/C00078.md">C00078 Change Search Algorithms for Disinformation Content. More specifically, change image search algorithms for hate groups and extremists</a></td>
 <td><a href="counters/C00106.md">C00106 Click-bait centrist content</a></td>
@@ -144,9 +144,9 @@
 </tr>
 <tr>
 <td><a href="counters/C00021.md">C00021 Encourage in-person communication</a></td>
-<td> </td>
+<td><a href="counters/C00207.md">C00207 Run a competing disinformation campaign - not recommended</a></td>
 <td><a href="counters/C00046.md">C00046 Marginalise and discredit extremist</a></td>
-<td><a href="counters/C00152.md">C00152 “name and shame”</a></td>
+<td><a href="counters/C00162.md">C00162 collect data/map constellations of Russian“civil society”. Unravel/target the Potemkin villages</a></td>
 <td> </td>
 <td><a href="counters/C00079.md">C00079 Change search algorithms for hate and extremist queries to show content sympathetic to opposite side</a></td>
 <td><a href="counters/C00107.md">C00107 Content moderation</a></td>
@@ -158,9 +158,9 @@
 </tr>
 <tr>
 <td><a href="counters/C00022.md">C00022 Innoculate. Positive campaign to promote feeling of safety</a></td>
-<td> </td>
+<td><a href="counters/C00222.md">C00222 Tabletop simulations</a></td>
 <td><a href="counters/C00047.md">C00047 Coordinated inauthentics</a></td>
-<td><a href="counters/C00162.md">C00162 collect data/map constellations of Russian“civil society”. Unravel/target the Potemkin villages</a></td>
+<td> </td>
 <td> </td>
 <td><a href="counters/C00080.md">C00080 Create competing narrative</a></td>
 <td><a href="counters/C00109.md">C00109 De-escalation</a></td>
@@ -229,7 +229,7 @@
 <tr>
 <td><a href="counters/C00153.md">C00153 Take pre-emptive action against actors' infrastructure</a></td>
 <td> </td>
-<td><a href="counters/C00164.md">C00164 compatriot policy</a></td>
+<td><a href="counters/C00179.md">C00179 Identify, monitor, and, if necessary, target Russia-based nonattributed social media accounts </a></td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00086.md">C00086 Distract from noise with addictive content</a></td>
@@ -243,7 +243,7 @@
 <tr>
 <td><a href="counters/C00159.md">C00159 Have a disinformation response plan</a></td>
 <td> </td>
-<td><a href="counters/C00179.md">C00179 Identify, monitor, and, if necessary, target Russia-based nonattributed social media accounts </a></td>
+<td><a href="counters/C00189.md">C00189 Ongoing analysis/monitoring of "flagged" profiles</a></td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00087.md">C00087 Make more noise</a></td>
@@ -257,7 +257,7 @@
 <tr>
 <td><a href="counters/C00161.md">C00161 Coalition Building and Third-Party Inducements:</a></td>
 <td> </td>
-<td><a href="counters/C00189.md">C00189 Ongoing analysis/monitoring of "flagged" profiles</a></td>
+<td><a href="counters/C00197.md">C00197 remove suspicious facebook accounts</a></td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00088.md">C00088 Poison pill recasting of message</a></td>
@@ -271,7 +271,7 @@
 <tr>
 <td><a href="counters/C00170.md">C00170 elevate information as a critical domain of statecraft</a></td>
 <td> </td>
-<td><a href="counters/C00197.md">C00197 remove suspicious facebook accounts</a></td>
+<td> </td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00089.md">C00089 Throttle number of forwards</a></td>
