@@ -10,50 +10,10 @@
 <th>responsetype</th>
 </tr>
 <tr>
-<td><a href="counters/C00001.md">C00001</a></td>
-<td>Better models of info spread up the layers</td>
-<td></td>
-<td>M007 - metatechnique</td>
-<td>TA01 Strategic Planning</td>
-<td>ALL</td>
-</tr>
-<tr>
-<td><a href="counters/C00003.md">C00003</a></td>
-<td>How can we safeguard against extremists using the tools that we will produce?</td>
-<td></td>
-<td>M007 - metatechnique</td>
-<td>TA01 Strategic Planning</td>
-<td>ALL</td>
-</tr>
-<tr>
-<td><a href="counters/C00004.md">C00004</a></td>
-<td>Managing like a chronic disease</td>
-<td></td>
-<td>M007 - metatechnique</td>
-<td>TA01 Strategic Planning</td>
-<td>ALL</td>
-</tr>
-<tr>
-<td><a href="counters/C00005.md">C00005</a></td>
-<td>Policy: makers, terminology, elements: a) broad, b) specific</td>
-<td></td>
-<td>M007 - metatechnique</td>
-<td>TA01 Strategic Planning</td>
-<td>ALL</td>
-</tr>
-<tr>
 <td><a href="counters/C00006.md">C00006</a></td>
 <td>Charge for social media</td>
-<td>No corresponding AMITT technique. </td>
+<td>Include a paid-for privacy option, e.g. pay Facebook for an option of them not collecting your personal information.  There are examples of this not work, e.g. most people don’t use proton mail etc. </td>
 <td>M004 - friction</td>
-<td>TA01 Strategic Planning</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
-<td><a href="counters/C00007.md">C00007</a></td>
-<td>Create framework for BetterBusinessBureau (BBB) for news media</td>
-<td>No corresponding AMITT technique.</td>
-<td>M006 - scoring</td>
 <td>TA01 Strategic Planning</td>
 <td>D2 Deny</td>
 </tr>
@@ -63,20 +23,20 @@
 <td>Snopes is best-known example</td>
 <td>M006 - scoring</td>
 <td>TA01 Strategic Planning</td>
-<td>D2 Deny</td>
+<td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00009.md">C00009</a></td>
 <td>Educate high profile influencers on best practices</td>
 <td></td>
 <td>M001 - resilience</td>
-<td>TA01 Strategic Planning</td>
+<td>TA02 Objective Planning</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
 <td><a href="counters/C00010.md">C00010</a></td>
 <td>Enhanced privacy regulation for social media</td>
-<td>No corresponding AMITT technique. </td>
+<td>Privacy standards</td>
 <td>M004 - friction</td>
 <td>TA01 Strategic Planning</td>
 <td>D2 Deny</td>
@@ -86,21 +46,21 @@
 <td>Media literacy. Games to identify fake news</td>
 <td></td>
 <td>M001 - resilience</td>
-<td>TA01 Strategic Planning</td>
+<td>TA02 Objective Planning</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
 <td><a href="counters/C00012.md">C00012</a></td>
 <td>Platform regulation</td>
-<td></td>
+<td>Empower existing regulators to govern social media. Also covers Destroy. </td>
 <td>M007 - metatechnique</td>
 <td>TA01 Strategic Planning</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
 <td><a href="counters/C00013.md">C00013</a></td>
-<td>Rating framework for news - full transcripts, link source, add items, BBB for news</td>
-<td>Technique should be in terms of "strategic innoculation", raising the standards of what people expect in terms of evidence when consuming news. No corresponding AMITT technique. </td>
+<td>Rating framework for news</td>
+<td>This is "strategic innoculation", raising the standards of what people expect in terms of evidence when consuming news. Example: journalistic ethics, or journalistic licensing body.  Include full transcripts, link source, add items. </td>
 <td>M006 - scoring</td>
 <td>TA01 Strategic Planning</td>
 <td>D2 Deny</td>
@@ -110,7 +70,7 @@
 <td>Real-time updates to fact-checking database</td>
 <td>existing examples at Buzzfeed and Fema, especially during disasters</td>
 <td>M006 - scoring</td>
-<td>TA01 Strategic Planning</td>
+<td>TA06 Develop Content</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
@@ -123,43 +83,27 @@
 </tr>
 <tr>
 <td><a href="counters/C00016.md">C00016</a></td>
-<td>Social media as a privilege not right</td>
-<td></td>
+<td>Censorship - not recommended</td>
+<td>e.g. treating social media as a privilege not right</td>
 <td>M012 - cleaning</td>
 <td>TA01 Strategic Planning</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
 <td><a href="counters/C00017.md">C00017</a></td>
-<td>Media campaign promoting in-group to out-group in person communication / activities</td>
-<td>Technique could be in terms of forcing a reality-check by talking to people instead of reading about bogeymen. No corresponding AMITT technique. </td>
+<td>Repair broken social connections</td>
+<td>For example, use a media campaign to promote in-group to out-group in person communication / activities . Technique could be in terms of forcing a reality-check by talking to people instead of reading about bogeymen. </td>
 <td>M010 - countermessaging</td>
 <td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
-<td><a href="counters/C00018.md">C00018</a></td>
-<td>Promote constructive communication by shaming division-enablers</td>
-<td>Duplicate of "Promote playbooks to call out dividers"</td>
-<td>M003 - daylight</td>
-<td>TA01 Strategic Planning</td>
-<td>D3 Disrupt</td>
-</tr>
-<tr>
 <td><a href="counters/C00019.md">C00019</a></td>
-<td>Promote playbooks to call out division-enablers</td>
-<td>Duplicate of "Promote constructive communication by shaming dividers"</td>
+<td>Reduce effect of division-enablers</td>
+<td>includes Promote constructive communication by shaming division-enablers, and Promote playbooks to call out division-enablers</td>
 <td>M003 - daylight</td>
 <td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
-</tr>
-<tr>
-<td><a href="counters/C00020.md">C00020</a></td>
-<td>Deligitimise the 24 hour news cycle</td>
-<td>Unsure</td>
-<td>M004 - friction</td>
-<td>TA01 Strategic Planning</td>
-<td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00021.md">C00021</a></td>
@@ -171,40 +115,24 @@
 </tr>
 <tr>
 <td><a href="counters/C00022.md">C00022</a></td>
-<td>Innoculate. Positive campaign to promote feeling of safety - to counter ability and fear based attacks</td>
-<td>Unsure</td>
-<td>M001 - resilience</td>
-<td>TA01 Strategic Planning</td>
-<td>D4 Degrade</td>
-</tr>
-<tr>
-<td><a href="counters/C00023.md">C00023</a></td>
-<td>Promote civility as an identity that people will defend</td>
-<td></td>
+<td>Innoculate. Positive campaign to promote feeling of safety</td>
+<td>Used to counter ability based and fear based attacks</td>
 <td>M001 - resilience</td>
 <td>TA01 Strategic Planning</td>
 <td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00024.md">C00024</a></td>
-<td>Promote constructive narratives i.e. not polarising. Pro-life, pro-choice, or pro-USA?</td>
-<td></td>
+<td>Promote healthy narratives</td>
+<td>Includes promoting constructive narratives i.e. not polarising (e.g. pro-life, pro-choice, pro-USA).  Includes promoting identity neutral narratives. </td>
 <td>M001 - resilience</td>
 <td>TA01 Strategic Planning</td>
 <td>D4 Degrade</td>
 </tr>
 <tr>
-<td><a href="counters/C00025.md">C00025</a></td>
-<td>Promote identity neutral narratives</td>
-<td></td>
-<td>M010 - countermessaging</td>
-<td>TA01 Strategic Planning</td>
-<td>D4 Degrade</td>
-</tr>
-<tr>
 <td><a href="counters/C00026.md">C00026</a></td>
-<td>Shore up democracy based messages (peace, freedom) - make it sexy</td>
-<td>Unsure</td>
+<td>Shore up democracy based messages</td>
+<td>Messages about e.g. peace, freedom. And make it sexy</td>
 <td>M010 - countermessaging</td>
 <td>TA01 Strategic Planning</td>
 <td>D4 Degrade</td>
@@ -212,7 +140,7 @@
 <tr>
 <td><a href="counters/C00027.md">C00027</a></td>
 <td>Create culture of civility</td>
-<td></td>
+<td>This is passive.  Includes promoting civility as an identity that people will defend. </td>
 <td>M001 - resilience</td>
 <td>TA01 Strategic Planning</td>
 <td>D7 Deter</td>
@@ -258,14 +186,6 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>M002 - diversion</td>
 <td>TA02 Objective Planning</td>
 <td>D3 Disrupt</td>
-</tr>
-<tr>
-<td><a href="counters/C00033.md">C00033</a></td>
-<td>Build cultural resistance to false content</td>
-<td>Cultural resistance to bullshit</td>
-<td>M001 - resilience</td>
-<td>TA03 Develop People</td>
-<td>D2 Deny</td>
 </tr>
 <tr>
 <td><a href="counters/C00034.md">C00034</a></td>
@@ -364,14 +284,6 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>D7 Deter</td>
 </tr>
 <tr>
-<td><a href="counters/C00049.md">C00049</a></td>
-<td>Influence literacy training</td>
-<td>Inoculate against "cult" recruiting</td>
-<td>M001 - resilience</td>
-<td>TA04 Develop Networks</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
 <td><a href="counters/C00050.md">C00050</a></td>
 <td>Anti-elicitation training</td>
 <td></td>
@@ -404,34 +316,10 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>D4 Degrade</td>
 </tr>
 <tr>
-<td><a href="counters/C00054.md">C00054</a></td>
-<td>Media literacy training. </td>
-<td>Leverage librarians / library for media literacy training. Covers detect, deny and degrade.</td>
-<td>M001 - resilience</td>
-<td>TA04 Develop Networks</td>
-<td>D4 Degrade</td>
-</tr>
-<tr>
-<td><a href="counters/C00055.md">C00055</a></td>
-<td>Empower existing regulators to govern social media</td>
-<td>Also covers Destroy. </td>
-<td>M007 - metatechnique</td>
-<td>TA04 Develop Networks</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
 <td><a href="counters/C00056.md">C00056</a></td>
 <td>Get off social media</td>
 <td></td>
 <td>M004 - friction</td>
-<td>TA04 Develop Networks</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
-<td><a href="counters/C00057.md">C00057</a></td>
-<td>Privacy standards</td>
-<td></td>
-<td>M006 - scoring</td>
 <td>TA04 Develop Networks</td>
 <td>D2 Deny</td>
 </tr>
@@ -456,14 +344,6 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>Enhanced legal enforcement against for-profit follower/engagement factories</td>
 <td></td>
 <td>M013 - targeting</td>
-<td>TA04 Develop Networks</td>
-<td>D3 Disrupt</td>
-</tr>
-<tr>
-<td><a href="counters/C00061.md">C00061</a></td>
-<td>Innoculating at language</td>
-<td></td>
-<td>M001 - resilience</td>
 <td>TA04 Develop Networks</td>
 <td>D3 Disrupt</td>
 </tr>
@@ -555,10 +435,10 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 </tr>
 <tr>
 <td><a href="counters/C00073.md">C00073</a></td>
-<td>Educate on how to handle info pollution. Push out targeted education on why it's pollution</td>
-<td>Strategic planning included as innoculating population has strategic value. Example is the "Learn to Discern" Program, funded by the Canadian government, operated in Ukraine from July 2015 to March 2016. The program trained 15,000 Ukrainians in ‘’safe, informed media consumption techniques,’’ including avoiding emotional manipulation, verifying sources, identifying hate speech, verifying expert credentials, detecting censorship, and debunking news, photos, and videos."</td>
+<td>Inoculate populations through media literacy training</td>
+<td>Educate on how to handle info pollution. Push out targeted education on why it's pollution.  Build cultural resistance to false content, e.g. cultural resistance to bullshit.  Influence literacy training, to inoculate against “cult” recruiting.  Media literacy training: leverage librarians / library for media literacy training. Inoculate at language.   Strategic planning included as inoculating population has strategic value. Example is the "Learn to Discern" Program, funded by the Canadian government, operated in Ukraine from July 2015 to March 2016. The program trained 15,000 Ukrainians in ‘’safe, informed media consumption techniques,’’ including avoiding emotional manipulation, verifying sources, identifying hate speech, verifying expert credentials, detecting censorship, and debunking news, photos, and videos.”  Covers detect, deny, and degrade. </td>
 <td>M001 - resilience</td>
-<td>TA06 Develop Content</td>
+<td>TA01 Strategic Planning</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
@@ -1148,7 +1028,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00153.md">C00153</a></td>
-<td>Use offensive cyber action</td>
+<td>Take pre-emptive action against actors' infrastructure</td>
 <td>Align offensive cyber action with information operations and counter disinformation approaches, where appropriate.</td>
 <td>M013 - targeting</td>
 <td>TA01 Strategic Planning</td>
@@ -1179,14 +1059,6 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>D3 Disrupt</td>
 </tr>
 <tr>
-<td><a href="counters/C00157.md">C00157</a></td>
-<td>Build alternative news sources</td>
-<td>Create alternative local-language news sources to counter local-language propaganda outlets</td>
-<td>M010 - countermessaging</td>
-<td>TA04 Develop Networks</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
 <td><a href="counters/C00158.md">C00158</a></td>
 <td>Use training to build the resilience of at-risk populations.</td>
 <td>NGO Baltic Centre for Media Excellence, with some international funding, provides training to journalists in the Baltics and conducts media literacy training in the region. In addition to helping journalists avoid becoming “unwitting multipliers of misleading information,” the organization works with school teachers in the region to help them “decode media and incorporate media research into teaching.” concepts of media literacy to a mass audience that authorities launch a public information campaign that teaches the program will take time to develop and establish impact, recommends curriculum-based training</td>
@@ -1196,8 +1068,8 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00159.md">C00159</a></td>
-<td>Campaign mindset and associated toolbox</td>
-<td>A campaign plan for the gray zone must account for U.S. vulnerabilities and strengths and must take care not to over-rely on any one tool of statecraft or line of effort. If the United States is to engage seriously in gray zone competition, it will need to identify and employ a broad spectrum of its national power to deter, compete, and counter (where necessary) other countries’ approaches. It is therefore critical that the United States understands its own capabilities, the capabilities of its adversaries, and international standards of conduct to compete in, shrink the size, and ultimately deter use of the gray zone.</td>
+<td>Have a disinformation response plan</td>
+<td>e.g. Create a campaign plan and toolkit for competition short of armed conflict (this used to be called “the grey zone”). The campaign plan should account for own vulnerabilities and strengths, and not over-rely on any one tool of statecraft or line of effort.  It will identify and employ a broad spectrum of national power to deter, compete, and counter (where necessary) other countries’ approaches, and will include understanding of own capabilities, capabilities of disinformation creators, and international standards of conduct to compete in, shrink the size, and ultimately deter use of competition short of armed conflict.</td>
 <td>M007 - metatechnique</td>
 <td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
@@ -1263,7 +1135,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>elevate information as a critical domain of statecraft</td>
 <td>Shift from reactive to proactive response, with priority on sharing relevant information with the public and mobilizing private-sector engagement. Recent advances in data-driven technologies have elevated information as a source of power to influence the political and economic environment, to foster economic growth, to enable a decision-making advantage over competitors, and to communicate securely and quickly.</td>
 <td>M007 - metatechnique</td>
-<td>TA03 Develop People</td>
+<td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -1284,16 +1156,16 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00174.md">C00174</a></td>
-<td>Free and Fair Press</td>
-<td>Create bipartisan, patriotic commitment to press freedom. </td>
+<td>Create a healthier news environment</td>
+<td>Free and fair press: create bipartisan, patriotic commitment to press freedom.  Note difference between news and editorialising.  Build alternative news sources: create alternative local-language news sources to counter local-language propaganda outlets. Delegitimize the 24 hour news cycle</td>
 <td>M007 - metatechnique</td>
-<td>TA04 Develop Networks</td>
+<td>TA01 Strategic Planning</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
 <td><a href="counters/C00176.md">C00176</a></td>
-<td>Improve Coordination with and feedback from the U.S. private sector</td>
-<td>gray zone challenges are increasingly multidisciplinary, there are few organizations within the U.S. national security structure that are equipped with the broad-spectrum capability to effectively counter Russian and Chinese gray zone tactics in real-time. Furthermore, institutional hurdles currently impede diverse subject matter experts, hailing from outside of the traditional national security and foreign policy disciplines (e.g., physical science, engineering, media, legal, and economics fields), from contributing to the direct development of national security countermeasures to emerging gray zone threat vectors. Driving key lines of interagency alignment through a Gray Zone Action Group (GZAG), akin to the Counterterrorism Security Group (CSG), in areas such as: Strategic narrative in coordination with DHS, DoS, DoD, Intelligence Community (IC), and other implementing agencies. Particular focus on the nexus of cyber and information operations;</td>
+<td>Improve Coordination amongst stakeholders: public and private</td>
+<td>Coordinated disinformation challenges are increasingly multidisciplinary, there are few organizations within the national security structures that are equipped with the broad-spectrum capability to effectively counter large-scale conflict short of war tactics in real-time. Institutional hurdles currently impede diverse subject matter experts, hailing from outside of the traditional national security and foreign policy disciplines (e.g., physical science, engineering, media, legal, and economics fields), from contributing to the direct development of national security countermeasures to emerging conflict short of war threat vectors. A Cognitive Security Action Group (CSAG), akin to the Counterterrorism Security Group (CSG), could drive interagency alignment across equivalents of DHS, DoS, DoD, Intelligence Community, and other implementing agencies, in areas including strategic narrative, and the nexus of cyber and information operations. </td>
 <td>M007 - metatechnique</td>
 <td>TA01 Strategic Planning</td>
 <td>D7 Deter</td>
@@ -1439,7 +1311,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>tit-for-tat campaign</td>
 <td>As used by Saudis? </td>
 <td>M013 - targeting</td>
-<td>TA01 Strategic Planning</td>
+<td>TA02 Objective Planning</td>
 <td>D7 Deter</td>
 </tr>
 <tr>
@@ -1512,6 +1384,22 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td></td>
 <td>M003 - daylight</td>
 <td>TA06 Develop Content</td>
+<td>D3 Disrupt</td>
+</tr>
+<tr>
+<td><a href="counters/C00220.md">C00220</a></td>
+<td>Develop a monitoring and intelligence plan</td>
+<td></td>
+<td>M007 - metatechnique</td>
+<td>TA01 Strategic Planning</td>
+<td>D3 Disrupt</td>
+</tr>
+<tr>
+<td><a href="counters/C00221.md">C00221</a></td>
+<td>Run a disinformation red team, and design mitigation factors</td>
+<td>Include PACE plans - Primary, Alternate, Contingency, Emergency</td>
+<td>M007 - metatechnique</td>
+<td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 </table>

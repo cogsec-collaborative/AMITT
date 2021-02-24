@@ -4,7 +4,7 @@ AMITT (Adversarial Misinformation and Influence Tactics and Techniques) is a fra
 
 AMITT's style is based on the [MITRE ATT&amp;CK framework](https://github.com/mitre-attack/attack-website/); STIX templates for AMITT objects are available in the [AMITT_CTI repo](https://github.com/cogsec-collaborative/amitt_cti) - these make it easy for AMITT data to be passed between ISAOs and similar bodies using standards like TAXI. 
 
-AMITT design documents are available in the AMITT_HISTORY folder, and in [The AMITT Design Guide](https://docs.google.com/document/d/1D1VM5l496pUjN8B5Pq6fAh9mgeeEaYTKHdAG5BEXBiA/edit#).   
+AMITT design documents are available in the AMITT_HISTORY folder. Design guides, user guides and more detailed TTP documentation are in [The AMITT Documentation repo](https://github.com/cogsec-collaborative/documentation/tree/master/AMITT_Design_Guides).
 
 ## What's in this folder
 
