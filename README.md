@@ -13,23 +13,21 @@ The AMITT framework diagrams are:
 * [AMITT Blue Team Framework](amitt_blue_framework.md) - Disinformation responder TTPs, listed by tactic stage. These are countermeasures, listed by the earliest tactic stages they're likely to be used in. 
 
 All the entities used to create the Red Team and Blue Team frameworks: 
-* [Phases](phases): higher-level groupings of tactics, created so we could check we didn't miss anything
-* [Tactics](tactics): stages that someone running a misinformation incident is likely to use
-* [Techniques](techniques): activities that might be seen at each stage
-* [Tasks](tasks): things that need to be done at each stage.  In Pablospeak, tasks are things you do, techniques are how you do them. 
-* [Counters](counters): countermeasures to AMITT TTPs.  
-* [Resources_needed](resources_by_responsetype_table.md): resources needed to run countermeasures
-* [Metatechniques](metatechniques_by_responsetype_table.md): a higher-level grouping for countermeasures
-* [Incidents](incidents_list.md): incident descriptions used to create the AMITT frameworks
+* [Phases](phases_index.md): higher-level groupings of tactics, created so we could check we didn't miss anything
+* [Tactics](tactics_index.md): stages that someone running a misinformation incident is likely to use
+* [Techniques](techniques_index.md): activities that might be seen at each stage
+* [Tasks](tasks_index.md): things that need to be done at each stage.  In Pablospeak, tasks are things you do, techniques are how you do them. 
+* [Counters](counters_index.md): countermeasures to AMITT TTPs.  
+* [Actors](actors_index.md): resources needed to run countermeasures
+* [Response types](responsetype_index.md): the course-of-action categories we used to create counters
+* [Metatechniques](metatechniques_index.md): a higher-level grouping for countermeasures
+* [Incidents](incidents_index.md): incident descriptions used to create the AMITT frameworks
 
-There's a directory for each of these, containing a datasheet for each individual entity (e.g. [technique T0046 Search Engine Optimization](techniques/T0046.md)).  
+There's a directory for each of these, containing a datasheet for each individual entity (e.g. [technique T0046 Search Engine Optimization](techniques/T0046.md)).  There's also a directory [generated_csvs](generated_csvs) containing any CSV files we generate from the above tables. 
 
 **YOU CAN ADD INFORMATION TO THESE FILES.**
 * The details above "DO NOT EDIT ABOVE THIS LINE" are generated and will be overwritten every time we run the update code; anything you write above that line will be lost
 * The details below "DO NOT EDIT ABOVE THIS LINE" are saved every time we run the update code. You can safely add notes below that line. 
-
-[generated_csvs](generated_csvs) contains any CSV files we generate from the above tables. 
-
 
 ## Using the Raw Data file
 
@@ -51,7 +49,7 @@ If you have your own version of this repository and update AMITT_TTPs_MASTER.xls
 
 * **Everyone who contributes to AMITT** (and there are many of you). Thank you to everyone who contributes to AMITT, and has contributed to AMITT over the years.  
 
-* **You**.  We love any and all suggestions for improvements, comments and offers of help - either reach out to us, or add to this repo's [issues list](https://github.com/cogsec-collaborative/AMITT/issues). (We're also going back through the [original issues list](https://github.com/misinfosecproject/amitt_framework/issues))
+* **You**.  We love any and all suggestions for improvements, comments and offers of help - either reach out to us using [this google form](https://docs.google.com/forms/d/e/1FAIpQLSdZuyKFp1UZzk6qUE4IN1O14HaJ-F4TH9thxR3hrRU-Mu7QUQ/viewform), or if you're comfortable with Github, add to this repo's [issues list](https://github.com/cogsec-collaborative/AMITT/issues) or fork the repo with corrections. (We're also going back through the [original issues list](https://github.com/misinfosecproject/amitt_framework/issues))
 
 
 AMITT is licensed under [CC-BY-4.0](LICENSE.md)
