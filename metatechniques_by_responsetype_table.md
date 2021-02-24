@@ -11,13 +11,13 @@
 <td>D7 Deter</td>
 <td>TOTALS</td></tr><tr>
 <td><a href="../metatechniques/M001.md">M001 resilience</a></td>
-<td>8</td>
+<td>7</td>
 <td>6</td>
 <td>5</td>
 <td>0</td>
 <td>0</td>
 <td>4</td>
-<td>23</td>
+<td>22</td>
 </tr>
 <tr>
 <td><a href="../metatechniques/M002.md">M002 diversion</a></td>
@@ -31,33 +31,33 @@
 </tr>
 <tr>
 <td><a href="../metatechniques/M003.md">M003 daylight</a></td>
-<td>6</td>
+<td>4</td>
 <td>7</td>
 <td>2</td>
 <td>0</td>
 <td>1</td>
 <td>2</td>
-<td>18</td>
+<td>16</td>
 </tr>
 <tr>
 <td><a href="../metatechniques/M004.md">M004 friction</a></td>
-<td>13</td>
-<td>7</td>
+<td>12</td>
+<td>6</td>
 <td>5</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>25</td>
+<td>23</td>
 </tr>
 <tr>
 <td><a href="../metatechniques/M005.md">M005 removal</a></td>
-<td>15</td>
-<td>4</td>
+<td>14</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>19</td>
+<td>17</td>
 </tr>
 <tr>
 <td><a href="../metatechniques/M006.md">M006 scoring</a></td>
@@ -122,12 +122,12 @@
 <tr>
 <td><a href="../metatechniques/M012.md">M012 cleaning</a></td>
 <td>2</td>
+<td>0</td>
 <td>1</td>
-<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>4</td>
+<td>3</td>
 </tr>
 <tr>
 <td><a href="../metatechniques/M013.md">M013 targeting</a></td>
@@ -151,12 +151,12 @@
 </tr>
 <tr>
 <td>TOTALS</td>
-<td>59</td>
-<td>66</td>
+<td>54</td>
+<td>63</td>
 <td>28</td>
 <td>4</td>
 <td>2</td>
 <td>14</td>
-<td>173</td>
+<td>165</td>
 </tr>
 </table>

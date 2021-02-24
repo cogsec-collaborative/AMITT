@@ -744,7 +744,7 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>Partner to develop analytic methods & tools</td>
 <td>This might include working with relevant technology firms to ensure that contracted analytic support is available. Contracted support is reportedly valuable because technology to monitor social media data is continually evolving, and such firms can provide the expertise to help identify and analyze trends, and they can more effectively stay abreast of the changing systems and develop new models as they are required</td>
 <td></td>
-<td></td>
+<td>TA01 Strategic Planning</td>
 <td>D1 Detect</td>
 </tr>
 <tr>
@@ -752,7 +752,15 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>daylight</td>
 <td>Warn social media companies about an ongoing campaign (e.g. antivax sites).  Anyone with datasets or data summaries can help with this</td>
 <td></td>
-<td>TA09 </td>
+<td>TA09 Exposure</td>
 <td>D1 Detect</td>
+</tr>
+<tr>
+<td><a href="detections/F00093.md">F00093</a></td>
+<td>S4d detection and re-allocation approaches</td>
+<td>S4D is a way to separate out different speakers in text, audio. </td>
+<td>M004 - friction</td>
+<td>TA03 Develop People</td>
+<td>D3 Disrupt</td>
 </tr>
 </table>

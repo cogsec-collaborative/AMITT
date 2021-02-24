@@ -20,7 +20,7 @@
 <td><a href="counters/C00006.md">C00006 Charge for social media</a></td>
 <td><a href="counters/C00009.md">C00009 Educate high profile influencers on best practices</a></td>
 <td><a href="counters/C00034.md">C00034 Create more friction at account creation</a></td>
-<td><a href="counters/C00050.md">C00050 Anti-elicitation training</a></td>
+<td><a href="counters/C00047.md">C00047 Coordinated inauthentics</a></td>
 <td><a href="counters/C00063.md">C00063 Ban political microtargeting</a></td>
 <td><a href="counters/C00014.md">C00014 Real-time updates to fact-checking database</a></td>
 <td><a href="counters/C00097.md">C00097 Require use of verified identities to contribute to poll or comment</a></td>
@@ -33,8 +33,8 @@
 <tr>
 <td><a href="counters/C00008.md">C00008 Create shared fact-checking database</a></td>
 <td><a href="counters/C00011.md">C00011 Media literacy. Games to identify fake news</a></td>
-<td><a href="counters/C00035.md">C00035 Friction</a></td>
-<td><a href="counters/C00051.md">C00051 Phishing prevention education etc</a></td>
+<td><a href="counters/C00036.md">C00036 Infiltrate the in-group to discredit leaders (divide)</a></td>
+<td><a href="counters/C00052.md">C00052 Infiltrate platforms</a></td>
 <td><a href="counters/C00065.md">C00065 Ban political ads</a></td>
 <td><a href="counters/C00032.md">C00032 Hijack content and link to truth- based info (platform) </a></td>
 <td><a href="counters/C00098.md">C00098 Revocation of "verified"</a></td>
@@ -47,8 +47,8 @@
 <tr>
 <td><a href="counters/C00010.md">C00010 Enhanced privacy regulation for social media</a></td>
 <td><a href="counters/C00028.md">C00028 Make information provenance available</a></td>
-<td><a href="counters/C00036.md">C00036 Infiltrate the in-group to discredit leaders (divide)</a></td>
-<td><a href="counters/C00052.md">C00052 Infiltrate platforms</a></td>
+<td><a href="counters/C00040.md">C00040 third party verification for people</a></td>
+<td><a href="counters/C00053.md">C00053 Delete old accounts / Remove unused social media accounts</a></td>
 <td><a href="counters/C00066.md">C00066 Co-opt a hashtag and drown it out (hijack it back)</a></td>
 <td><a href="counters/C00071.md">C00071 Block source of pollution</a></td>
 <td><a href="counters/C00099.md">C00099 Strengthen verification methods</a></td>
@@ -61,8 +61,8 @@
 <tr>
 <td><a href="counters/C00012.md">C00012 Platform regulation</a></td>
 <td><a href="counters/C00029.md">C00029 Create fake website to issue counter narrative and counter narrative through physical merchandise</a></td>
-<td><a href="counters/C00039.md">C00039 Standard reporting for false profiles</a></td>
-<td><a href="counters/C00053.md">C00053 Delete old accounts / Remove unused social media accounts</a></td>
+<td><a href="counters/C00042.md">C00042 Address truth contained in narratives</a></td>
+<td><a href="counters/C00056.md">C00056 Get off social media</a></td>
 <td><a href="counters/C00067.md">C00067 Denigrate the recipient/ project (of online funding)</a></td>
 <td><a href="counters/C00072.md">C00072 Content censorship in non-relevant domains e.g. Pinterest antivax</a></td>
 <td><a href="counters/C00100.md">C00100 Hashtag jacking</a></td>
@@ -75,8 +75,8 @@
 <tr>
 <td><a href="counters/C00013.md">C00013 Rating framework for news</a></td>
 <td><a href="counters/C00030.md">C00030 Develop a compelling counter narrative (truth based)</a></td>
-<td><a href="counters/C00040.md">C00040 third party verification for people</a></td>
-<td><a href="counters/C00056.md">C00056 Get off social media</a></td>
+<td><a href="counters/C00044.md">C00044 Keep people from posting to social media immediately</a></td>
+<td><a href="counters/C00059.md">C00059 Verification of project before posting (counters funding campaigns)</a></td>
 <td><a href="counters/C00068.md">C00068 Expose online funding as fake</a></td>
 <td><a href="counters/C00074.md">C00074 Identify identical content and mass deplatform</a></td>
 <td><a href="counters/C00101.md">C00101 Create participant friction</a></td>
@@ -89,8 +89,8 @@
 <tr>
 <td><a href="counters/C00015.md">C00015 Reputation scores for social media users</a></td>
 <td><a href="counters/C00031.md">C00031 Dilute the core narrative - create multiple permutations, target / amplify</a></td>
-<td><a href="counters/C00042.md">C00042 Address truth contained in narratives</a></td>
-<td><a href="counters/C00058.md">C00058 Report crowdfunder as violator</a></td>
+<td><a href="counters/C00046.md">C00046 Marginalise and discredit extremist groups</a></td>
+<td><a href="counters/C00062.md">C00062 Free open library sources worldwide</a></td>
 <td><a href="counters/C00069.md">C00069 Mark clickbait visually</a></td>
 <td><a href="counters/C00075.md">C00075 normalise language</a></td>
 <td><a href="counters/C00102.md">C00102 Make repeat voting harder</a></td>
@@ -103,8 +103,8 @@
 <tr>
 <td><a href="counters/C00016.md">C00016 Censorship - not recommended</a></td>
 <td><a href="counters/C00060.md">C00060 Legal action against for-profit engagement factories</a></td>
-<td><a href="counters/C00043.md">C00043 Detect hijacked accounts and reallocate them </a></td>
-<td><a href="counters/C00059.md">C00059 Verification of project before posting (counters funding campaigns)</a></td>
+<td><a href="counters/C00048.md">C00048 Name and Shame Influencers</a></td>
+<td><a href="counters/C00162.md">C00162 collect data/map constellations of Russian“civil society”. Unravel/target the Potemkin villages</a></td>
 <td><a href="counters/C00216.md">C00216 Use advertiser controls to stem flow of funds to bad actors</a></td>
 <td><a href="counters/C00076.md">C00076 Prohibit images in political discourse channels</a></td>
 <td><a href="counters/C00103.md">C00103 Create a bot that engages / distract trolls</a></td>
@@ -117,8 +117,8 @@
 <tr>
 <td><a href="counters/C00017.md">C00017 Repair broken social connections</a></td>
 <td><a href="counters/C00070.md">C00070 Block access to disinformation resources</a></td>
-<td><a href="counters/C00044.md">C00044 Keep people from posting to social media immediately</a></td>
-<td><a href="counters/C00062.md">C00062 Free open library sources worldwide</a></td>
+<td><a href="counters/C00051.md">C00051 Counter social engineering training</a></td>
+<td> </td>
 <td> </td>
 <td><a href="counters/C00077.md">C00077 Active defence: replay "develop people"</a></td>
 <td><a href="counters/C00105.md">C00105 Buy more advertising than the adversary to shift influence and algorithms</a></td>
@@ -131,8 +131,8 @@
 <tr>
 <td><a href="counters/C00019.md">C00019 Reduce effect of division-enablers</a></td>
 <td><a href="counters/C00164.md">C00164 compatriot policy</a></td>
-<td><a href="counters/C00045.md">C00045 S4d detection and re-allocation approaches</a></td>
-<td><a href="counters/C00152.md">C00152 “name and shame”</a></td>
+<td><a href="counters/C00058.md">C00058 Report crowdfunder as violator</a></td>
+<td> </td>
 <td> </td>
 <td><a href="counters/C00078.md">C00078 Change Search Algorithms for Disinformation Content. More specifically, change image search algorithms for hate groups and extremists</a></td>
 <td><a href="counters/C00106.md">C00106 Click-bait centrist content</a></td>
@@ -145,8 +145,8 @@
 <tr>
 <td><a href="counters/C00021.md">C00021 Encourage in-person communication</a></td>
 <td><a href="counters/C00207.md">C00207 Run a competing disinformation campaign - not recommended</a></td>
-<td><a href="counters/C00046.md">C00046 Marginalise and discredit extremist</a></td>
-<td><a href="counters/C00162.md">C00162 collect data/map constellations of Russian“civil society”. Unravel/target the Potemkin villages</a></td>
+<td><a href="counters/C00155.md">C00155 Ban incident actors from funding sites</a></td>
+<td> </td>
 <td> </td>
 <td><a href="counters/C00079.md">C00079 Change search algorithms for hate and extremist queries to show content sympathetic to opposite side</a></td>
 <td><a href="counters/C00107.md">C00107 Content moderation</a></td>
@@ -159,7 +159,7 @@
 <tr>
 <td><a href="counters/C00022.md">C00022 Innoculate. Positive campaign to promote feeling of safety</a></td>
 <td><a href="counters/C00222.md">C00222 Tabletop simulations</a></td>
-<td><a href="counters/C00047.md">C00047 Coordinated inauthentics</a></td>
+<td><a href="counters/C00160.md">C00160 find and train influencers</a></td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00080.md">C00080 Create competing narrative</a></td>
@@ -173,7 +173,7 @@
 <tr>
 <td><a href="counters/C00024.md">C00024 Promote healthy narratives</a></td>
 <td> </td>
-<td><a href="counters/C00048.md">C00048 Name and Shame</a></td>
+<td><a href="counters/C00189.md">C00189 Ensure that platforms are taking down flagged accounts</a></td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00081.md">C00081 Discredit by pointing out the "noise" and informing public that "flooding" is a technique of disinformation campaigns; point out intended objective of "noise"</a></td>
@@ -187,7 +187,7 @@
 <tr>
 <td><a href="counters/C00026.md">C00026 Shore up democracy based messages</a></td>
 <td> </td>
-<td><a href="counters/C00150.md">C00150 “calling them out”</a></td>
+<td><a href="counters/C00197.md">C00197 remove suspicious accounts</a></td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00082.md">C00082 Ground truthing as automated response to pollution</a></td>
@@ -201,7 +201,7 @@
 <tr>
 <td><a href="counters/C00027.md">C00027 Create culture of civility</a></td>
 <td> </td>
-<td><a href="counters/C00155.md">C00155 Ban incident actors from funding sites</a></td>
+<td> </td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00084.md">C00084 Steal their truths</a></td>
@@ -215,7 +215,7 @@
 <tr>
 <td><a href="counters/C00073.md">C00073 Inoculate populations through media literacy training</a></td>
 <td> </td>
-<td><a href="counters/C00160.md">C00160 find and train influencers</a></td>
+<td> </td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00085.md">C00085 Demuting content</a></td>
@@ -229,7 +229,7 @@
 <tr>
 <td><a href="counters/C00153.md">C00153 Take pre-emptive action against actors' infrastructure</a></td>
 <td> </td>
-<td><a href="counters/C00179.md">C00179 Identify, monitor, and, if necessary, target Russia-based nonattributed social media accounts </a></td>
+<td> </td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00086.md">C00086 Distract from noise with addictive content</a></td>
@@ -243,7 +243,7 @@
 <tr>
 <td><a href="counters/C00159.md">C00159 Have a disinformation response plan</a></td>
 <td> </td>
-<td><a href="counters/C00189.md">C00189 Ongoing analysis/monitoring of "flagged" profiles</a></td>
+<td> </td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00087.md">C00087 Make more noise</a></td>
@@ -257,7 +257,7 @@
 <tr>
 <td><a href="counters/C00161.md">C00161 Coalition Building and Third-Party Inducements:</a></td>
 <td> </td>
-<td><a href="counters/C00197.md">C00197 remove suspicious facebook accounts</a></td>
+<td> </td>
 <td> </td>
 <td> </td>
 <td><a href="counters/C00088.md">C00088 Poison pill recasting of message</a></td>

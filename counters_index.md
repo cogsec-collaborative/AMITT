@@ -196,26 +196,10 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>D2 Deny</td>
 </tr>
 <tr>
-<td><a href="counters/C00035.md">C00035</a></td>
-<td>Friction</td>
-<td></td>
-<td>M004 - friction</td>
-<td>TA03 Develop People</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
 <td><a href="counters/C00036.md">C00036</a></td>
 <td>Infiltrate the in-group to discredit leaders (divide)</td>
 <td>All of these would be highly affected by infiltration or false-claims of infiltration.</td>
 <td>M013 - targeting</td>
-<td>TA03 Develop People</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
-<td><a href="counters/C00039.md">C00039</a></td>
-<td>Standard reporting for false profiles</td>
-<td>Deplatform. Reporting fake profiles is the only solution (identity issues). Only resolution</td>
-<td>M005 - removal</td>
 <td>TA03 Develop People</td>
 <td>D2 Deny</td>
 </tr>
@@ -236,14 +220,6 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>D3 Disrupt</td>
 </tr>
 <tr>
-<td><a href="counters/C00043.md">C00043</a></td>
-<td>Detect hijacked accounts and reallocate them </td>
-<td></td>
-<td>M012 - cleaning</td>
-<td>TA03 Develop People</td>
-<td>D3 Disrupt</td>
-</tr>
-<tr>
 <td><a href="counters/C00044.md">C00044</a></td>
 <td>Keep people from posting to social media immediately</td>
 <td>My interpretation is that this is method would be used to slow down activities or force a small delay between posts or replies to new posts.</td>
@@ -252,17 +228,9 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>D3 Disrupt</td>
 </tr>
 <tr>
-<td><a href="counters/C00045.md">C00045</a></td>
-<td>S4d detection and re-allocation approaches</td>
-<td>What's S4D?</td>
-<td>M004 - friction</td>
-<td>TA03 Develop People</td>
-<td>D3 Disrupt</td>
-</tr>
-<tr>
 <td><a href="counters/C00046.md">C00046</a></td>
-<td>Marginalise and discredit extremist</td>
-<td>Duplicate of "Name and Shame" - recommend removal. No, not quite. </td>
+<td>Marginalise and discredit extremist groups</td>
+<td></td>
 <td>M013 - targeting</td>
 <td>TA03 Develop People</td>
 <td>D4 Degrade</td>
@@ -272,31 +240,23 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>Coordinated inauthentics</td>
 <td></td>
 <td>M008 - data pollution</td>
-<td>TA03 Develop People</td>
+<td>TA04 Develop Networks</td>
 <td>D5 Deceive</td>
 </tr>
 <tr>
 <td><a href="counters/C00048.md">C00048</a></td>
-<td>Name and Shame</td>
-<td></td>
+<td>Name and Shame Influencers</td>
+<td>Think about the different levels: individual vs state-sponsored account.  Includes “call them out” and “name and shame”.  Note that USAID operations were at a different level. Identify social media accounts as sources of propaganda—“calling them out”— might be helpful to prevent the spread of their message to audiences that otherwise would consider them factual. USAID has been restructuring its programs to address predatory Chinese development projects and the information operations that support them. USAID’s new strategy has tailored programs to counter Chinese educational exchange programs and to support free and fair elections, youth empowerment, democratic governance, and free press. USAID’s Russia regional teams have also been compiling a strategy for Russia’s information operations. One strong point of USAID’s programming is a system of indicators and measurements for a country’s vulnerability to foreign influence and information operations.  Identify, monitor, and, if necessary, target externally-based nonattributed social media accounts.  Impact of and Dealing with Trolls - "Chatham House has observed that trolls also sometimes function as decoys, as a way of “keeping the infantry busy” that “aims to wear down the other side” (Lough et al., 2014). Another type of troll involves “false accounts posing as authoritative information sources on social media”.</td>
 <td>M003 - daylight</td>
 <td>TA03 Develop People</td>
 <td>D7 Deter</td>
 </tr>
 <tr>
-<td><a href="counters/C00050.md">C00050</a></td>
-<td>Anti-elicitation training</td>
-<td></td>
-<td>M001 - resilience</td>
-<td>TA04 Develop Networks</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
 <td><a href="counters/C00051.md">C00051</a></td>
-<td>Phishing prevention education etc</td>
-<td></td>
+<td>Counter social engineering training</td>
+<td>Includes anti-elicitation training, phishing prevention education. </td>
 <td>M001 - resilience</td>
-<td>TA04 Develop Networks</td>
+<td>TA03 Develop People</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
@@ -328,7 +288,7 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>Report crowdfunder as violator</td>
 <td>counters crowdfunding</td>
 <td>M005 - removal</td>
-<td>TA04 Develop Networks</td>
+<td>TA03 Develop People</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
@@ -1005,28 +965,12 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>D4 Degrade</td>
 </tr>
 <tr>
-<td><a href="counters/C00150.md">C00150</a></td>
-<td>“calling them out”</td>
-<td>Identify social media accounts as sources of propaganda—“calling them out”— might be helpful to prevent the spread of their message to audiences that otherwise would consider them factual</td>
-<td>M003 - daylight</td>
-<td>TA03 Develop People</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
 <td><a href="counters/C00151.md">C00151</a></td>
 <td>“fight in the light”</td>
 <td>Use leadership in the arts, entertainment, and media to highlight and build on fundamental tenets of democracy.</td>
 <td>M003 - daylight</td>
 <td>TA09 Exposure</td>
 <td>D3 Disrupt</td>
-</tr>
-<tr>
-<td><a href="counters/C00152.md">C00152</a></td>
-<td>“name and shame”</td>
-<td>USAID has been restructuring its programs to address predatory Chinese development projects and the information operations that support them. USAID’s new strategy has tailored programs to counter Chinese educational exchange programs and to support free and fair elections, youth empowerment, democratic governance, and free press. USAID’s Russia regional teams have also been compiling a strategy for Russia’s information operations. One strong point of USAID’s programming is a system of indicators and measurements for a country’s vulnerability to foreign influence and information operations</td>
-<td>M003 - daylight</td>
-<td>TA04 Develop Networks</td>
-<td>D2 Deny</td>
 </tr>
 <tr>
 <td><a href="counters/C00153.md">C00153</a></td>
@@ -1181,14 +1125,6 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>D3 Disrupt</td>
 </tr>
 <tr>
-<td><a href="counters/C00179.md">C00179</a></td>
-<td>Identify, monitor, and, if necessary, target Russia-based nonattributed social media accounts </td>
-<td>Impact of and Dealing with Trolls - "Chatham House has observed that trolls also sometimes function as decoys, as a way of “keeping the infantry busy” that “aims to wear down the other side” (Lough et al., 2014). Another type of troll involves “false accounts posing as authoritative information sources on social media,"</td>
-<td>M005 - removal</td>
-<td>TA03 Develop People</td>
-<td>D3 Disrupt</td>
-</tr>
-<tr>
 <td><a href="counters/C00182.md">C00182</a></td>
 <td>malware detection/quarantine/deletion</td>
 <td>(2015) Trustwave reported that a Bedep Trojan malware kit had begun infecting machines and forcing them to browse certain sites, artificially inflating traffic to a set of pro-Russia</td>
@@ -1214,8 +1150,8 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00189.md">C00189</a></td>
-<td>Ongoing analysis/monitoring of "flagged" profiles</td>
-<td>Confirm whether platforms are actively removing flagged accounts, and raise pressure via e.g. government organizations to encourage removal</td>
+<td>Ensure that platforms are taking down flagged accounts</td>
+<td>Use ongoing analysis/monitoring of "flagged" profiles.  Confirm whether platforms are actively removing flagged accounts, and raise pressure via e.g. government organizations to encourage removal</td>
 <td>M003 - daylight</td>
 <td>TA03 Develop People</td>
 <td>D6 Destroy</td>
@@ -1262,8 +1198,8 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00197.md">C00197</a></td>
-<td>remove suspicious facebook accounts</td>
-<td></td>
+<td>remove suspicious accounts</td>
+<td>Standard reporting for false profiles (identity issues).  Includes detecting hijacked accounts and reallocating them - if possible, back to original owners. </td>
 <td>M005 - removal</td>
 <td>TA03 Develop People</td>
 <td>D2 Deny</td>
