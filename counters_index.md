@@ -181,8 +181,8 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 </tr>
 <tr>
 <td><a href="counters/C00032.md">C00032</a></td>
-<td>Hijack content and link to truth- based info (platform) </td>
-<td></td>
+<td>Hijack content and link to truth- based info</td>
+<td>Link to platform</td>
 <td>M002 - diversion</td>
 <td>TA06 Develop Content</td>
 <td>D3 Disrupt</td>
@@ -286,7 +286,7 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <tr>
 <td><a href="counters/C00058.md">C00058</a></td>
 <td>Report crowdfunder as violator</td>
-<td>counters crowdfunding</td>
+<td>counters crowdfunding. Includes ‘Expose online funding as fake”. </td>
 <td>M005 - removal</td>
 <td>TA03 Develop People</td>
 <td>D2 Deny</td>
@@ -313,20 +313,12 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>Open-source libraries could be created that aid in some way for each technique. Even for Strategic Planning, some open-source frameworks such as AMITT can be created to counter the adversarial efforts.</td>
 <td>M010 - countermessaging</td>
 <td>TA04 Develop Networks</td>
-<td>D6 Destroy</td>
-</tr>
-<tr>
-<td><a href="counters/C00063.md">C00063</a></td>
-<td>Ban political microtargeting</td>
-<td></td>
-<td>M005 - removal</td>
-<td>TA05 Microtargeting</td>
-<td>D2 Deny</td>
+<td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00065.md">C00065</a></td>
-<td>Ban political ads</td>
-<td></td>
+<td>Reduce political targeting</td>
+<td>Includes “ban political micro targeting” and “ban political ads”</td>
 <td>M005 - removal</td>
 <td>TA05 Microtargeting</td>
 <td>D3 Disrupt</td>
@@ -344,23 +336,7 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <td>Denigrate the recipient/ project (of online funding)</td>
 <td></td>
 <td>M013 - targeting</td>
-<td>TA05 Microtargeting</td>
-<td>D3 Disrupt</td>
-</tr>
-<tr>
-<td><a href="counters/C00068.md">C00068</a></td>
-<td>Expose online funding as fake</td>
-<td></td>
-<td>M003 - daylight</td>
-<td>TA05 Microtargeting</td>
-<td>D3 Disrupt</td>
-</tr>
-<tr>
-<td><a href="counters/C00069.md">C00069</a></td>
-<td>Mark clickbait visually</td>
-<td></td>
-<td>M003 - daylight</td>
-<td>TA05 Microtargeting</td>
+<td>TA03 Develop People</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -529,7 +505,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Throttle number of forwards</td>
 <td></td>
 <td>M004 - friction</td>
-<td>TA06 Develop Content</td>
+<td>TA09 Exposure</td>
 <td>D4 Degrade</td>
 </tr>
 <tr>
@@ -537,7 +513,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Fake engagement system</td>
 <td></td>
 <td>M002 - diversion</td>
-<td>TA06 Develop Content</td>
+<td>TA12 Measure Effectiveness</td>
 <td>D5 Deceive</td>
 </tr>
 <tr>
@@ -550,8 +526,8 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00092.md">C00092</a></td>
-<td>Establish a truth teller reputation score for individuals with many followers</td>
-<td></td>
+<td>Establish a truth teller reputation score for influencers</td>
+<td>individuals with many followers</td>
 <td>M006 - scoring</td>
 <td>TA06 Develop Content</td>
 <td>D7 Deter</td>
@@ -573,19 +549,11 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>D7 Deter</td>
 </tr>
 <tr>
-<td><a href="counters/C00095.md">C00095</a></td>
-<td>Keep score</td>
-<td></td>
-<td>M006 - scoring</td>
-<td>TA06 Develop Content</td>
-<td>D7 Deter</td>
-</tr>
-<tr>
 <td><a href="counters/C00096.md">C00096</a></td>
 <td>Strengthen institutions that are always truth tellers</td>
 <td></td>
 <td>M006 - scoring</td>
-<td>TA06 Develop Content</td>
+<td>TA01 Strategic Planning</td>
 <td>D7 Deter</td>
 </tr>
 <tr>
@@ -895,25 +863,17 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00140.md">C00140</a></td>
 <td>"Bomb" link shorteners with lots of calls</td>
-<td>Applies to most of the content used by exposure techniques except "T0055 - Use hashtag"</td>
+<td>Applies to most of the content used by exposure techniques except "T0055 - Use hashtag”. Applies to analytics</td>
 <td>M008 - data pollution</td>
-<td>TA11 Persistence</td>
-<td>D4 Degrade</td>
-</tr>
-<tr>
-<td><a href="counters/C00141.md">C00141</a></td>
-<td>"Hey this story is old" popup when messaging with old URL</td>
-<td>This assumes that this technique is based on visits to an URL shortener or a captured news site that can publish a message of our choice.</td>
-<td>M004 - friction</td>
-<td>TA11 Persistence</td>
-<td>D4 Degrade</td>
+<td>TA12 Measure Effectiveness</td>
+<td>D3 Disrupt</td>
 </tr>
 <tr>
 <td><a href="counters/C00142.md">C00142</a></td>
-<td>"This has been disproved - do you want to forward it"</td>
-<td></td>
+<td>Platform adds warning label and decision point when sharing content</td>
+<td>Includes “this has been disproved: do you want to forward it”. Includes “"Hey this story is old" popup when messaging with old URL” - this assumes that this technique is based on visits to an URL shortener or a captured news site that can publish a message of our choice.  Includes “mark clickbait visually”. </td>
 <td>M004 - friction</td>
-<td>TA11 Persistence</td>
+<td>TA06 Develop Content</td>
 <td>D4 Degrade</td>
 </tr>
 <tr>
@@ -1215,7 +1175,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00202.md">C00202</a></td>
 <td>Set data 'honeytraps'</td>
-<td></td>
+<td>NB Macron election team modified docs to spike a hack and leak. </td>
 <td>M002 - diversion</td>
 <td>TA06 Develop Content</td>
 <td>D2 Deny</td>
@@ -1295,7 +1255,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00216.md">C00216</a></td>
 <td>Use advertiser controls to stem flow of funds to bad actors</td>
-<td></td>
+<td>Prevent ad revenue going to disinformation domains</td>
 <td>M014 - reduce resources</td>
 <td>TA05 Microtargeting</td>
 <td>D2 Deny</td>

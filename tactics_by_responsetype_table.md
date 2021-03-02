@@ -16,8 +16,8 @@
 <td>5</td>
 <td>0</td>
 <td>0</td>
-<td>3</td>
-<td>24</td>
+<td>4</td>
+<td>25</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA02.md">TA02 Objective Planning</a></td>
@@ -32,42 +32,42 @@
 <tr>
 <td><a href="../tactics/TA03.md">TA03 Develop People</a></td>
 <td>8</td>
-<td>2</td>
+<td>3</td>
 <td>1</td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
-<td>13</td>
+<td>14</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA04.md">TA04 Develop Networks</a></td>
 <td>2</td>
 <td>1</td>
-<td>2</td>
+<td>3</td>
 <td>1</td>
-<td>1</td>
+<td>0</td>
 <td>0</td>
 <td>7</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA05.md">TA05 Microtargeting</a></td>
+<td>1</td>
 <td>2</td>
-<td>5</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>7</td>
+<td>3</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA06.md">TA06 Develop Content</a></td>
 <td>12</td>
 <td>9</td>
 <td>5</td>
-<td>2</td>
+<td>1</td>
 <td>0</td>
-<td>5</td>
-<td>33</td>
+<td>3</td>
+<td>30</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA07.md">TA07 Channel Selection</a></td>
@@ -93,11 +93,11 @@
 <td><a href="../tactics/TA09.md">TA09 Exposure</a></td>
 <td>3</td>
 <td>14</td>
-<td>2</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>19</td>
+<td>20</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA10.md">TA10 Go Physical</a></td>
@@ -113,30 +113,30 @@
 <td><a href="../tactics/TA11.md">TA11 Persistence</a></td>
 <td>1</td>
 <td>6</td>
-<td>6</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>13</td>
+<td>10</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA12.md">TA12 Measure Effectiveness</a></td>
 <td>0</td>
-<td>1</td>
 <td>2</td>
+<td>2</td>
+<td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>3</td>
+<td>5</td>
 </tr>
 <tr>
 <td>TOTALS</td>
-<td>54</td>
-<td>63</td>
-<td>28</td>
+<td>53</td>
+<td>62</td>
+<td>27</td>
 <td>4</td>
-<td>2</td>
-<td>14</td>
-<td>165</td>
+<td>1</td>
+<td>13</td>
+<td>160</td>
 </tr>
 </table>
