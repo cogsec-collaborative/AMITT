@@ -71,15 +71,7 @@
 <td>existing examples at Buzzfeed and Fema, especially during disasters</td>
 <td>M006 - scoring</td>
 <td>TA06 Develop Content</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
-<td><a href="counters/C00015.md">C00015</a></td>
-<td>Reputation scores for social media users</td>
-<td></td>
-<td>M006 - scoring</td>
-<td>TA01 Strategic Planning</td>
-<td>D2 Deny</td>
+<td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00016.md">C00016</a></td>
@@ -406,24 +398,16 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 </tr>
 <tr>
 <td><a href="counters/C00077.md">C00077</a></td>
-<td>Active defence: replay "develop people"</td>
+<td>Active defence: run TA03 "develop people” - not recommended</td>
 <td></td>
 <td>M013 - targeting</td>
-<td>TA06 Develop Content</td>
+<td>TA03 Develop People</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
 <td><a href="counters/C00078.md">C00078</a></td>
-<td>Change Search Algorithms for Disinformation Content. More specifically, change image search algorithms for hate groups and extremists</td>
-<td>Note: Suggest a more generic technique since this applies to non-image content and to non-hate groups.</td>
-<td>M002 - diversion</td>
-<td>TA06 Develop Content</td>
-<td>D3 Disrupt</td>
-</tr>
-<tr>
-<td><a href="counters/C00079.md">C00079</a></td>
-<td>Change search algorithms for hate and extremist queries to show content sympathetic to opposite side</td>
-<td></td>
+<td>Change Search Algorithms for Disinformation Content</td>
+<td>Includes “change image search algorithms for hate groups and extremists” and “Change search algorithms for hate and extremist queries to show content sympathetic to opposite side”</td>
 <td>M002 - diversion</td>
 <td>TA06 Develop Content</td>
 <td>D3 Disrupt</td>
@@ -431,15 +415,15 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00080.md">C00080</a></td>
 <td>Create competing narrative</td>
-<td></td>
+<td>Could also be degrade</td>
 <td>M002 - diversion</td>
 <td>TA06 Develop Content</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
 <td><a href="counters/C00081.md">C00081</a></td>
+<td>Highlight flooding and noise, and explain motivations</td>
 <td>Discredit by pointing out the "noise" and informing public that "flooding" is a technique of disinformation campaigns; point out intended objective of "noise"</td>
-<td></td>
 <td>M003 - daylight</td>
 <td>TA06 Develop Content</td>
 <td>D3 Disrupt</td>
@@ -447,32 +431,28 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00082.md">C00082</a></td>
 <td>Ground truthing as automated response to pollution</td>
-<td></td>
+<td>e.g. RealityTeam work that adds clear information to spaces with disinformation in.  Also inoculation.</td>
 <td>M010 - countermessaging</td>
 <td>TA06 Develop Content</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
 <td><a href="counters/C00084.md">C00084</a></td>
-<td>Steal their truths</td>
-<td>Try technique T0003. </td>
+<td>Modify disinformation narratives, and rebroadcast them</td>
+<td>Includes “poison pill recasting of message” and “steal their truths”.  Many techniques involve promotion which could be manipulated. For example, online fundings or rallies could be advertised, through compromised or fake channels, as being associated with "far-up/down/left/right" actors. "Long Game" narratives could be subjected in a similar way with negative connotations.  Can also replay technique T0003. </td>
 <td>M002 - diversion</td>
 <td>TA06 Develop Content</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
 <td><a href="counters/C00085.md">C00085</a></td>
-<td>Demuting content</td>
-<td>Unsure. My interpretation is that disinformation campaigns can be disrupted by archiving their contents online, for intelligence analysis and public transparency.
+<td>Mute content</td>
+<td>Rate-limit disinformation content.  Reduces its effects, whilst not running afoul of censorship concerns.
 
-In some phases, contents would be archives of websites, social media profiles, media and copies of published advertisements.
-
-In others, content would be archives of comments attributed to bad actors, as well as anonymized metadata about users who interacted with them and analysis of the effect.
-
-Having these tagged and shamed for as associated by bad actors would be beneficial for public vigilance.</td>
+Online archives of content (archives of websites, social media profiles, media, copies of published advertisements; or archives of comments attributed to bad actors, as well as anonymized metadata about users who interacted with them and analysis of the effect) is useful for intelligence analysis and public transparency, but will need similar muting or tagging/ shaming as associated with bad actors.</td>
 <td>M003 - daylight</td>
 <td>TA06 Develop Content</td>
-<td>D4 Degrade</td>
+<td>D3 Disrupt</td>
 </tr>
 <tr>
 <td><a href="counters/C00086.md">C00086</a></td>
@@ -486,17 +466,9 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00087.md">C00087</a></td>
-<td>Make more noise</td>
-<td>Recommend Removal: I see "Make More Noise" as similar to "Do everything in AMITT, better than the adversary". It is not a counter in itself but rather an adversarial attack tool that can be used for blue team narratives.</td>
+<td>Make more noise than the disinformation</td>
+<td>Examples: kPop stans, #proudboys takeover by LGBT community</td>
 <td>M009 - dilution</td>
-<td>TA06 Develop Content</td>
-<td>D4 Degrade</td>
-</tr>
-<tr>
-<td><a href="counters/C00088.md">C00088</a></td>
-<td>Poison pill recasting of message</td>
-<td>Unsure how to interpret. The techniques listed all involve some amount of promotion which could be manipulated. For example, online fundings or rallies could be advertised, through compromised or fake channels, as being associated with "far-up/down/left/right" actors. "Long Game" narratives could be subjected in a similar way with negative connotations.</td>
-<td>M002 - diversion</td>
 <td>TA06 Develop Content</td>
 <td>D4 Degrade</td>
 </tr>
@@ -519,34 +491,34 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00091.md">C00091</a></td>
 <td>Honeypot social community</td>
-<td></td>
+<td>Set honeypots, e.g. communities, in networks likely to be used for disinformation. </td>
 <td>M002 - diversion</td>
 <td>TA06 Develop Content</td>
 <td>D5 Deceive</td>
 </tr>
 <tr>
 <td><a href="counters/C00092.md">C00092</a></td>
-<td>Establish a truth teller reputation score for influencers</td>
-<td>individuals with many followers</td>
+<td>Reputation scores for social media influencers</td>
+<td>Includes "Establish a truth teller reputation score for influencers” and “Reputation scores for social media users”.  Influencers are individuals or accounts with many followers. </td>
 <td>M006 - scoring</td>
-<td>TA06 Develop Content</td>
+<td>TA02 Objective Planning</td>
 <td>D7 Deter</td>
 </tr>
 <tr>
 <td><a href="counters/C00093.md">C00093</a></td>
-<td>Establish tailored code of conduct for individuals with many followers</td>
-<td></td>
+<td>Influencer code of conduct</td>
+<td>Establish tailored code of conduct for individuals with many followers.  Can be platform code of conduct; can also be community code, e.g. the Pro-Truth Pledge. </td>
 <td>M001 - resilience</td>
-<td>TA06 Develop Content</td>
+<td>TA03 Develop People</td>
 <td>D7 Deter</td>
 </tr>
 <tr>
 <td><a href="counters/C00094.md">C00094</a></td>
 <td>Force full disclosure on corporate sponsor of research</td>
-<td></td>
+<td>Accountability move: make sure research is published with its funding sources. </td>
 <td>M003 - daylight</td>
 <td>TA06 Develop Content</td>
-<td>D7 Deter</td>
+<td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00096.md">C00096</a></td>
@@ -1175,7 +1147,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00202.md">C00202</a></td>
 <td>Set data 'honeytraps'</td>
-<td>NB Macron election team modified docs to spike a hack and leak. </td>
+<td>Set honeytraps in content likely to be accessed for disinformation.   NB Macron election team modified docs to spike a hack and leak. </td>
 <td>M002 - diversion</td>
 <td>TA06 Develop Content</td>
 <td>D2 Deny</td>
@@ -1278,11 +1250,11 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00219.md">C00219</a></td>
-<td>Add metadata to content - out of the control of the adversary</td>
-<td></td>
+<td>Add metadata to content that’s out of the control of disinformation creators</td>
+<td>Steganography. Adding date, signatures etc to stop issue of photo relabelling etc. </td>
 <td>M003 - daylight</td>
 <td>TA06 Develop Content</td>
-<td>D3 Disrupt</td>
+<td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00220.md">C00220</a></td>
@@ -1306,6 +1278,14 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td></td>
 <td>M007 - metatechnique</td>
 <td>TA02 Objective Planning</td>
+<td>D3 Disrupt</td>
+</tr>
+<tr>
+<td><a href="counters/C00223.md">C00223</a></td>
+<td>Strengthen Trust in social media platforms</td>
+<td></td>
+<td>M001 - resilience</td>
+<td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 </table>

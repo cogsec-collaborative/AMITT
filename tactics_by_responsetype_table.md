@@ -11,8 +11,8 @@
 <td>D7 Deter</td>
 <td>TOTALS</td></tr><tr>
 <td><a href="../tactics/TA01.md">TA01 Strategic Planning</a></td>
-<td>8</td>
-<td>8</td>
+<td>7</td>
+<td>9</td>
 <td>5</td>
 <td>0</td>
 <td>0</td>
@@ -26,18 +26,18 @@
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>1</td>
-<td>11</td>
+<td>2</td>
+<td>12</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA03.md">TA03 Develop People</a></td>
 <td>8</td>
-<td>3</td>
+<td>4</td>
 <td>1</td>
 <td>0</td>
 <td>1</td>
-<td>1</td>
-<td>14</td>
+<td>2</td>
+<td>16</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA04.md">TA04 Develop Networks</a></td>
@@ -61,13 +61,13 @@
 </tr>
 <tr>
 <td><a href="../tactics/TA06.md">TA06 Develop Content</a></td>
-<td>12</td>
-<td>9</td>
-<td>5</td>
+<td>11</td>
+<td>7</td>
+<td>6</td>
 <td>1</td>
 <td>0</td>
-<td>3</td>
-<td>30</td>
+<td>0</td>
+<td>25</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA07.md">TA07 Channel Selection</a></td>
@@ -131,12 +131,12 @@
 </tr>
 <tr>
 <td>TOTALS</td>
-<td>53</td>
+<td>51</td>
 <td>62</td>
-<td>27</td>
+<td>28</td>
 <td>4</td>
 <td>1</td>
-<td>13</td>
-<td>160</td>
+<td>12</td>
+<td>158</td>
 </tr>
 </table>
