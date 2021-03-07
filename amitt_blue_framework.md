@@ -1,4 +1,4 @@
-# AMITT Blue: Latest Framework
+# AMITT Blue framework: Latest Framework
 
 <table border="1">
 <tr>

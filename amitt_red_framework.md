@@ -1,4 +1,4 @@
-# AMITT Red: Latest Framework
+# AMITT Red framework: Latest Framework
 
 <table border="1">
 <tr>

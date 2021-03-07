@@ -68,6 +68,8 @@ Creates CSVs
 
 todo: 
 * add all framework comments to the repo issues list
+* add clickable blue framework
+* add detections
 '''
 
 import pandas as pd
@@ -107,10 +109,10 @@ class Amitt:
         self.df_tactics = metadata['tactics']
 
         # Add columns containing lists of techniques and counters to the tactics dataframe
-        df_techniques_per_tactic = self.df_techniques.groupby('tactic_id')['id'].apply(list).reset_index().rename({'id':'technique_ids'}, axis=1)
-        df_counters_per_tactic = self.df_counters.groupby('tactic_id')['id'].apply(list).reset_index().rename({'id':'counter_ids'}, axis=1)
-        self.df_tactics = self.df_tactics.merge(df_techniques_per_tactic, left_on='id', right_on='tactic_id', how='left').fillna('').drop('tactic_id', axis=1)
-        self.df_tactics = self.df_tactics.merge(df_counters_per_tactic, left_on='id', right_on='tactic_id', how='left').fillna('').drop('tactic_id', axis=1)
+        self.df_techniques_per_tactic = self.df_techniques.groupby('tactic_id')['id'].apply(list).reset_index().rename({'id':'technique_ids'}, axis=1)
+        self.df_counters_per_tactic = self.df_counters.groupby('tactic_id')['id'].apply(list).reset_index().rename({'id':'counter_ids'}, axis=1)
+        self.df_tactics = self.df_tactics.merge(self.df_techniques_per_tactic, left_on='id', right_on='tactic_id', how='left').fillna('').drop('tactic_id', axis=1)
+        self.df_tactics = self.df_tactics.merge(self.df_counters_per_tactic, left_on='id', right_on='tactic_id', how='left').fillna('').drop('tactic_id', axis=1)
 
         # Add simple dictionaries (id -> name) for objects
         self.phases      = self.make_object_dictionary(self.df_phases)
@@ -123,10 +125,6 @@ class Amitt:
 
         # Create the data table for each framework file
         self.num_tactics = len(self.df_tactics)
-        self.max_num_techniques_per_tactic = max(df_techniques_per_tactic['technique_ids'].apply(len)) +2
-        self.max_num_counters_per_tactic = max(df_counters_per_tactic['counter_ids'].apply(len)) +2
-        self.padded_techniques_tactics_table = self.create_padded_techniques_tactics_table()
-        self.padded_counters_tactics_table = self.create_padded_counters_tactics_table()
 
         # Create counters cross-tables
         self.cross_counterid_techniqueid = self.create_cross_table(self.df_counters[['id', 'techniques']], 
@@ -154,53 +152,6 @@ class Amitt:
 
     def make_object_dictionary(self, df):
         return(pd.Series(df.name.values,index=df.id).to_dict())
-    
-    
-    def create_padded_techniques_tactics_table(self, tocsv=True):
-        # Create the master grid that we make all the framework visuals from
-        # cols = number of tactics
-        # rows = max number of techniques per tactic + 2
-
-        arr = [['' for i in range(self.num_tactics)] for j in range(self.max_num_techniques_per_tactic)] 
-        for index, tactic in self.df_tactics.iterrows():
-            arr[0][index] = tactic['phase_id']
-            arr[1][index] = tactic['id']
-            if tactic['technique_ids'] == '':
-                continue
-            for index2, technique in enumerate(tactic['technique_ids']):
-                arr[index2+2][index] = technique
-
-        #Save grid to file
-        if tocsv:
-            csvdir = '../generated_csvs'
-            if not os.path.exists(csvdir):
-                os.makedirs(csvdir)
-            pd.DataFrame(arr).to_csv(csvdir + '/techniques_tactics_table.csv', index=False, header=False)
-
-        return(arr)
-
-    def create_padded_counters_tactics_table(self, tocsv=True):
-        # Create the master grid that we make all the framework visuals from
-        # cols = number of tactics
-        # rows = max number of techniques per tactic + 2
-
-        arr = [['' for i in range(self.num_tactics)] for j in range(self.max_num_counters_per_tactic)] 
-        for index, tactic in self.df_tactics.iterrows():
-            arr[0][index] = tactic['phase_id']
-            arr[1][index] = tactic['id']
-            if tactic['counter_ids'] == '':
-                continue
-            for index2, counter in enumerate(tactic['counter_ids']):
-                arr[index2+2][index] = counter
-
-        #Save grid to file
-        if tocsv:
-            csvdir = '../generated_csvs'
-            if not os.path.exists(csvdir):
-                os.makedirs(csvdir)
-            pd.DataFrame(arr).to_csv(csvdir + '/counters_tactics_table.csv', index=False, header=False)
-
-        return(arr)
 
 
     def create_cross_table(self, df, col, newcol, divider=','):
@@ -528,132 +479,140 @@ class Amitt:
         return
 
 
-    def write_amitt_red_framework_file(self, outfile = '../amitt_red_framework.md'):
+    def create_padded_framework_table(self, title, ttp_col, tocsv=True):
+        # Create the master grid that we make all the framework visuals from
+        # cols = number of tactics
+        # rows = max number of techniques per tactic + 2
+
+        numrows = max(self.df_tactics[ttp_col].apply(len)) + 2
+
+        arr = [['' for i in range(self.num_tactics)] for j in range(numrows)] 
+        for index, tactic in self.df_tactics.iterrows():
+            arr[0][index] = tactic['phase_id']
+            arr[1][index] = tactic['id']
+            if tactic[ttp_col] == '':
+                continue
+            for index2, technique in enumerate(tactic[ttp_col]):
+                arr[index2+2][index] = technique
+
+        #Save grid to file
+        if tocsv:
+            snakecase_title = title.replace(' ', '_')
+            csvdir = '../generated_csvs'
+            if not os.path.exists(csvdir):
+                os.makedirs(csvdir)
+            pd.DataFrame(arr).to_csv('{0}/{1}_ids.csv'.format(csvdir, snakecase_title), index=False, header=False)
+
+        return(arr)
+
+
+    def write_amitt_frameworks(self):
+
+        self.write_amitt_framework_files("red framework", self.techniques, "techniques", 'technique_ids')
+        self.write_amitt_framework_files("blue framework", self.counters, "counters", 'counter_ids')
+        return
+
+    def write_amitt_framework_files(self, title, ttp_dictionary, ttp_dir, ttp_col):
         # Write HTML version of framework diagram to markdown file
-        # Needs phases, tactics, techniques, padded_techniques_tactics_table
+        # Needs phases, tactics
+        snakecase_title = title.replace(' ', '_')
+        outfile = '../amitt_{}.md'.format(snakecase_title)
+        clickable_file = '../amitt_{}_clickable.html'.format(snakecase_title)
 
-        html = '''# AMITT Red: Latest Framework
+        # Create padded table to make the writing easier
+        padded_table = self.create_padded_framework_table(title, ttp_col)
+
+
+        html = '''# AMITT {}: Latest Framework
 
 <table border="1">
 <tr>
-'''
+'''.format(title.capitalize())
 
+        # row with phase names in - removed because it makes the tables confusing
         # for col in range(self.num_tactics):
         #     html += '<td><a href="phases/{0}.md">{0} {1}</a></td>\n'.format(
-        #         self.padded_techniques_tactics_table[0][col], self.phases[self.padded_techniques_tactics_table[0][col]])
+        #         padded_table[0][col], self.phases[padded_table[0][col]])
         # html += '</tr>\n'
 
         html += '<tr style="background-color:blue;color:white;">\n'
         for col in range(self.num_tactics):
             html += '<td><a href="tactics/{0}.md">{0} {1}</a></td>\n'.format(
-                self.padded_techniques_tactics_table[1][col], self.tactics[self.padded_techniques_tactics_table[1][col]])
+                padded_table[1][col], self.tactics[padded_table[1][col]])
         html += '</tr>\n<tr>\n'
 
-        for row in range(2,self.max_num_techniques_per_tactic):
+        for row in range(2,len(padded_table)):
             for col in range(self.num_tactics):
-                if self.padded_techniques_tactics_table[row][col] == '':
+                if padded_table[row][col] == '':
                     html += '<td> </td>\n'
                 else:
-                    html += '<td><a href="techniques/{0}.md">{0} {1}</a></td>\n'.format(
-                        self.padded_techniques_tactics_table[row][col], self.techniques[self.padded_techniques_tactics_table[row][col]])
+                    html += '<td><a href="{0}/{1}.md">{1} {2}</a></td>\n'.format(
+                        ttp_dir, padded_table[row][col], ttp_dictionary[padded_table[row][col]])
             html += '</tr>\n<tr>\n'
         html += '</tr>\n</table>\n'
 
         with open(outfile, 'w') as f:
             f.write(html)
             print('updated {}'.format(outfile))
-        return
 
-    def write_amitt_blue_framework_file(self, outfile = '../amitt_blue_framework.md'):
-        # Write HTML version of counters framework diagram to markdown file
-        # Needs phases, tactics, counters, padded_counters_tactics_table
+        # Clickable version
+        self.write_clickable_amitt_framework_file(title, padded_table, ttp_dictionary, clickable_file)
 
-        html = '''# AMITT Blue: Latest Framework
-
-<table border="1">
-<tr>
-'''
-
-        # for col in range(self.num_tactics):
-        #     html += '<td><a href="phases/{0}.md">{0} {1}</a></td>\n'.format(
-        #         self.padded_counters_tactics_table[0][col], self.phases[self.padded_counters_tactics_table[0][col]])
-        # html += '</tr>\n'
-
-        html += '<tr style="background-color:blue;color:white;">\n'
-        for col in range(self.num_tactics):
-            html += '<td><a href="tactics/{0}.md">{0} {1}</a></td>\n'.format(
-                self.padded_counters_tactics_table[1][col], self.tactics[self.padded_counters_tactics_table[1][col]])
-        html += '</tr>\n<tr>\n'
-
-        for row in range(2,self.max_num_counters_per_tactic):
-            for col in range(self.num_tactics):
-                if self.padded_counters_tactics_table[row][col] == '':
-                    html += '<td> </td>\n'
-                else:
-                    html += '<td><a href="counters/{0}.md">{0} {1}</a></td>\n'.format(
-                        self.padded_counters_tactics_table[row][col], self.counters[self.padded_counters_tactics_table[row][col]])
-            html += '</tr>\n<tr>\n'
-        html += '</tr>\n</table>\n'
-
-        with open(outfile, 'w') as f:
-            f.write(html)
-            print('updated {}'.format(outfile))
         return
 
 
-
-    def write_clickable_amitt_red_framework_file(self, outfile='../amitt_red_framework_clickable.html'):
+    def write_clickable_amitt_framework_file(self, title, padded_table, ttp_dictionary, outfile):
         # Write clickable html version of the matrix grid to html file
 
         html = '''<!DOCTYPE html>
 <html>
 <head>
-    <title>AMITT</title>
+    <title>AMITT {}</title>
 </head>
 <body>
 
 <script>
-function handleTechniqueClick(box) {
+function handleTechniqueClick(box) {{
   var technique = document.getElementById(box);
   var checkBox = document.getElementById(box+"check");
   var text = document.getElementById(box+"text");
-  if (checkBox.checked == true){
+  if (checkBox.checked == true){{
     text.style.display = "block";
     technique.bgColor = "Lime"
-  } else {
+  }} else {{
      text.style.display = "none";
      technique.bgColor = "Silver"
-  }
-}
+  }}
+}}
 </script>
 
 <h1>AMITT</h1>
 
 <table border=1 bgcolor=silver>
-'''
+'''.format(title.capitalize())
 
         html += '<tr bgcolor=fuchsia>\n'
         for col in range(self.num_tactics):
-            html += '<td>{0} {1}</td>\n'.format(self.padded_techniques_tactics_table[0][col], self.phases[self.padded_techniques_tactics_table[0][col]])
+            html += '<td>{0} {1}</td>\n'.format(padded_table[0][col], self.phases[padded_table[0][col]])
         html += '</tr>\n'
 
         html += '<tr bgcolor=aqua>\n'
         for col in range(self.num_tactics):
-            html += '<td>{0} {1}</td>\n'.format(self.padded_techniques_tactics_table[1][col], self.tactics[self.padded_techniques_tactics_table[1][col]])
+            html += '<td>{0} {1}</td>\n'.format(padded_table[1][col], self.tactics[padded_table[1][col]])
         html += '</tr>\n'
 
         liststr = ''
         html += '<tr>\n'
-        for row in range(2,self.max_num_techniques_per_tactic):
+        for row in range(2,len(padded_table)):
             for col in range(self.num_tactics):
-                techid = self.padded_techniques_tactics_table[row][col]
+                techid = padded_table[row][col]
                 if techid == '':
                     html += '<td bgcolor=white> </td>\n'
                 else:
                     html += '<td id="{0}">{0} {1}<input type="checkbox" id="{0}check"  onclick="handleTechniqueClick(\'{0}\')"></td>\n'.format(
-                        techid, self.techniques[techid])
+                        techid, ttp_dictionary[techid])
                     liststr += '<li id="{0}text" style="display:none">{0}: {1}</li>\n'.format(
-                        techid, self.techniques[techid])
+                        techid, ttp_dictionary[techid])
 
             html += '</tr>\n<tr>\n'
         html += '</tr>\n</table>\n<hr>\n'
@@ -770,9 +729,7 @@ function handleTechniqueClick(box) {
     def generate_and_write_datafiles(self):
 
         # Framework matrices
-        self.write_amitt_red_framework_file()
-        self.write_amitt_blue_framework_file()
-        self.write_clickable_amitt_red_framework_file()
+        self.write_amitt_frameworks()
         # Editable files
         self.update_markdown_files()
         self.write_object_indexes_to_file()
