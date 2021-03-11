@@ -1185,14 +1185,6 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>D7 Deter</td>
 </tr>
 <tr>
-<td><a href="counters/C00210.md">C00210</a></td>
-<td>Use encrypted apps for confidential communication</td>
-<td></td>
-<td>M001 - resilience</td>
-<td>TA06 Develop Content</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
 <td><a href="counters/C00211.md">C00211</a></td>
 <td>Use humorous counter-narratives</td>
 <td></td>

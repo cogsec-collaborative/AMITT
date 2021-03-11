@@ -418,4 +418,22 @@ Examples of tertiary sites include Russia Insider, The Duran, geopolitica.ru, Mi
 <td>Sell hats, t-shirts, flags and other branded content that's designed to be seen in the real world</td>
 <td>TA10</td>
 </tr>
+<tr>
+<td><a href="techniques/T0062.md">T0062</a></td>
+<td>Behaviour changes</td>
+<td></td>
+<td>TA12</td>
+</tr>
+<tr>
+<td><a href="techniques/T0063.md">T0063</a></td>
+<td>Message reach</td>
+<td></td>
+<td>TA12</td>
+</tr>
+<tr>
+<td><a href="techniques/T0064.md">T0064</a></td>
+<td>Social media engagement</td>
+<td></td>
+<td>TA12</td>
+</tr>
 </table>

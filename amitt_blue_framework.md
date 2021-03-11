@@ -344,7 +344,7 @@
 <td> </td>
 <td> </td>
 <td> </td>
-<td><a href="counters/C00210.md">C00210 Use encrypted apps for confidential communication</a></td>
+<td><a href="counters/C00219.md">C00219 Add metadata to content that’s out of the control of disinformation creators</a></td>
 <td> </td>
 <td> </td>
 <td> </td>
@@ -358,7 +358,7 @@
 <td> </td>
 <td> </td>
 <td> </td>
-<td><a href="counters/C00219.md">C00219 Add metadata to content that’s out of the control of disinformation creators</a></td>
+<td> </td>
 <td> </td>
 <td> </td>
 <td> </td>

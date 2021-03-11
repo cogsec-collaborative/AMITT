@@ -61,13 +61,13 @@
 </tr>
 <tr>
 <td><a href="../tactics/TA06.md">TA06 Develop Content</a></td>
-<td>11</td>
+<td>10</td>
 <td>7</td>
 <td>6</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>25</td>
+<td>24</td>
 </tr>
 <tr>
 <td><a href="../tactics/TA07.md">TA07 Channel Selection</a></td>
@@ -131,12 +131,12 @@
 </tr>
 <tr>
 <td>TOTALS</td>
-<td>51</td>
+<td>50</td>
 <td>62</td>
 <td>28</td>
 <td>4</td>
 <td>1</td>
 <td>12</td>
-<td>158</td>
+<td>157</td>
 </tr>
 </table>

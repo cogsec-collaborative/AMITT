@@ -28,7 +28,7 @@
 <td><a href="techniques/T0047.md">T0047 Muzzle social media as a political force</a></td>
 <td><a href="techniques/T0057.md">T0057 Organise remote rallies and events</a></td>
 <td><a href="techniques/T0058.md">T0058 Legacy web content</a></td>
-<td> </td>
+<td><a href="techniques/T0062.md">T0062 Behaviour changes</a></td>
 </tr>
 <tr>
 <td><a href="techniques/T0002.md">T0002 Facilitate State Propaganda</a></td>
@@ -42,7 +42,7 @@
 <td><a href="techniques/T0048.md">T0048 Cow online opinion leaders</a></td>
 <td><a href="techniques/T0061.md">T0061 Sell merchandising</a></td>
 <td><a href="techniques/T0059.md">T0059 Play the long game</a></td>
-<td> </td>
+<td><a href="techniques/T0063.md">T0063 Message reach</a></td>
 </tr>
 <tr>
 <td><a href="techniques/T0003.md">T0003 Leverage Existing Narratives</a></td>
@@ -56,7 +56,7 @@
 <td><a href="techniques/T0049.md">T0049 Flooding</a></td>
 <td> </td>
 <td><a href="techniques/T0060.md">T0060 Continue to amplify</a></td>
-<td> </td>
+<td><a href="techniques/T0064.md">T0064 Social media engagement</a></td>
 </tr>
 <tr>
 <td><a href="techniques/T0004.md">T0004 Competing Narratives</a></td>
