@@ -1107,7 +1107,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00194.md">C00194</a></td>
 <td>Provide an alternative to Russian information by expanding and improving local content.</td>
-<td>To effectively compete, others argue, is to develop content that can displace the pro-Russia narrative. given the importance of affecting the entire media environment, we should note that these recommendations for alternative content span both new and old media alike.</td>
+<td>Develop content that can displace geopolitically-motivated narratives in the entire media environment, both new and old media alike.</td>
 <td>M002 - diversion</td>
 <td>TA09 Exposure</td>
 <td>D3 Disrupt</td>

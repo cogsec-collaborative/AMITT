@@ -653,6 +653,15 @@ function handleTechniqueClick(box) {{
         dfw = dfw.sort_values(by='count', ascending=False)
         return(dfw)   
 
+
+    def analyse_coverage(self, technique_id_list, counter_id_list):
+        ct = self.cross_counterid_techniqueid.copy()
+        ct = ct[ct['technique_id'].isin(self.df_techniques['id'].to_list()) & ct['id'].isin(self.df_counters['id'].to_list())]
+        possible_counters_for_techniques = ct[ct['technique_id'].isin(technique_id_list)] 
+        possible_techniques_for_counters = ct[ct['technique_id'].isin(counter_id_list)] 
+        coverage = ct[(ct['id'].isin(counter_id_list)) & (ct['technique_id'].isin(technique_id_list))]
+        return coverage, possible_counters_for_techniques, possible_techniques_for_counters
+
     
     def write_counts_table_to_file(self, objectname, objectdict, counts_table, outfile):
         html = '''# AMITT {} courses of action
