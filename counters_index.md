@@ -851,7 +851,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00143.md">C00143</a></td>
 <td>(botnet) DMCA takedown requests to waste group time</td>
-<td></td>
+<td>Use copyright infringement claims to remove videos etc. </td>
 <td>M013 - targeting</td>
 <td>TA11 Persistence</td>
 <td>D4 Degrade</td>
@@ -859,7 +859,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00144.md">C00144</a></td>
 <td>Buy out troll farm employees / offer them jobs</td>
-<td></td>
+<td>Degrade the infrastructure. </td>
 <td>M014 - reduce resources</td>
 <td>TA11 Persistence</td>
 <td>D4 Degrade</td>
