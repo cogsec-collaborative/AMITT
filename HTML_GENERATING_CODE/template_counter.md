@@ -10,6 +10,8 @@
 
 * **Belongs to tactic stage**: {tactic}
 
+{actors}
+
 {tactics}
 
 {techniques}

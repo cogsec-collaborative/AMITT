@@ -246,6 +246,18 @@ class Amitt:
             table_string += row_string.format(row['id'], row['name'], row['responsetype'])
         return table_string
 
+    def create_counter_actors_string(self, counter_id):
+        table_string = '''
+| Actors | Sectors |
+| ------ | ------- |
+'''
+        counter_actors = self.cross_counterid_actorid[self.cross_counterid_actorid['id']==counter_id]
+        counter_actors = pd.merge(counter_actors, self.df_actors[['id', 'name', 'sector']], left_on='actor_id', right_on='id')
+        row_string = '| [{0} {1}](../actors/{0}.md) | {2} |\n'
+        for index, row in counter_actors.sort_values('actor_id').iterrows():
+            table_string += row_string.format(row['actor_id'], row['name'], row['sector'])
+        return table_string
+
     def create_actor_counters_string(self, actor_id):
         table_string = '''
 | Counters | Response types |
@@ -441,6 +453,7 @@ class Amitt:
                     metatext = template.format(type = 'Counter', id=row['id'], name=row['name'],
                                                tactic=row['tactic_id'], summary=row['summary'],
                                                playbooks=row['playbooks'], metatechnique=row['metatechnique'],
+                                               actors=self.create_counter_actors_string(row['id']),
                                                resources_needed=row['resources_needed'],
                                                tactics=self.create_counter_tactics_string(row['id']),
                                                techniques=self.create_counter_techniques_string(row['id']),

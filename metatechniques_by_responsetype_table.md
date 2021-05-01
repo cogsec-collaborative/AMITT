@@ -92,8 +92,8 @@
 <tr>
 <td><a href="../metatechniques/M009.md">M009 dilution</a></td>
 <td>0</td>
-<td>5</td>
-<td>1</td>
+<td>4</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -101,9 +101,9 @@
 </tr>
 <tr>
 <td><a href="../metatechniques/M010.md">M010 countermessaging</a></td>
-<td>2</td>
+<td>1</td>
 <td>8</td>
-<td>4</td>
+<td>5</td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -121,13 +121,13 @@
 </tr>
 <tr>
 <td><a href="../metatechniques/M012.md">M012 cleaning</a></td>
-<td>2</td>
+<td>1</td>
 <td>0</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>3</td>
+<td>2</td>
 </tr>
 <tr>
 <td><a href="../metatechniques/M013.md">M013 targeting</a></td>
@@ -151,12 +151,12 @@
 </tr>
 <tr>
 <td>TOTALS</td>
-<td>50</td>
-<td>62</td>
-<td>28</td>
+<td>48</td>
+<td>61</td>
+<td>30</td>
 <td>4</td>
 <td>1</td>
 <td>12</td>
-<td>157</td>
+<td>156</td>
 </tr>
 </table>

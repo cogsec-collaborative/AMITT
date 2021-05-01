@@ -18,6 +18,14 @@
 <td>D2 Deny</td>
 </tr>
 <tr>
+<td><a href="counters/C00006.md">C00006</a></td>
+<td>Censorship</td>
+<td>Alter and/or block the publication/dissemination of adversary controlled information</td>
+<td>M005 - removal</td>
+<td>TA01 Strategic Planning</td>
+<td>D2 Deny</td>
+</tr>
+<tr>
 <td><a href="counters/C00008.md">C00008</a></td>
 <td>Create shared fact-checking database</td>
 <td>Snopes is best-known example</td>
@@ -72,14 +80,6 @@
 <td>M006 - scoring</td>
 <td>TA06 Develop Content</td>
 <td>D4 Degrade</td>
-</tr>
-<tr>
-<td><a href="counters/C00016.md">C00016</a></td>
-<td>Censorship - not recommended</td>
-<td>e.g. treating social media as a privilege not right</td>
-<td>M012 - cleaning</td>
-<td>TA01 Strategic Planning</td>
-<td>D2 Deny</td>
 </tr>
 <tr>
 <td><a href="counters/C00017.md">C00017</a></td>
@@ -357,7 +357,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 </tr>
 <tr>
 <td><a href="counters/C00072.md">C00072</a></td>
-<td>Content censorship in non-relevant domains e.g. Pinterest antivax</td>
+<td>Remove non-relevant content from special interest groups – not recommended</td>
 <td></td>
 <td>M005 - removal</td>
 <td>TA06 Develop Content</td>
@@ -373,7 +373,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 </tr>
 <tr>
 <td><a href="counters/C00074.md">C00074</a></td>
-<td>Identify identical content and mass deplatform</td>
+<td>Identify and delete or rate limit identical content</td>
 <td>
 </td>
 <td>M012 - cleaning</td>
@@ -477,7 +477,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Throttle number of forwards</td>
 <td></td>
 <td>M004 - friction</td>
-<td>TA09 Exposure</td>
+<td>TA07 Channel Selection</td>
 <td>D4 Degrade</td>
 </tr>
 <tr>
@@ -498,7 +498,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00092.md">C00092</a></td>
-<td>Reputation scores for social media influencers</td>
+<td>Establish a truth teller reputation score for influencers</td>
 <td>Includes "Establish a truth teller reputation score for influencers” and “Reputation scores for social media users”.  Influencers are individuals or accounts with many followers. </td>
 <td>M006 - scoring</td>
 <td>TA02 Objective Planning</td>
@@ -538,7 +538,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00098.md">C00098</a></td>
-<td>Revocation of "verified"</td>
+<td>Revocation of allowlisted or "verified" status</td>
 <td></td>
 <td>M004 - friction</td>
 <td>TA07 Channel Selection</td>
@@ -557,12 +557,12 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Hashtag jacking</td>
 <td></td>
 <td>M002 - diversion</td>
-<td>TA07 Channel Selection</td>
+<td>TA08 Pump Priming</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
 <td><a href="counters/C00101.md">C00101</a></td>
-<td>Create participant friction</td>
+<td>Create friction by rate-limiting engagement</td>
 <td></td>
 <td>M004 - friction</td>
 <td>TA07 Channel Selection</td>
@@ -579,7 +579,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00103.md">C00103</a></td>
 <td>Create a bot that engages / distract trolls</td>
-<td>Use T00030 backstop personas</td>
+<td></td>
 <td>M002 - diversion</td>
 <td>TA07 Channel Selection</td>
 <td>D5 Deceive</td>
@@ -597,7 +597,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Click-bait centrist content</td>
 <td>Create emotive centrist content that gets more clicks</td>
 <td>M002 - diversion</td>
-<td>TA07 Channel Selection</td>
+<td>TA06 Develop Content</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -605,15 +605,15 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Content moderation</td>
 <td></td>
 <td>M006 - scoring</td>
-<td>TA07 Channel Selection</td>
+<td>TA06 Develop Content</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
 <td><a href="counters/C00109.md">C00109</a></td>
-<td>De-escalation</td>
+<td>Dampen Emotional Reaction</td>
 <td></td>
 <td>M001 - resilience</td>
-<td>TA07 Channel Selection</td>
+<td>TA09 Exposure</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -626,16 +626,16 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00111.md">C00111</a></td>
-<td>Present sympathetic views of opposite side</td>
+<td>Reduce polarisation by connecting and presenting sympathetic renditions of opposite views</td>
 <td></td>
 <td>M001 - resilience</td>
-<td>TA07 Channel Selection</td>
+<td>TA01 Strategic Planning</td>
 <td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00112.md">C00112</a></td>
 <td>"Prove they are not an op!"</td>
-<td>This applies to the entirety of the matrix as I read this as "create awareness around the use of all of these techniques"</td>
+<td></td>
 <td>M004 - friction</td>
 <td>TA08 Pump Priming</td>
 <td>D2 Deny</td>
@@ -674,7 +674,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00117.md">C00117</a></td>
-<td>Downgrade de-amplify label promote counter to disinformation</td>
+<td>Downgrade / de-amplify so message is seen by fewer people</td>
 <td></td>
 <td>M010 - countermessaging</td>
 <td>TA08 Pump Priming</td>
@@ -714,7 +714,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00122.md">C00122</a></td>
-<td>Content moderation. Censorship?</td>
+<td>Content moderation</td>
 <td></td>
 <td>M004 - friction</td>
 <td>TA09 Exposure</td>
@@ -722,7 +722,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00123.md">C00123</a></td>
-<td>Bot control</td>
+<td>Remove or rate limit botnets</td>
 <td></td>
 <td>M004 - friction</td>
 <td>TA09 Exposure</td>
@@ -738,7 +738,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00125.md">C00125</a></td>
-<td>Prepare the population with pre-announcements</td>
+<td>Prebunking</td>
 <td></td>
 <td>M001 - resilience</td>
 <td>TA09 Exposure</td>
@@ -765,7 +765,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Use banking to cut off access </td>
 <td>fiscal sanctions; parallel to counter terrorism</td>
 <td>M014 - reduce resources</td>
-<td>TA10 Go Physical</td>
+<td>TA09 Exposure</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
@@ -773,7 +773,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Mentorship: elders, youth, credit. Learn vicariously.</td>
 <td></td>
 <td>M001 - resilience</td>
-<td>TA10 Go Physical</td>
+<td>TA05 Microtargeting</td>
 <td>D7 Deter</td>
 </tr>
 <tr>
@@ -789,7 +789,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Deplatform Account*</td>
 <td>Note: Similar to Deplatform People but less generic. Perhaps both should be left.</td>
 <td>M005 - removal</td>
-<td>TA11 Persistence</td>
+<td>TA03 Develop People</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -797,7 +797,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Deplatform message groups and/or message boards</td>
 <td>Merged two rows here. </td>
 <td>M005 - removal</td>
-<td>TA11 Persistence</td>
+<td>TA04 Develop Networks</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -805,7 +805,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Microtarget most likely targets then send them countermessages</td>
 <td></td>
 <td>M010 - countermessaging</td>
-<td>TA11 Persistence</td>
+<td>TA08 Pump Priming</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -813,7 +813,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Pollute the AB-testing data feeds</td>
 <td>Polluting A/B testing requires knowledge of MOEs and MOPs. A/B testing must be caught early when there is relatively little data available so infiltration of TAs and understanding of how content is migrated from testing to larger audiences is fundamental.</td>
 <td>M008 - data pollution</td>
-<td>TA11 Persistence</td>
+<td>TA12 Measure Effectiveness</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -861,7 +861,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Buy out troll farm employees / offer them jobs</td>
 <td>Degrade the infrastructure. </td>
 <td>M014 - reduce resources</td>
-<td>TA11 Persistence</td>
+<td>TA02 Objective Planning</td>
 <td>D4 Degrade</td>
 </tr>
 <tr>
@@ -877,7 +877,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Make amplification of social media ports expire (e.g. can't like/ retweet after n days)</td>
 <td></td>
 <td>M004 - friction</td>
-<td>TA12 Measure Effectiveness</td>
+<td>TA09 Exposure</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -901,7 +901,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>“fight in the light”</td>
 <td>Use leadership in the arts, entertainment, and media to highlight and build on fundamental tenets of democracy.</td>
 <td>M003 - daylight</td>
-<td>TA09 Exposure</td>
+<td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -930,18 +930,18 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00156.md">C00156</a></td>
-<td>Better tell the U.S., NATO, and EU story.</td>
+<td>Better tell your country or organization story</td>
 <td>Civil engagement activities conducted on the part of EFP forces. In Latvia, for example, U.S. soldiers have reportedly conducted numerous civil engagements with the local populations. In one example, soldiers cut firewood for local Russian-speaking Latvians. Locals were reportedly overheard saying, “A Russian soldier wouldn’t do that.” NATO should likewise provide support and training, where needed, to local public affairs and other communication personnel. Local government and military public affairs personnel can play their part in creating and disseminating entertaining and sharable content that supports the EFP mission. </td>
 <td>M010 - countermessaging</td>
-<td>TA09 Exposure</td>
+<td>TA02 Objective Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
 <td><a href="counters/C00158.md">C00158</a></td>
-<td>Use training to build the resilience of at-risk populations.</td>
+<td>Use training to build the resilience of at-risk populations</td>
 <td>NGO Baltic Centre for Media Excellence, with some international funding, provides training to journalists in the Baltics and conducts media literacy training in the region. In addition to helping journalists avoid becoming “unwitting multipliers of misleading information,” the organization works with school teachers in the region to help them “decode media and incorporate media research into teaching.” concepts of media literacy to a mass audience that authorities launch a public information campaign that teaches the program will take time to develop and establish impact, recommends curriculum-based training</td>
 <td>M001 - resilience</td>
-<td>TA09 Exposure</td>
+<td>TA01 Strategic Planning</td>
 <td>D4 Degrade</td>
 </tr>
 <tr>
@@ -962,7 +962,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00161.md">C00161</a></td>
-<td>Coalition Building and Third-Party Inducements:</td>
+<td>Coalition Building with stakeholders and Third-Party Inducements</td>
 <td>Advance coalitions across borders and sectors, spanning public and private, as well as foreign and domestic, divides. Improve mechanisms to collaborate, share information, and develop coordinated approaches with the private sector at home and allies and partners abroad.</td>
 <td>M007 - metatechnique</td>
 <td>TA01 Strategic Planning</td>
@@ -970,7 +970,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00162.md">C00162</a></td>
-<td>collect data/map constellations of Russian“civil society”. Unravel/target the Potemkin villages</td>
+<td>Unravel/target the Potemkin villages</td>
 <td>Kremlin’s narrative spin extends through constellations of “civil society” organizations, political parties, churches, and other actors. Moscow leverages think tanks, human rights groups, election observers, Eurasianist integration groups, and orthodox groups. A collection of Russian civil society organizations, such as the Federal Agency for the Commonwealth of Independent States Affairs, Compatriots Living Abroad, and International Humanitarian Cooperation, together receive at least US$100 million per year, in addition to government-organized nongovernmental organizations (NGOs), at least 150 of which are funded by Russian presidential grants totaling US$70 million per year.</td>
 <td>M013 - targeting</td>
 <td>TA04 Develop Networks</td>
@@ -986,7 +986,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00165.md">C00165</a></td>
-<td>Limit access to alterable documents</td>
+<td>Ensure integrity of official documents</td>
 <td>e.g. for leaked legal documents, use court motions to limit future discovery actions</td>
 <td>M004 - friction</td>
 <td>TA06 Develop Content</td>
@@ -997,15 +997,15 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Deploy Information and Narrative-Building in Service of Statecraft</td>
 <td>Promote a narrative of transparency, truthfulness, liberal values, and democracy. Implement a compelling narrative via effective mechanisms of communication. Continually reassess U.S. messages, mechanisms, and audiences over time. Counteract efforts to manipulate media, undermine free markets, and suppress political freedoms via public diplomacy</td>
 <td>M010 - countermessaging</td>
-<td>TA06 Develop Content</td>
-<td>D2 Deny</td>
+<td>TA01 Strategic Planning</td>
+<td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00169.md">C00169</a></td>
 <td>develop a creative content hub</td>
 <td>international donors will donate to a basket fund that will pay a committee of local experts who will, in turn, manage and distribute the money to Russian-language producers and broadcasters that pitch various projects.</td>
 <td>M010 - countermessaging</td>
-<td>TA09 Exposure</td>
+<td>TA02 Objective Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -1026,10 +1026,10 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00172.md">C00172</a></td>
-<td>social media page removal</td>
+<td>social media source removal</td>
 <td>e.g. facebook page removal</td>
 <td>M005 - removal</td>
-<td>TA06 Develop Content</td>
+<td>TA04 Develop Networks</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
@@ -1053,8 +1053,8 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Fill information voids with non-disinformation content</td>
 <td>e.g. increase Russian-language programming. The Economist notes, in May, Current Time videos were viewed 40 million times online (“America’s Answer to Russian Propaganda TV,” 2017). It would certainly be a positive development if Current Time could draw viewers away from Russian TV programming of RT and Sputnik. One effort that might assist in this regard is expanding programming to include more conventional entertainment programming</td>
 <td>M009 - dilution</td>
-<td>TA09 Exposure</td>
-<td>D3 Disrupt</td>
+<td>TA05 Microtargeting</td>
+<td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00182.md">C00182</a></td>
@@ -1069,12 +1069,12 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Media exposure</td>
 <td></td>
 <td>M003 - daylight</td>
-<td>TA09 Exposure</td>
+<td>TA08 Pump Priming</td>
 <td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00188.md">C00188</a></td>
-<td>Newsroom/Journalist training to counter SEO influence</td>
+<td>Newsroom/Journalist training to counter influence moves</td>
 <td>August 2014, Russian news agency Rossiya Segodnya commissioned a poll in France with poorly worded questions and a statistically insignificant subsample that RT used to back a story titled “15% of French people back ISIS [Islamic State of Iraq and Syria] militants, poll finds.” The story and summary infographic circulated on the internet, initially appearing primarily on French sites. After a week, the generally respectable digital U.S. news outlet Vox ran the story, now titled “One in Six French People Say They Support ISIS.” Although this effect has now worn off or been overwritten, for a time—despite a later story from The Washington Post debunking the claim—typing “ISIS France” into Google resulted in an autosuggestion of “ISIS France support” (Borthwick, 2015).</td>
 <td>M001 - resilience</td>
 <td>TA08 Pump Priming</td>
@@ -1093,7 +1093,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>open engagement with civil society</td>
 <td>U.S. government should also open engagement with civil society as an independent check on government action and messaging. It should seek to coordinate and synchronize narrative themes with allies and partners while calibrating action in cases where elements in these countries may have been co-opted by U.S. competitors.</td>
 <td>M001 - resilience</td>
-<td>TA09 Exposure</td>
+<td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -1106,15 +1106,15 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00194.md">C00194</a></td>
-<td>Provide an alternative to Russian information by expanding and improving local content.</td>
+<td>Provide an alternative to disinformation content by expanding and improving local content</td>
 <td>Develop content that can displace geopolitically-motivated narratives in the entire media environment, both new and old media alike.</td>
 <td>M002 - diversion</td>
-<td>TA09 Exposure</td>
+<td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
 <td><a href="counters/C00195.md">C00195</a></td>
-<td>Redirect Method</td>
+<td>Redirect searches away from disinformation or extremist content </td>
 <td>Use Google AdWords to identify instances in which people search Google about particular fake-news stories or Russian propaganda themes. Taking advantage of the technology behind Google AdWords, this method identifies potential ISIS recruits through their Google searches and exposes them to curated YouTube videos debunking ISIS recruiting themes. Apply this method to Russian propaganda.</td>
 <td>M002 - diversion</td>
 <td>TA07 Channel Selection</td>
@@ -1125,7 +1125,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Include the role of social media in the regulatory framework for media</td>
 <td>The European Union created significant new regulations in 2018; the U.S. approach will need to be carefully crafted to protect First Amendment principles, create needed transparency, ensure liability, and impose costs for noncompliance</td>
 <td>M007 - metatechnique</td>
-<td>TA07 Channel Selection</td>
+<td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -1157,7 +1157,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Stop offering press credentials to propaganda outlets</td>
 <td></td>
 <td>M004 - friction</td>
-<td>TA08 Pump Priming</td>
+<td>TA04 Develop Networks</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -1194,10 +1194,10 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00212.md">C00212</a></td>
-<td>build public resilence by making civil society more vibrant</td>
+<td>build public resilience by making civil society more vibrant</td>
 <td>Increase public service experience, and support wider civics and history education.</td>
 <td>M001 - resilience</td>
-<td>TA09 Exposure</td>
+<td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -1205,7 +1205,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Create policy that makes social media police disinformation</td>
 <td>German model: facebook forced to police content by law.</td>
 <td>M007 - metatechnique</td>
-<td>TA07 Channel Selection</td>
+<td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -1213,7 +1213,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td>Use fraud legislation to clean up social media</td>
 <td></td>
 <td>M007 - metatechnique</td>
-<td>TA07 Channel Selection</td>
+<td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
 </tr>
 <tr>
@@ -1230,14 +1230,6 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <td></td>
 <td>M003 - daylight</td>
 <td>TA07 Channel Selection</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
-<td><a href="counters/C00218.md">C00218</a></td>
-<td>Censorship</td>
-<td>Alter and/or block the publication/dissemination of adversary controlled information</td>
-<td>M005 - removal</td>
-<td>TA09 Exposure</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
