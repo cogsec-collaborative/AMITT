@@ -763,4 +763,12 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>TA03 Develop People</td>
 <td>D3 Disrupt</td>
 </tr>
+<tr>
+<td><a href="detections/F00094.md">F00094</a></td>
+<td>Registries alert when large batches of newsy URLs get registered together</td>
+<td></td>
+<td>M003 - daylight</td>
+<td>TA07 Channel Selection</td>
+<td>D2 Deny</td>
+</tr>
 </table>
