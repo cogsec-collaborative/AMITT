@@ -31,9 +31,9 @@
 </tr>
 <tr>
 <td><a href="../tactics/TA03.md">TA03 Develop People</a></td>
-<td>8</td>
-<td>5</td>
-<td>1</td>
+<td>7</td>
+<td>4</td>
+<td>3</td>
 <td>0</td>
 <td>1</td>
 <td>2</td>
@@ -121,9 +121,9 @@
 </tr>
 <tr>
 <td>TOTALS</td>
-<td>44</td>
-<td>54</td>
-<td>25</td>
+<td>43</td>
+<td>53</td>
+<td>27</td>
 <td>4</td>
 <td>1</td>
 <td>12</td>

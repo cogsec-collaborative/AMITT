@@ -41,9 +41,9 @@
 </tr>
 <tr>
 <td><a href="../metatechniques/M004.md">M004 friction</a></td>
-<td>11</td>
+<td>10</td>
 <td>6</td>
-<td>2</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -102,8 +102,8 @@
 <tr>
 <td><a href="../metatechniques/M010.md">M010 countermessaging</a></td>
 <td>1</td>
-<td>8</td>
-<td>4</td>
+<td>7</td>
+<td>5</td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
@@ -151,9 +151,9 @@
 </tr>
 <tr>
 <td>TOTALS</td>
-<td>44</td>
-<td>54</td>
-<td>25</td>
+<td>43</td>
+<td>53</td>
+<td>27</td>
 <td>4</td>
 <td>1</td>
 <td>12</td>
