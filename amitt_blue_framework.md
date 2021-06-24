@@ -136,7 +136,7 @@
 <td> </td>
 <td><a href="counters/C00080.md">C00080 Create competing narrative</a></td>
 <td> </td>
-<td><a href="counters/C00119.md">C00119 Engage payload and debunk. </a></td>
+<td><a href="counters/C00119.md">C00119 Engage payload and debunk.</a></td>
 <td><a href="counters/C00147.md">C00147 Make amplification of social media posts expire (e.g. can't like/ retweet after n days)</a></td>
 <td> </td>
 <td> </td>

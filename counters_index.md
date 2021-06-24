@@ -18,14 +18,6 @@
 <td>D2 Deny</td>
 </tr>
 <tr>
-<td><a href="counters/C00006.md">C00006</a></td>
-<td>Censorship</td>
-<td>Alter and/or block the publication/dissemination of information controlled by disinformation creators. Not recommended. </td>
-<td>M005 - removal</td>
-<td>TA01 Strategic Planning</td>
-<td>D2 Deny</td>
-</tr>
-<tr>
 <td><a href="counters/C00008.md">C00008</a></td>
 <td>Create shared fact-checking database</td>
 <td>Share fact-checking resources - tips, responses, countermessages, across respose groups.  Snopes is best-known example of fact-checking sites. </td>
@@ -82,9 +74,17 @@
 <td>D4 Degrade</td>
 </tr>
 <tr>
+<td><a href="counters/C00016.md">C00016</a></td>
+<td>Censorship</td>
+<td>Alter and/or block the publication/dissemination of information controlled by disinformation creators. Not recommended. </td>
+<td>M005 - removal</td>
+<td>TA01 Strategic Planning</td>
+<td>D2 Deny</td>
+</tr>
+<tr>
 <td><a href="counters/C00017.md">C00017</a></td>
 <td>Repair broken social connections</td>
-<td>Technique could be in terms of forcing a reality-check by talking to people instead of reading about bogeymen. </td>
+<td>For example, use a media campaign to promote in-group to out-group in person communication / activities . Technique could be in terms of forcing a reality-check by talking to people instead of reading about bogeymen. </td>
 <td>M010 - countermessaging</td>
 <td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
@@ -186,7 +186,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <td>Counters fake account</td>
 <td>M004 - friction</td>
 <td>TA03 Develop People</td>
-<td>D2 Deny</td>
+<td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00036.md">C00036</a></td>
@@ -210,12 +210,12 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <td>Focus on and boost truths in misinformation narratives, removing misinformation from them. </td>
 <td>M010 - countermessaging</td>
 <td>TA03 Develop People</td>
-<td>D3 Disrupt</td>
+<td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00044.md">C00044</a></td>
 <td>Keep people from posting to social media immediately</td>
-<td>Use this to slow down activities or force a small delay between posts or replies to new posts.</td>
+<td>Platforms can introduce friction to slow down activities, force a small delay between posts, or replies to posts.</td>
 <td>M004 - friction</td>
 <td>TA03 Develop People</td>
 <td>D3 Disrupt</td>
@@ -230,7 +230,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 </tr>
 <tr>
 <td><a href="counters/C00047.md">C00047</a></td>
-<td>Coordinated inauthentics</td>
+<td>Honeypot with coordinated inauthentics</td>
 <td>Flood disinformation spaces with obviously fake content, to dilute core misinformation narratives in them. </td>
 <td>M008 - data pollution</td>
 <td>TA04 Develop Networks</td>
@@ -270,7 +270,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 </tr>
 <tr>
 <td><a href="counters/C00056.md">C00056</a></td>
-<td>Get off social media</td>
+<td>Encourage people to leave social media</td>
 <td>Encourage people to leave spcial media.  We don't expect this to work</td>
 <td>M004 - friction</td>
 <td>TA04 Develop Networks</td>
@@ -286,7 +286,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 </tr>
 <tr>
 <td><a href="counters/C00059.md">C00059</a></td>
-<td>Verification of project before posting (counters funding campaigns)</td>
+<td>Verification of project before posting fund requests</td>
 <td>third-party verification of projects posting funding campaigns before those campaigns can be posted. </td>
 <td>M011 - verification</td>
 <td>TA04 Develop Networks</td>
@@ -358,7 +358,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 </tr>
 <tr>
 <td><a href="counters/C00072.md">C00072</a></td>
-<td>Remove non-relevant content from special interest groups – not recommended</td>
+<td>Remove non-relevant content from special interest groups - not recommended</td>
 <td>Check special-interest groups (e.g. medical, knitting) for unrelated and misinformation-linked content, and remove it. </td>
 <td>M005 - removal</td>
 <td>TA06 Develop Content</td>
@@ -375,8 +375,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00074.md">C00074</a></td>
 <td>Identify and delete or rate limit identical content</td>
-<td>Search for repeated content (text, images, videos etc); check for misinformation, rate-limit or delete repeats. 
-</td>
+<td>Search for repeated content (text, images, videos etc); check for misinformation, rate-limit or delete repeats. </td>
 <td>M012 - cleaning</td>
 <td>TA06 Develop Content</td>
 <td>D2 Deny</td>
@@ -667,7 +666,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00119.md">C00119</a></td>
-<td>Engage payload and debunk. </td>
+<td>Engage payload and debunk.</td>
 <td>debunk misinformation content.  Provide link to facts. </td>
 <td>M010 - countermessaging</td>
 <td>TA08 Pump Priming</td>
