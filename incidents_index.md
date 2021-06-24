@@ -2,12 +2,12 @@
 
 <table border="1">
 <tr>
-<th>id</th>
+<th>amitt_id</th>
 <th>name</th>
 <th>type</th>
-<th>Year Started</th>
-<th>To country</th>
-<th>Found via</th>
+<th>year_started</th>
+<th>to_country</th>
+<th>found_via</th>
 </tr>
 <tr>
 <td><a href="incidents/I00001.md">I00001</a></td>

@@ -29,7 +29,7 @@ Reads 1 excel file: ../AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx with sheets:
 * incidenttechniques
 * tactics
 * countermeasures
-* actors
+* actortypes
 * resources
 * responsetypes
 
@@ -95,13 +95,13 @@ class Amitt:
         self.df_techniques = metadata['techniques']
         self.df_tasks = metadata['tasks']
         self.df_incidents = metadata['incidents']
-        self.df_counters = metadata['countermeasures'].sort_values('id')
+        self.df_counters = metadata['countermeasures'].sort_values('amitt_id')
         self.df_counters[['tactic_id', 'tactic_name']] = self.df_counters['tactic'].str.split(' ', 1, expand=True)
         self.df_counters[['metatechnique_id', 'metatechnique_name']] = self.df_counters['metatechnique'].str.split(' ', 1, expand=True)
         self.df_detections = metadata['detections']
         self.df_detections[['tactic_id', 'tactic_name']] = self.df_detections['tactic'].str.split(' ', 1, expand=True)
 #        self.df_detections[['metatechnique_id', 'metatechnique_name']] = self.df_detections['metatechnique'].str.split(' ', 1, expand=True) #FIXIT
-        self.df_actors = metadata['actors']
+        self.df_actortypes = metadata['actortypes']
         self.df_resources = metadata['resources']
         self.df_responsetypes = metadata['responsetypes']
         self.df_metatechniques = metadata['metatechniques']
@@ -109,10 +109,10 @@ class Amitt:
         self.df_tactics = metadata['tactics']
 
         # Add columns containing lists of techniques and counters to the tactics dataframe
-        self.df_techniques_per_tactic = self.df_techniques.groupby('tactic_id')['id'].apply(list).reset_index().rename({'id':'technique_ids'}, axis=1)
-        self.df_counters_per_tactic = self.df_counters.groupby('tactic_id')['id'].apply(list).reset_index().rename({'id':'counter_ids'}, axis=1)
-        self.df_tactics = self.df_tactics.merge(self.df_techniques_per_tactic, left_on='id', right_on='tactic_id', how='left').fillna('').drop('tactic_id', axis=1)
-        self.df_tactics = self.df_tactics.merge(self.df_counters_per_tactic, left_on='id', right_on='tactic_id', how='left').fillna('').drop('tactic_id', axis=1)
+        self.df_techniques_per_tactic = self.df_techniques.groupby('tactic_id')['amitt_id'].apply(list).reset_index().rename({'amitt_id':'technique_ids'}, axis=1)
+        self.df_counters_per_tactic = self.df_counters.groupby('tactic_id')['amitt_id'].apply(list).reset_index().rename({'amitt_id':'counter_ids'}, axis=1)
+        self.df_tactics = self.df_tactics.merge(self.df_techniques_per_tactic, left_on='amitt_id', right_on='tactic_id', how='left').fillna('').drop('tactic_id', axis=1)
+        self.df_tactics = self.df_tactics.merge(self.df_counters_per_tactic, left_on='amitt_id', right_on='tactic_id', how='left').fillna('').drop('tactic_id', axis=1)
 
         # Add simple dictionaries (id -> name) for objects
         self.phases      = self.make_object_dictionary(self.df_phases)
@@ -120,38 +120,38 @@ class Amitt:
         self.techniques  = self.make_object_dictionary(self.df_techniques)
         self.counters    = self.make_object_dictionary(self.df_counters)
         self.metatechniques = self.make_object_dictionary(self.df_metatechniques)
-        self.actors      = self.make_object_dictionary(self.df_actors)
+        self.actortypes  = self.make_object_dictionary(self.df_actortypes)
         self.resources   = self.make_object_dictionary(self.df_resources)
 
         # Create the data table for each framework file
         self.num_tactics = len(self.df_tactics)
 
         # Create counters cross-tables
-        self.cross_counterid_techniqueid = self.create_cross_table(self.df_counters[['id', 'techniques']], 
+        self.cross_counterid_techniqueid = self.create_cross_table(self.df_counters[['amitt_id', 'techniques']], 
                                                                    'techniques', 'technique', '\n')        
-        self.cross_counterid_resourceid = self.create_cross_table(self.df_counters[['id', 'resources_needed']], 
+        self.cross_counterid_resourceid = self.create_cross_table(self.df_counters[['amitt_id', 'resources_needed']], 
                                                                   'resources_needed', 'resource', ',')
-        self.cross_counterid_actorid = self.create_cross_table(self.df_counters[['id', 'actors']], 
-                                                                  'actors', 'actor', ',')
+        self.cross_counterid_actortypeid = self.create_cross_table(self.df_counters[['amitt_id', 'actortypes']], 
+                                                                  'actortypes', 'actortype', ',')
 
 
     def create_incident_technique_crosstable(self, it_metadata):
         # Generate full cross-table between incidents and techniques
 
         it = it_metadata
-        it.index=it['id']
-        it = it['technique_ids'].str.split(',').apply(lambda x: pd.Series(x)).stack().reset_index(level=1, drop=True).to_frame('technique_id').reset_index().merge(it.drop('id', axis=1).reset_index()).drop('technique_ids', axis=1)
-        it = it.merge(self.df_incidents[['id','name']], 
-                      left_on='incident_id', right_on='id',
+        it.index=it['amitt_id']
+        it = it['technique_ids'].str.split(',').apply(lambda x: pd.Series(x)).stack().reset_index(level=1, drop=True).to_frame('technique_id').reset_index().merge(it.drop('amitt_id', axis=1).reset_index()).drop('technique_ids', axis=1)
+        it = it.merge(self.df_incidents[['amitt_id','name']], 
+                      left_on='incident_id', right_on='amitt_id',
                       suffixes=['','_incident']).drop('incident_id', axis=1)
-        it = it.merge(self.df_techniques[['id','name']], 
-                      left_on='technique_id', right_on='id',
+        it = it.merge(self.df_techniques[['amitt_id','name']], 
+                      left_on='technique_id', right_on='amitt_id',
                       suffixes=['','_technique']).drop('technique_id', axis=1)
         return(it)
 
 
     def make_object_dictionary(self, df):
-        return(pd.Series(df.name.values,index=df.id).to_dict())
+        return(pd.Series(df.name.values,index=df.amitt_id).to_dict())
 
 
     def create_cross_table(self, df, col, newcol, divider=','):
@@ -176,10 +176,10 @@ class Amitt:
 | -------- | -------------------- |
 '''
         incirow = '| [{0} {1}](../incidents/{0}.md) | {2} |\n'
-        its = self.it[self.it['id_technique']==techniqueid]
-        for index, row in its[['id_incident', 'name_incident']].drop_duplicates().sort_values('id_incident').iterrows():
-            techstring = ', '.join(its[its['id_incident']==row['id_incident']]['name'].to_list())
-            incidentstr += incirow.format(row['id_incident'], row['name_incident'], techstring)
+        its = self.it[self.it['amitt_id_technique']==techniqueid]
+        for index, row in its[['amitt_id_incident', 'name_incident']].drop_duplicates().sort_values('amitt_id_incident').iterrows():
+            techstring = ', '.join(its[its['amitt_id_incident']==row['amitt_id_incident']]['name'].to_list())
+            incidentstr += incirow.format(row['amitt_id_incident'], row['name_incident'], techstring)
         return incidentstr
 
 
@@ -190,10 +190,10 @@ class Amitt:
 | --------- | ------------------------- |
 '''
         techrow = '| [{0} {1}](../techniques/{0}.md) | {2} {3} |\n'
-        techlist = self.it[self.it['id_incident'] == incidentid]
-        for index, row in techlist.sort_values('id_technique').iterrows():
-            techstr += techrow.format(row['id_technique'], row['name_technique'], 
-                                      row['id'], row['name'])
+        techlist = self.it[self.it['amitt_id_incident'] == incidentid]
+        for index, row in techlist.sort_values('amitt_id_technique').iterrows():
+            techstr += techrow.format(row['amitt_id_technique'], row['name_technique'], 
+                                      row['amitt_id'], row['name'])
         return techstr
 
 
@@ -205,8 +205,8 @@ class Amitt:
 '''
         tactic_tasks = self.df_tasks[self.df_tasks['tactic_id']==tactic_id]
         task_string = '| [{0} {1}](../tasks/{0}.md) |\n'
-        for index, row in tactic_tasks.sort_values('id').iterrows():
-            table_string += task_string.format(row['id'], row['name'])
+        for index, row in tactic_tasks.sort_values('amitt_id').iterrows():
+            table_string += task_string.format(row['amitt_id'], row['name'])
         return table_string
 
 
@@ -218,8 +218,8 @@ class Amitt:
 '''
         tactic_techniques = self.df_techniques[self.df_techniques['tactic_id']==tactic_id]
         row_string = '| [{0} {1}](../techniques/{0}.md) |\n'
-        for index, row in tactic_techniques.sort_values('id').iterrows():
-            table_string += row_string.format(row['id'], row['name'])
+        for index, row in tactic_techniques.sort_values('amitt_id').iterrows():
+            table_string += row_string.format(row['amitt_id'], row['name'])
         return table_string
 
 
@@ -230,8 +230,8 @@ class Amitt:
 '''
         object_counters = self.df_counters[self.df_counters[objectcolumn]==object_id]
         row_string = '| [{0} {1}](../counters/{0}.md) | {2} |\n'
-        for index, row in object_counters.sort_values(['responsetype', 'id']).iterrows():
-            table_string += row_string.format(row['id'], row['name'], row['responsetype'])
+        for index, row in object_counters.sort_values(['responsetype', 'amitt_id']).iterrows():
+            table_string += row_string.format(row['amitt_id'], row['name'], row['responsetype'])
         return table_string
 
     def create_technique_counters_string(self, technique_id):
@@ -240,34 +240,34 @@ class Amitt:
 | -------- | -------------- |
 '''
         technique_counters = self.cross_counterid_techniqueid[self.cross_counterid_techniqueid['technique_id']==technique_id]
-        technique_counters = pd.merge(technique_counters, self.df_counters[['id', 'name', 'responsetype']])
+        technique_counters = pd.merge(technique_counters, self.df_counters[['amitt_id', 'name', 'responsetype']])
         row_string = '| [{0} {1}](../counters/{0}.md) | {2} |\n'
-        for index, row in technique_counters.sort_values('id').iterrows():
-            table_string += row_string.format(row['id'], row['name'], row['responsetype'])
+        for index, row in technique_counters.sort_values('amitt_id').iterrows():
+            table_string += row_string.format(row['amitt_id'], row['name'], row['responsetype'])
         return table_string
 
-    def create_counter_actors_string(self, counter_id):
+    def create_counter_actortypes_string(self, counter_id):
         table_string = '''
-| Actors | Sectors |
-| ------ | ------- |
+| Actor types | Sectors |
+| ----------- | ------- |
 '''
-        counter_actors = self.cross_counterid_actorid[self.cross_counterid_actorid['id']==counter_id]
-        counter_actors = pd.merge(counter_actors, self.df_actors[['id', 'name', 'sector']], left_on='actor_id', right_on='id')
-        row_string = '| [{0} {1}](../actors/{0}.md) | {2} |\n'
-        for index, row in counter_actors.sort_values('actor_id').iterrows():
-            table_string += row_string.format(row['actor_id'], row['name'], row['sector'])
+        counter_actortypes = self.cross_counterid_actortypeid[self.cross_counterid_actortypeid['amitt_id']==counter_id]
+        counter_actortypes = pd.merge(counter_actortypes, self.df_actortypes[['amitt_id', 'name', 'sector']], left_on='actortype_id', right_on='amitt_id')
+        row_string = '| [{0} {1}](../actortypes/{0}.md) | {2} |\n'
+        for index, row in counter_actortypes.sort_values('actortype_id').iterrows():
+            table_string += row_string.format(row['actortype_id'], row['name'], row['sector'])
         return table_string
 
-    def create_actor_counters_string(self, actor_id):
+    def create_actortype_counters_string(self, actortype_id):
         table_string = '''
 | Counters | Response types |
 | -------- | -------------- |
 '''
-        actor_counters = self.cross_counterid_actorid[self.cross_counterid_actorid['actor_id']==actor_id]
-        actor_counters = pd.merge(actor_counters, self.df_counters[['id', 'name', 'responsetype']])
+        actortype_counters = self.cross_counterid_actortypeid[self.cross_counterid_actortypeid['actortype_id']==actortype_id]
+        actortype_counters = pd.merge(actortype_counters, self.df_counters[['amitt_id', 'name', 'responsetype']])
         row_string = '| [{0} {1}](../counters/{0}.md) | {2} |\n'
-        for index, row in actor_counters.sort_values('id').iterrows():
-            table_string += row_string.format(row['id'], row['name'], row['responsetype'])
+        for index, row in actortype_counters.sort_values('amitt_id').iterrows():
+            table_string += row_string.format(row['amitt_id'], row['name'], row['responsetype'])
         return table_string
 
     def create_resource_counters_string(self, resource_id):
@@ -276,10 +276,10 @@ class Amitt:
 | -------- | -------------- |
 '''
         resource_counters = self.cross_counterid_resourceid[self.cross_counterid_resourceid['resource_id']==resource_id]
-        resource_counters = pd.merge(resource_counters, self.df_counters[['id', 'name', 'responsetype']])
+        resource_counters = pd.merge(resource_counters, self.df_counters[['amitt_id', 'name', 'responsetype']])
         row_string = '| [{0} {1}](../counters/{0}.md) | {2} |\n'
-        for index, row in actor_counters.sort_values('id').iterrows():
-            table_string += row_string.format(row['id'], row['name'], row['responsetype'])
+        for index, row in actortype_counters.sort_values('amitt_id').iterrows():
+            table_string += row_string.format(row['amitt_id'], row['name'], row['responsetype'])
         return table_string
 
 
@@ -290,8 +290,8 @@ class Amitt:
 '''
         # tactic_counters = self.df_counters[self.df_counters['tactic_id']==tactic_id]
         # row_string = '| {0} | [{1} {2}](../counters/{1}.md) |\n'
-        # for index, row in tactic_counters.sort_values(['responsetype', 'id']).iterrows():
-        #     table_string += row_string.format(row['responsetype'], row['id'], row['name'])
+        # for index, row in tactic_counters.sort_values(['responsetype', 'amitt_id']).iterrows():
+        #     table_string += row_string.format(row['responsetype'], row['amitt_id'], row['name'])
         return table_string
 
     def create_counter_techniques_string(self, counter_id):
@@ -299,10 +299,10 @@ class Amitt:
 | Counters these Techniques |
 | ------------------------- |
 '''
-        counter_techniques = self.cross_counterid_techniqueid[self.cross_counterid_techniqueid['id']==counter_id]
-        counter_techniques = pd.merge(counter_techniques, self.df_techniques[['id', 'name']].rename(columns={'id': 'technique_id'}))
+        counter_techniques = self.cross_counterid_techniqueid[self.cross_counterid_techniqueid['amitt_id']==counter_id]
+        counter_techniques = pd.merge(counter_techniques, self.df_techniques[['amitt_id', 'name']].rename(columns={'amitt_id': 'technique_id'}))
         row_string = '| [{0} {1}](../techniques/{0}.md) |\n'
-        for index, row in counter_techniques.sort_values('id').iterrows():
+        for index, row in counter_techniques.sort_values('amitt_id').iterrows():
             table_string += row_string.format(row['technique_id'], row['name'])
         return table_string
 
@@ -313,15 +313,15 @@ class Amitt:
 '''
         # tactic_counters = self.df_counters[self.df_counters['tactic_id']==tactic_id]
         # row_string = '| {0} | [{1} {2}](../counters/{1}.md) |\n'
-        # for index, row in tactic_counters.sort_values(['responsetype', 'id']).iterrows():
-        #     table_string += row_string.format(row['responsetype'], row['id'], row['name'])
+        # for index, row in tactic_counters.sort_values(['responsetype', 'amitt_id']).iterrows():
+        #     table_string += row_string.format(row['responsetype'], row['amitt_id'], row['name'])
         return table_string
 
 
     def write_object_index_to_file(self, objectname, objectcols, dfobject, outfile):
         ''' Write HTML version of incident list to markdown file
 
-        Assumes that dfobject has columns named 'id' and 'name'
+        Assumes that dfobject has columns named 'amitt_id' and 'name'
         '''
 
         html = '''# AMITT {}:
@@ -331,14 +331,14 @@ class Amitt:
 '''.format(objectname.capitalize())
 
         # Create header row
-        html += '<th>{}</th>\n'.format('id')
+        html += '<th>{}</th>\n'.format('amitt_id')
         html += ''.join(['<th>{}</th>\n'.format(col) for col in objectcols])
         html += '</tr>\n'
 
         # Add row for each object
         for index, row in dfobject[dfobject['name'].notnull()].iterrows():
             html += '<tr>\n'
-            html += '<td><a href="{0}/{1}.md">{1}</a></td>\n'.format(objectname, row['id'])
+            html += '<td><a href="{0}/{1}.md">{1}</a></td>\n'.format(objectname, row['amitt_id'])
             html += ''.join(['<td>{}</td>\n'.format(row[col]) for col in objectcols])
             html += '</tr>\n'
         html += '</table>\n'
@@ -379,7 +379,7 @@ class Amitt:
             'incident': self.df_incidents,
             'counter': self.df_counters,
             'metatechnique': self.df_metatechniques,
-            'actor': self.df_actors,
+            'actortype': self.df_actortypes,
             #'resource': self.df_resources,
             #'responsetype': self.df_responsetypes,
             #'detection': self.df_detections
@@ -390,12 +390,12 @@ class Amitt:
             'tactic': ['name', 'summary', 'phase_id'],
             'technique': ['name', 'summary', 'tactic_id'],
             'task': ['name', 'summary', 'tactic_id'],
-            'incident': ['name', 'type', 'Year Started', 'To country', 'Found via'],
+            'incident': ['name', 'type', 'year_started', 'to_country', 'found_via'],
             'counter': ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
             'detection': ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
             'responsetype': ['name', 'summary'],
             'metatechnique': ['name', 'summary'],
-            'actor': ['name', 'summary', 'sector'],
+            'actortype': ['name', 'summary', 'sector'],
             'resource': ['name', 'summary', 'resource type']
         }
         
@@ -417,7 +417,7 @@ class Amitt:
                 # First read in the file - if it exists - and grab everything 
                 # below the "do not write about this line". Will write this 
                 # out below new metadata. 
-                datafile = '../{}/{}.md'.format(objecttypeplural, row['id'])
+                datafile = '../{}/{}.md'.format(objecttypeplural, row['amitt_id'])
                 oldmetatext = ''
                 if os.path.exists(datafile):
                     with open(datafile) as f:
@@ -434,52 +434,52 @@ class Amitt:
 
                 # Now populate datafiles with new metadata plus old userdata
                 if objecttype == 'phase':
-                    metatext = template.format(type='Phase', id=row['id'], name=row['name'], summary=row['summary'])
+                    metatext = template.format(type='Phase', id=row['amitt_id'], name=row['name'], summary=row['summary'])
                 if objecttype == 'tactic':
-                    metatext = template.format(type = 'Tactic', id=row['id'], name=row['name'],
+                    metatext = template.format(type = 'Tactic', id=row['amitt_id'], name=row['name'],
                                                phase=row['phase_id'], summary=row['summary'],
-                                               tasks=self.create_tactic_tasks_string(row['id']),
-                                               techniques=self.create_tactic_techniques_string(row['id']),
-                                               counters=self.create_object_counters_string('tactic_id', row['id']))
+                                               tasks=self.create_tactic_tasks_string(row['amitt_id']),
+                                               techniques=self.create_tactic_techniques_string(row['amitt_id']),
+                                               counters=self.create_object_counters_string('tactic_id', row['amitt_id']))
                 if objecttype == 'task':
-                    metatext = template.format(type='Task', id=row['id'], name=row['name'],
+                    metatext = template.format(type='Task', id=row['amitt_id'], name=row['name'],
                                                tactic=row['tactic_id'], summary=row['summary'])
                 if objecttype == 'technique':
-                    metatext = template.format(type = 'Technique', id=row['id'], name=row['name'],
+                    metatext = template.format(type = 'Technique', id=row['amitt_id'], name=row['name'],
                                                tactic=row['tactic_id'], summary=row['summary'],
-                                               incidents=self.create_technique_incidents_string(row['id']),
-                                               counters=self.create_technique_counters_string(row['id']))
+                                               incidents=self.create_technique_incidents_string(row['amitt_id']),
+                                               counters=self.create_technique_counters_string(row['amitt_id']))
                 if objecttype == 'counter':
-                    metatext = template.format(type = 'Counter', id=row['id'], name=row['name'],
+                    metatext = template.format(type = 'Counter', id=row['amitt_id'], name=row['name'],
                                                tactic=row['tactic_id'], summary=row['summary'],
-                                               playbooks=row['playbooks'], metatechnique=row['metatechnique'],
-                                               actors=self.create_counter_actors_string(row['id']),
+                                               playbooks='', metatechnique=row['metatechnique'],
+                                               actortypes=self.create_counter_actortypes_string(row['amitt_id']),
                                                resources_needed=row['resources_needed'],
-                                               tactics=self.create_counter_tactics_string(row['id']),
-                                               techniques=self.create_counter_techniques_string(row['id']),
-                                               incidents=self.create_counter_incidents_string(row['id']))
+                                               tactics=self.create_counter_tactics_string(row['amitt_id']),
+                                               techniques=self.create_counter_techniques_string(row['amitt_id']),
+                                               incidents=self.create_counter_incidents_string(row['amitt_id']))
                 if objecttype == 'incident':
-                    metatext = template.format(type = 'Incident', id=row['id'], name=row['name'],
+                    metatext = template.format(type = 'Incident', id=row['amitt_id'], name=row['name'],
                                                incidenttype=row['type'], summary=row['summary'],
-                                               yearstarted=row['Year Started'], 
-                                               fromcountry=row['From country'],
-                                               tocountry=row['To country'],
-                                               foundvia=row['Found via'],
-                                               dateadded=row['When added'],
-                                               techniques=self.create_incident_techniques_string(row['id']))
-                if objecttype == 'actor':
-                    metatext = template.format(type = 'Actor', id=row['id'], name=row['name'], 
+                                               yearstarted=row['year_started'], 
+                                               fromcountry=row['from_country'],
+                                               tocountry=row['to_country'],
+                                               foundvia=row['found_via'],
+                                               dateadded=row['when_added'],
+                                               techniques=self.create_incident_techniques_string(row['amitt_id']))
+                if objecttype == 'actortype':
+                    metatext = template.format(type = 'Actor', id=row['amitt_id'], name=row['name'], 
                                                summary=row['summary'], sector=row['sector'],
                                                viewpoint=row['viewpoint'],
-                                               counters=self.create_actor_counters_string(row['id']))
+                                               counters=self.create_actortype_counters_string(row['amitt_id']))
                 if objecttype == 'resource':
-                    metatext = template.format(type = 'Resource', id=row['id'], name=row['name'], 
+                    metatext = template.format(type = 'Resource', id=row['amitt_id'], name=row['name'], 
                                                summary=row['summary'], resource_type=row['resource_type'],
-                                               counters=self.create_resource_counters_string(row['id']))
+                                               counters=self.create_resource_counters_string(row['amitt_id']))
                 if objecttype == 'metatechnique':
-                    metatext = template.format(type='Metatechnique', id=row['id'], name=row['name'], 
+                    metatext = template.format(type='Metatechnique', id=row['amitt_id'], name=row['name'], 
                                                summary=row['summary'],
-                                               counters=self.create_object_counters_string('metatechnique_id', row['id']))
+                                               counters=self.create_object_counters_string('metatechnique_id', row['amitt_id']))
 
                 # Make sure the user data goes in
                 if (metatext + warntext) != oldmetatext:
@@ -502,7 +502,7 @@ class Amitt:
         arr = [['' for i in range(self.num_tactics)] for j in range(numrows)] 
         for index, tactic in self.df_tactics.iterrows():
             arr[0][index] = tactic['phase_id']
-            arr[1][index] = tactic['id']
+            arr[1][index] = tactic['amitt_id']
             if tactic[ttp_col] == '':
                 continue
             for index2, technique in enumerate(tactic[ttp_col]):
@@ -643,14 +643,14 @@ function handleTechniqueClick(box) {{
 
         
     def print_technique_incidents(self):
-        for id_technique in self.df_techniques['id'].to_list():
+        for id_technique in self.df_techniques['amitt_id'].to_list():
             print('{}\n{}'.format(id_technique, 
                                   self.create_incidentstring(id_technique)))
         return
 
 
     def print_incident_techniques(self):
-        for id_incident in self.df_incidents['id'].to_list():
+        for id_incident in self.df_incidents['amitt_id'].to_list():
             print('{}\n{}'.format(id_incident, 
                                   self.create_techstring(id_incident)))
         return
@@ -669,10 +669,10 @@ function handleTechniqueClick(box) {{
 
     def analyse_coverage(self, technique_id_list, counter_id_list):
         ct = self.cross_counterid_techniqueid.copy()
-        ct = ct[ct['technique_id'].isin(self.df_techniques['id'].to_list()) & ct['id'].isin(self.df_counters['id'].to_list())]
+        ct = ct[ct['technique_id'].isin(self.df_techniques['amitt_id'].to_list()) & ct['amitt_id'].isin(self.df_counters['amitt_id'].to_list())]
         possible_counters_for_techniques = ct[ct['technique_id'].isin(technique_id_list)] 
         possible_techniques_for_counters = ct[ct['technique_id'].isin(counter_id_list)] 
-        coverage = ct[(ct['id'].isin(counter_id_list)) & (ct['technique_id'].isin(technique_id_list))]
+        coverage = ct[(ct['amitt_id'].isin(counter_id_list)) & (ct['technique_id'].isin(technique_id_list))]
         return coverage, possible_counters_for_techniques, possible_techniques_for_counters
 
     
@@ -714,7 +714,7 @@ function handleTechniqueClick(box) {{
         ''' Write course of action matrix for tactics vs responsetype
         '''
 
-        counts_table = pd.pivot_table(self.df_counters[['responsetype', 'tactic_id','id']], 
+        counts_table = pd.pivot_table(self.df_counters[['responsetype', 'tactic_id','amitt_id']], 
                                   index='tactic_id', columns='responsetype', aggfunc=len, 
                                   fill_value=0) 
         counts_table['TOTALS'] = counts_table.sum(axis=1)
@@ -725,7 +725,7 @@ function handleTechniqueClick(box) {{
 
     def write_metatechniques_responsetype_table_file(self, outfile = '../metatechniques_by_responsetype_table.md'):
 
-        counts_table = pd.pivot_table(self.df_counters[['responsetype', 'metatechnique_id','id']], 
+        counts_table = pd.pivot_table(self.df_counters[['responsetype', 'metatechnique_id','amitt_id']], 
                                   index='metatechnique_id', columns='responsetype', aggfunc=len, 
                                   fill_value=0) 
         counts_table['TOTALS'] = counts_table.sum(axis=1)
@@ -737,7 +737,7 @@ function handleTechniqueClick(box) {{
     def write_resources_responsetype_table_file(self, outfile = '../resources_by_responsetype_table.md'):
 
         # dirty hack because there are lots of -blanks?- in the cross-table that should have been filtered out
-        crosstable_with_responsetype = self.cross_counterid_resourceid.merge(self.df_counters[['id', 'responsetype']])
+        crosstable_with_responsetype = self.cross_counterid_resourceid.merge(self.df_counters[['amitt_id', 'responsetype']])
         crosstable_with_responsetype = crosstable_with_responsetype[crosstable_with_responsetype['responsetype'].isin(self.resources.keys())]
         counts_table = pd.pivot_table(crosstable_with_responsetype, 
                                   index='resource_id', columns='responsetype', aggfunc=len, 

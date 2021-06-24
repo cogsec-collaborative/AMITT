@@ -2,7 +2,7 @@
 
 <table border="1">
 <tr>
-<th>id</th>
+<th>amitt_id</th>
 <th>name</th>
 <th>summary</th>
 <th>metatechnique</th>
@@ -20,7 +20,7 @@
 <tr>
 <td><a href="counters/C00006.md">C00006</a></td>
 <td>Censorship</td>
-<td>Alter and/or block the publication/dissemination of adversary controlled information</td>
+<td>Alter and/or block the publication/dissemination of information controlled by disinformation creators. Not recommended. </td>
 <td>M005 - removal</td>
 <td>TA01 Strategic Planning</td>
 <td>D2 Deny</td>
@@ -28,7 +28,7 @@
 <tr>
 <td><a href="counters/C00008.md">C00008</a></td>
 <td>Create shared fact-checking database</td>
-<td>Snopes is best-known example</td>
+<td>Share fact-checking resources - tips, responses, countermessages, across respose groups.  Snopes is best-known example of fact-checking sites. </td>
 <td>M006 - scoring</td>
 <td>TA01 Strategic Planning</td>
 <td>D4 Degrade</td>
@@ -36,7 +36,7 @@
 <tr>
 <td><a href="counters/C00009.md">C00009</a></td>
 <td>Educate high profile influencers on best practices</td>
-<td></td>
+<td>Find online influencers. Provide training in the mechanisms of disinformation, how to spot campaigns, and/or how to contribute to responses by countermessaging, boosting information sites etc. </td>
 <td>M001 - resilience</td>
 <td>TA02 Objective Planning</td>
 <td>D2 Deny</td>
@@ -44,7 +44,7 @@
 <tr>
 <td><a href="counters/C00010.md">C00010</a></td>
 <td>Enhanced privacy regulation for social media</td>
-<td>Privacy standards</td>
+<td>Implement stronger privacy standards, to reduce the ability to microtarget community members. </td>
 <td>M004 - friction</td>
 <td>TA01 Strategic Planning</td>
 <td>D2 Deny</td>
@@ -52,7 +52,7 @@
 <tr>
 <td><a href="counters/C00011.md">C00011</a></td>
 <td>Media literacy. Games to identify fake news</td>
-<td></td>
+<td>Create and use games to show people the mechanics of disinformation, and how to counter them. </td>
 <td>M001 - resilience</td>
 <td>TA02 Objective Planning</td>
 <td>D2 Deny</td>
@@ -76,7 +76,7 @@
 <tr>
 <td><a href="counters/C00014.md">C00014</a></td>
 <td>Real-time updates to fact-checking database</td>
-<td>existing examples at Buzzfeed and Fema, especially during disasters</td>
+<td>Update fact-checking databases and resources in real time.  Especially import for time-limited events like natural disasters.  Existing examples at Buzzfeed and Fema.</td>
 <td>M006 - scoring</td>
 <td>TA06 Develop Content</td>
 <td>D4 Degrade</td>
@@ -84,7 +84,7 @@
 <tr>
 <td><a href="counters/C00017.md">C00017</a></td>
 <td>Repair broken social connections</td>
-<td>For example, use a media campaign to promote in-group to out-group in person communication / activities . Technique could be in terms of forcing a reality-check by talking to people instead of reading about bogeymen. </td>
+<td>Technique could be in terms of forcing a reality-check by talking to people instead of reading about bogeymen. </td>
 <td>M010 - countermessaging</td>
 <td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
@@ -100,7 +100,7 @@
 <tr>
 <td><a href="counters/C00021.md">C00021</a></td>
 <td>Encourage in-person communication</td>
-<td></td>
+<td>Encourage offline communication</td>
 <td>M001 - resilience</td>
 <td>TA01 Strategic Planning</td>
 <td>D4 Degrade</td>
@@ -150,7 +150,7 @@ This could be used to adjust upvote weight via a trust factor of people and orga
 <tr>
 <td><a href="counters/C00029.md">C00029</a></td>
 <td>Create fake website to issue counter narrative and counter narrative through physical merchandise</td>
-<td></td>
+<td>Create websites in disinformation voids - spaces where people are looking for known disinformation. </td>
 <td>M002 - diversion</td>
 <td>TA02 Objective Planning</td>
 <td>D3 Disrupt</td>
@@ -207,7 +207,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <tr>
 <td><a href="counters/C00042.md">C00042</a></td>
 <td>Address truth contained in narratives</td>
-<td></td>
+<td>Focus on and boost truths in misinformation narratives, removing misinformation from them. </td>
 <td>M010 - countermessaging</td>
 <td>TA03 Develop People</td>
 <td>D3 Disrupt</td>
@@ -215,7 +215,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <tr>
 <td><a href="counters/C00044.md">C00044</a></td>
 <td>Keep people from posting to social media immediately</td>
-<td>My interpretation is that this is method would be used to slow down activities or force a small delay between posts or replies to new posts.</td>
+<td>Use this to slow down activities or force a small delay between posts or replies to new posts.</td>
 <td>M004 - friction</td>
 <td>TA03 Develop People</td>
 <td>D3 Disrupt</td>
@@ -223,7 +223,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <tr>
 <td><a href="counters/C00046.md">C00046</a></td>
 <td>Marginalise and discredit extremist groups</td>
-<td></td>
+<td>Reduce the credibility of extremist groups posting misinformation.</td>
 <td>M013 - targeting</td>
 <td>TA03 Develop People</td>
 <td>D4 Degrade</td>
@@ -231,7 +231,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <tr>
 <td><a href="counters/C00047.md">C00047</a></td>
 <td>Coordinated inauthentics</td>
-<td></td>
+<td>Flood disinformation spaces with obviously fake content, to dilute core misinformation narratives in them. </td>
 <td>M008 - data pollution</td>
 <td>TA04 Develop Networks</td>
 <td>D5 Deceive</td>
@@ -263,7 +263,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <tr>
 <td><a href="counters/C00053.md">C00053</a></td>
 <td>Delete old accounts / Remove unused social media accounts</td>
-<td></td>
+<td>remove or remove access to (e.g. stop the ability to update) old social media accounts, to reduce the pool of accounts available for takeover, botnets etc. </td>
 <td>M012 - cleaning</td>
 <td>TA04 Develop Networks</td>
 <td>D4 Degrade</td>
@@ -271,7 +271,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <tr>
 <td><a href="counters/C00056.md">C00056</a></td>
 <td>Get off social media</td>
-<td>We don't expect this to work</td>
+<td>Encourage people to leave spcial media.  We don't expect this to work</td>
 <td>M004 - friction</td>
 <td>TA04 Develop Networks</td>
 <td>D2 Deny</td>
@@ -287,7 +287,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <tr>
 <td><a href="counters/C00059.md">C00059</a></td>
 <td>Verification of project before posting (counters funding campaigns)</td>
-<td></td>
+<td>third-party verification of projects posting funding campaigns before those campaigns can be posted. </td>
 <td>M011 - verification</td>
 <td>TA04 Develop Networks</td>
 <td>D2 Deny</td>
@@ -295,7 +295,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <tr>
 <td><a href="counters/C00060.md">C00060</a></td>
 <td>Legal action against for-profit engagement factories</td>
-<td></td>
+<td>Take legal action against for-profit "factories" creating misinformation. </td>
 <td>M013 - targeting</td>
 <td>TA02 Objective Planning</td>
 <td>D3 Disrupt</td>
@@ -319,7 +319,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <tr>
 <td><a href="counters/C00066.md">C00066</a></td>
 <td>Co-opt a hashtag and drown it out (hijack it back)</td>
-<td></td>
+<td>Flood a disinformation-related hashtag with other content. Examples include kPop stans flooding extremist hashtags with pop videos and images. </td>
 <td>M009 - dilution</td>
 <td>TA05 Microtargeting</td>
 <td>D3 Disrupt</td>
@@ -327,7 +327,7 @@ https://www.isdglobal.org/wp-content/uploads/2016/06/Counter-narrative-Handbook_
 <tr>
 <td><a href="counters/C00067.md">C00067</a></td>
 <td>Denigrate the recipient/ project (of online funding)</td>
-<td></td>
+<td>Reduce the credibility of groups behind misinformation-linked funding campaigns. </td>
 <td>M013 - targeting</td>
 <td>TA03 Develop People</td>
 <td>D3 Disrupt</td>
@@ -351,7 +351,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00071.md">C00071</a></td>
 <td>Block source of pollution</td>
-<td></td>
+<td>Block websites, accounts, groups etc connected to misinformation and other information pollution. </td>
 <td>M005 - removal</td>
 <td>TA06 Develop Content</td>
 <td>D2 Deny</td>
@@ -359,7 +359,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00072.md">C00072</a></td>
 <td>Remove non-relevant content from special interest groups – not recommended</td>
-<td></td>
+<td>Check special-interest groups (e.g. medical, knitting) for unrelated and misinformation-linked content, and remove it. </td>
 <td>M005 - removal</td>
 <td>TA06 Develop Content</td>
 <td>D2 Deny</td>
@@ -375,7 +375,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00074.md">C00074</a></td>
 <td>Identify and delete or rate limit identical content</td>
-<td>
+<td>Search for repeated content (text, images, videos etc); check for misinformation, rate-limit or delete repeats. 
 </td>
 <td>M012 - cleaning</td>
 <td>TA06 Develop Content</td>
@@ -384,7 +384,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00075.md">C00075</a></td>
 <td>normalise language</td>
-<td></td>
+<td>normalise the language around disinformation and misinformation; give people the words for artifact and effect types. </td>
 <td>M010 - countermessaging</td>
 <td>TA06 Develop Content</td>
 <td>D2 Deny</td>
@@ -392,7 +392,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00076.md">C00076</a></td>
 <td>Prohibit images in political discourse channels</td>
-<td></td>
+<td>Make political discussion channels text-only. </td>
 <td>M005 - removal</td>
 <td>TA06 Develop Content</td>
 <td>D2 Deny</td>
@@ -400,7 +400,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00077.md">C00077</a></td>
 <td>Active defence: run TA03 "develop people” - not recommended</td>
-<td></td>
+<td>Develop networks of communities and influencers around counter-misinformation. Match them to misinformation creators </td>
 <td>M013 - targeting</td>
 <td>TA03 Develop People</td>
 <td>D3 Disrupt</td>
@@ -416,7 +416,7 @@ T0046 - Search Engine Optimization: Sub-optimal website performance affect its s
 <tr>
 <td><a href="counters/C00080.md">C00080</a></td>
 <td>Create competing narrative</td>
-<td>Could also be degrade</td>
+<td>Create counternarratives, or narratives that compete in the same spaces as misinformation narratives.  Could also be degrade</td>
 <td>M002 - diversion</td>
 <td>TA06 Develop Content</td>
 <td>D3 Disrupt</td>
@@ -476,7 +476,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00090.md">C00090</a></td>
 <td>Fake engagement system</td>
-<td></td>
+<td>Create honeypots for misinformation creators to engage with, and reduce the resources they have available for misinformation campaigns. </td>
 <td>M002 - diversion</td>
 <td>TA07 Channel Selection</td>
 <td>D5 Deceive</td>
@@ -516,7 +516,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00096.md">C00096</a></td>
 <td>Strengthen institutions that are always truth tellers</td>
-<td></td>
+<td>Increase credibility, visibility, and reach of positive influencers in the information space. </td>
 <td>M006 - scoring</td>
 <td>TA01 Strategic Planning</td>
 <td>D7 Deter</td>
@@ -524,7 +524,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00097.md">C00097</a></td>
 <td>Require use of verified identities to contribute to poll or comment</td>
-<td></td>
+<td>Reduce poll flooding by online taking comments or poll entries from verified accounts. </td>
 <td>M004 - friction</td>
 <td>TA07 Channel Selection</td>
 <td>D2 Deny</td>
@@ -532,7 +532,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00098.md">C00098</a></td>
 <td>Revocation of allowlisted or "verified" status</td>
-<td></td>
+<td>remove blue checkmarks etc from known misinformation accounts. </td>
 <td>M004 - friction</td>
 <td>TA07 Channel Selection</td>
 <td>D2 Deny</td>
@@ -540,7 +540,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00099.md">C00099</a></td>
 <td>Strengthen verification methods</td>
-<td></td>
+<td>Improve content veerification methods available to groups, individuals etc.  </td>
 <td>M004 - friction</td>
 <td>TA07 Channel Selection</td>
 <td>D2 Deny</td>
@@ -548,7 +548,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00100.md">C00100</a></td>
 <td>Hashtag jacking</td>
-<td></td>
+<td>Post large volumes of unrelated content on known misinformation hashtags </td>
 <td>M002 - diversion</td>
 <td>TA08 Pump Priming</td>
 <td>D3 Disrupt</td>
@@ -571,8 +571,8 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00105.md">C00105</a></td>
-<td>Buy more advertising than the adversary to shift influence and algorithms</td>
-<td></td>
+<td>Buy more advertising than misinformation creators</td>
+<td>Shift influence and algorithms by posting more adverts into spaces than misinformation creators. </td>
 <td>M009 - dilution</td>
 <td>TA07 Channel Selection</td>
 <td>D3 Disrupt</td>
@@ -596,7 +596,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00109.md">C00109</a></td>
 <td>Dampen Emotional Reaction</td>
-<td></td>
+<td>Reduce emotional responses to misinformation through calming messages, etc. </td>
 <td>M001 - resilience</td>
 <td>TA09 Exposure</td>
 <td>D3 Disrupt</td>
@@ -612,15 +612,15 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00112.md">C00112</a></td>
 <td>"Prove they are not an op!"</td>
-<td></td>
+<td>Challenge misinformation creators to prove they're not an information operation.  </td>
 <td>M004 - friction</td>
 <td>TA08 Pump Priming</td>
 <td>D2 Deny</td>
 </tr>
 <tr>
 <td><a href="counters/C00113.md">C00113</a></td>
-<td>Debunk and defuse a fake expert / credentials. Attack audience quality of fake expert</td>
-<td></td>
+<td>Debunk and defuse a fake expert / credentials.</td>
+<td>Debunk fake experts, their credentials, and potentially also their  audience quality</td>
 <td>M003 - daylight</td>
 <td>TA08 Pump Priming</td>
 <td>D2 Deny</td>
@@ -628,7 +628,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00114.md">C00114</a></td>
 <td>Don't engage with payloads</td>
-<td></td>
+<td>Stop passing on misinformation</td>
 <td>M004 - friction</td>
 <td>TA08 Pump Priming</td>
 <td>D2 Deny</td>
@@ -636,7 +636,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00115.md">C00115</a></td>
 <td>Expose actor and intentions</td>
-<td></td>
+<td>Debunk misinformation creators and posters. </td>
 <td>M003 - daylight</td>
 <td>TA08 Pump Priming</td>
 <td>D2 Deny</td>
@@ -644,7 +644,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00116.md">C00116</a></td>
 <td>Provide proof of involvement</td>
-<td></td>
+<td>Build and post information about groups etc's involvement in misinformation incidents. </td>
 <td>M003 - daylight</td>
 <td>TA08 Pump Priming</td>
 <td>D2 Deny</td>
@@ -660,15 +660,15 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00118.md">C00118</a></td>
 <td>Repurpose images with new text</td>
-<td></td>
+<td>Add countermessage text to iamges used in misinformation incidents. </td>
 <td>M010 - countermessaging</td>
 <td>TA08 Pump Priming</td>
 <td>D4 Degrade</td>
 </tr>
 <tr>
 <td><a href="counters/C00119.md">C00119</a></td>
-<td>Engage payload and debunk. Provide link to facts. </td>
-<td>Might be okay. </td>
+<td>Engage payload and debunk. </td>
+<td>debunk misinformation content.  Provide link to facts. </td>
 <td>M010 - countermessaging</td>
 <td>TA08 Pump Priming</td>
 <td>D7 Deter</td>
@@ -676,7 +676,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00120.md">C00120</a></td>
 <td>Open dialogue about design of platforms to produce different outcomes</td>
-<td></td>
+<td>Redesign platforms and algorithms to reduce the effectiveness of disinformation</td>
 <td>M007 - metatechnique</td>
 <td>TA08 Pump Priming</td>
 <td>D7 Deter</td>
@@ -684,7 +684,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00121.md">C00121</a></td>
 <td>Tool transparency and literacy for channels people follow. </td>
-<td></td>
+<td>Make algorithms in platforms explainable, and visible to people using those platforms. </td>
 <td>M001 - resilience</td>
 <td>TA08 Pump Priming</td>
 <td>D7 Deter</td>
@@ -700,7 +700,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00123.md">C00123</a></td>
 <td>Remove or rate limit botnets</td>
-<td></td>
+<td>reduce the visibility of known botnets online. </td>
 <td>M004 - friction</td>
 <td>TA09 Exposure</td>
 <td>D3 Disrupt</td>
@@ -708,7 +708,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00124.md">C00124</a></td>
 <td>Don't feed the trolls</td>
-<td></td>
+<td>Don't engage with individuals relaying misinformation. </td>
 <td>M004 - friction</td>
 <td>TA09 Exposure</td>
 <td>D3 Disrupt</td>
@@ -716,7 +716,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00125.md">C00125</a></td>
 <td>Prebunking</td>
-<td></td>
+<td>Produce material in advance of misinformation incidents, by anticipating the narratives used in them, and debunking them. </td>
 <td>M001 - resilience</td>
 <td>TA09 Exposure</td>
 <td>D3 Disrupt</td>
@@ -724,7 +724,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00126.md">C00126</a></td>
 <td>Social media amber alert</td>
-<td></td>
+<td>Create an alert system around disinformation and misinformation artifacts, narratives, and incidents </td>
 <td>M003 - daylight</td>
 <td>TA09 Exposure</td>
 <td>D3 Disrupt</td>
@@ -732,7 +732,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00128.md">C00128</a></td>
 <td>Create friction by marking content with ridicule or other "decelerants"</td>
-<td></td>
+<td>Repost or comment on misinformation artifacts, using ridicule or other content to reduce the likelihood of reposting. </td>
 <td>M009 - dilution</td>
 <td>TA09 Exposure</td>
 <td>D3 Disrupt</td>
@@ -748,7 +748,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00130.md">C00130</a></td>
 <td>Mentorship: elders, youth, credit. Learn vicariously.</td>
-<td></td>
+<td>Train local influencers in countering misinformation. </td>
 <td>M001 - resilience</td>
 <td>TA05 Microtargeting</td>
 <td>D7 Deter</td>
@@ -756,7 +756,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00131.md">C00131</a></td>
 <td>Seize and analyse botnet servers</td>
-<td></td>
+<td>Take botnet servers offline by seizing them. </td>
 <td>M005 - removal</td>
 <td>TA11 Persistence</td>
 <td>D2 Deny</td>
@@ -780,7 +780,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00136.md">C00136</a></td>
 <td>Microtarget most likely targets then send them countermessages</td>
-<td></td>
+<td>Find communities likely to be targetted by misinformation campaigns, and send them countermessages or pointers to information sources. </td>
 <td>M010 - countermessaging</td>
 <td>TA08 Pump Priming</td>
 <td>D3 Disrupt</td>
@@ -788,7 +788,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00138.md">C00138</a></td>
 <td>Spam domestic actors with lawsuits</td>
-<td></td>
+<td>File multiple lawsuits against known misinformation creators and posters, to distract them from disinformation creation. </td>
 <td>M014 - reduce resources</td>
 <td>TA11 Persistence</td>
 <td>D3 Disrupt</td>
@@ -835,8 +835,8 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 </tr>
 <tr>
 <td><a href="counters/C00147.md">C00147</a></td>
-<td>Make amplification of social media ports expire (e.g. can't like/ retweet after n days)</td>
-<td></td>
+<td>Make amplification of social media posts expire (e.g. can't like/ retweet after n days)</td>
+<td>Stop new community activity (likes, comments) on old social media posts.  </td>
 <td>M004 - friction</td>
 <td>TA09 Exposure</td>
 <td>D3 Disrupt</td>
@@ -868,7 +868,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00154.md">C00154</a></td>
 <td>Ask media not to report false information</td>
-<td></td>
+<td>Train media to spot and respond to misinformation, and ask them not to post or transmit misinformation they've found. </td>
 <td>M005 - removal</td>
 <td>TA08 Pump Priming</td>
 <td>D2 Deny</td>
@@ -876,7 +876,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00155.md">C00155</a></td>
 <td>Ban incident actors from funding sites</td>
-<td></td>
+<td>Ban misinformation creators and posters from funding sites</td>
 <td>M005 - removal</td>
 <td>TA03 Develop People</td>
 <td>D2 Deny</td>
@@ -996,7 +996,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00184.md">C00184</a></td>
 <td>Media exposure</td>
-<td></td>
+<td>highlight misinformation activities and actors in media</td>
 <td>M003 - daylight</td>
 <td>TA08 Pump Priming</td>
 <td>D4 Degrade</td>
@@ -1060,7 +1060,7 @@ Note: This sounds eerlily like many Reddit communities where the most upvoted co
 <tr>
 <td><a href="counters/C00203.md">C00203</a></td>
 <td>Stop offering press credentials to propaganda outlets</td>
-<td></td>
+<td>Remove access to official press events from known misinformation actors. </td>
 <td>M004 - friction</td>
 <td>TA04 Develop Networks</td>
 <td>D3 Disrupt</td>
@@ -1122,7 +1122,7 @@ https://internews.org/story/using-comedy-and-social-media-educate-disinformation
 <tr>
 <td><a href="counters/C00220.md">C00220</a></td>
 <td>Develop a monitoring and intelligence plan</td>
-<td></td>
+<td>Create a plan for misinformation and disinformation response, before it's needed.  Include connections / contacts needed, expected counteremessages etc. </td>
 <td>M007 - metatechnique</td>
 <td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>
@@ -1138,7 +1138,7 @@ https://internews.org/story/using-comedy-and-social-media-educate-disinformation
 <tr>
 <td><a href="counters/C00222.md">C00222</a></td>
 <td>Tabletop simulations</td>
-<td></td>
+<td>Simulate misinformation and disinformation campaigns, and responses to them, before campaigns happen. </td>
 <td>M007 - metatechnique</td>
 <td>TA02 Objective Planning</td>
 <td>D3 Disrupt</td>
@@ -1146,7 +1146,7 @@ https://internews.org/story/using-comedy-and-social-media-educate-disinformation
 <tr>
 <td><a href="counters/C00223.md">C00223</a></td>
 <td>Strengthen Trust in social media platforms</td>
-<td></td>
+<td>Improve trust in the misinformation responses from social media and other platforms.  Examples include creating greater transparancy on their actions and algorithms. </td>
 <td>M001 - resilience</td>
 <td>TA01 Strategic Planning</td>
 <td>D3 Disrupt</td>

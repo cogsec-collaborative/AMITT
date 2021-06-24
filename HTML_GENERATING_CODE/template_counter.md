@@ -10,7 +10,7 @@
 
 * **Belongs to tactic stage**: {tactic}
 
-{actors}
+{actortypes}
 
 {tactics}
 

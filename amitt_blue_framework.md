@@ -52,7 +52,7 @@
 <td><a href="counters/C00130.md">C00130 Mentorship: elders, youth, credit. Learn vicariously.</a></td>
 <td><a href="counters/C00071.md">C00071 Block source of pollution</a></td>
 <td><a href="counters/C00098.md">C00098 Revocation of allowlisted or "verified" status</a></td>
-<td><a href="counters/C00113.md">C00113 Debunk and defuse a fake expert / credentials. Attack audience quality of fake expert</a></td>
+<td><a href="counters/C00113.md">C00113 Debunk and defuse a fake expert / credentials.</a></td>
 <td><a href="counters/C00123.md">C00123 Remove or rate limit botnets</a></td>
 <td> </td>
 <td><a href="counters/C00139.md">C00139 Weaponise youtube content matrices</a></td>
@@ -107,7 +107,7 @@
 <td><a href="counters/C00135.md">C00135 Deplatform message groups and/or message boards</a></td>
 <td> </td>
 <td><a href="counters/C00076.md">C00076 Prohibit images in political discourse channels</a></td>
-<td><a href="counters/C00105.md">C00105 Buy more advertising than the adversary to shift influence and algorithms</a></td>
+<td><a href="counters/C00105.md">C00105 Buy more advertising than misinformation creators</a></td>
 <td><a href="counters/C00117.md">C00117 Downgrade / de-amplify so message is seen by fewer people</a></td>
 <td><a href="counters/C00128.md">C00128 Create friction by marking content with ridicule or other "decelerants"</a></td>
 <td> </td>
@@ -136,8 +136,8 @@
 <td> </td>
 <td><a href="counters/C00080.md">C00080 Create competing narrative</a></td>
 <td> </td>
-<td><a href="counters/C00119.md">C00119 Engage payload and debunk. Provide link to facts. </a></td>
-<td><a href="counters/C00147.md">C00147 Make amplification of social media ports expire (e.g. can't like/ retweet after n days)</a></td>
+<td><a href="counters/C00119.md">C00119 Engage payload and debunk. </a></td>
+<td><a href="counters/C00147.md">C00147 Make amplification of social media posts expire (e.g. can't like/ retweet after n days)</a></td>
 <td> </td>
 <td> </td>
 <td> </td>

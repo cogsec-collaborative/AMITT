@@ -2,7 +2,7 @@
 
 <table border="1">
 <tr>
-<th>id</th>
+<th>amitt_id</th>
 <th>name</th>
 <th>summary</th>
 <th>tactic_id</th>
@@ -188,69 +188,75 @@
 <td>TA12</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0031.md">TK0031</a></td>
+<td>OPSEC for TA01</td>
 <td></td>
-<td></td>
-<td></td>
+<td>TA01</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0032.md">TK0032</a></td>
+<td>OPSEC for TA02</td>
 <td></td>
-<td></td>
-<td></td>
+<td>TA02</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0033.md">TK0033</a></td>
+<td>OPSEC for TA03</td>
 <td></td>
-<td></td>
-<td></td>
+<td>TA03</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0034.md">TK0034</a></td>
+<td>OPSEC for TA04</td>
 <td></td>
-<td></td>
-<td></td>
+<td>TA04</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0035.md">TK0035</a></td>
+<td>OPSEC for TA05</td>
 <td></td>
-<td></td>
-<td></td>
+<td>TA05</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0036.md">TK0036</a></td>
+<td>OPSEC for TA06</td>
 <td></td>
-<td></td>
-<td></td>
+<td>TA06</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0037.md">TK0037</a></td>
+<td>OPSEC for TA07</td>
 <td></td>
-<td></td>
-<td></td>
+<td>TA07</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0038.md">TK0038</a></td>
+<td>OPSEC for TA08</td>
 <td></td>
-<td></td>
-<td></td>
+<td>TA08</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0039.md">TK0039</a></td>
+<td>OPSEC for TA09</td>
 <td></td>
-<td></td>
-<td></td>
+<td>TA09</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0040.md">TK0040</a></td>
+<td>OPSEC for TA10</td>
 <td></td>
-<td></td>
-<td></td>
+<td>TA10</td>
 </tr>
 <tr>
-<td><a href="tasks/.md"></a></td>
+<td><a href="tasks/TK0041.md">TK0041</a></td>
+<td>OPSEC for TA11</td>
 <td></td>
+<td>TA11</td>
+</tr>
+<tr>
+<td><a href="tasks/TK0042.md">TK0042</a></td>
+<td>OPSEC for TA12</td>
 <td></td>
-<td></td>
+<td>TA12</td>
 </tr>
 </table>

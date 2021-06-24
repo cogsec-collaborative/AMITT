@@ -2,7 +2,7 @@
 
 <table border="1">
 <tr>
-<th>id</th>
+<th>amitt_id</th>
 <th>name</th>
 <th>summary</th>
 <th>tactic_id</th>
@@ -421,19 +421,19 @@ Examples of tertiary sites include Russia Insider, The Duran, geopolitica.ru, Mi
 <tr>
 <td><a href="techniques/T0062.md">T0062</a></td>
 <td>Behaviour changes</td>
-<td></td>
+<td>Monitor and evaluate behaviour changes from misinformation incidents. </td>
 <td>TA12</td>
 </tr>
 <tr>
 <td><a href="techniques/T0063.md">T0063</a></td>
 <td>Message reach</td>
-<td></td>
+<td>Monitor and evaluate message reach in misinformation incidents. </td>
 <td>TA12</td>
 </tr>
 <tr>
 <td><a href="techniques/T0064.md">T0064</a></td>
 <td>Social media engagement</td>
-<td></td>
+<td>Monitor and evaluate social media engagement in misinformation incidents. </td>
 <td>TA12</td>
 </tr>
 </table>

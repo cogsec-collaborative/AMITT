@@ -2,7 +2,7 @@
 
 <table border="1">
 <tr>
-<th>id</th>
+<th>amitt_id</th>
 <th>name</th>
 <th>summary</th>
 <th>metatechnique</th>
@@ -12,7 +12,7 @@
 <tr>
 <td><a href="detections/F00001.md">F00001</a></td>
 <td>Analyse aborted / failed campaigns</td>
-<td></td>
+<td>Examine failed campaigns. How did they fail? Can we create useful activities that increase these failures? </td>
 <td></td>
 <td>TA01 Strategic Planning</td>
 <td>D1 Detect</td>

@@ -2,7 +2,7 @@
 
 <table border="1">
 <tr>
-<th>id</th>
+<th>amitt_id</th>
 <th>name</th>
 <th>summary</th>
 <th>phase_id</th>
