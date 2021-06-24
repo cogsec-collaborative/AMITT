@@ -17,10 +17,10 @@
 <td><a href="tactics/TA12.md">TA12 Measure Effectiveness</a></td>
 </tr>
 <tr>
-<td><a href="counters/C00006.md">C00006 Censorship</a></td>
+<td><a href="counters/C00006.md">C00006 Charge for social media</a></td>
 <td><a href="counters/C00009.md">C00009 Educate high profile influencers on best practices</a></td>
 <td><a href="counters/C00034.md">C00034 Create more friction at account creation</a></td>
-<td><a href="counters/C00047.md">C00047 Coordinated inauthentics</a></td>
+<td><a href="counters/C00047.md">C00047 Honeypot with coordinated inauthentics</a></td>
 <td><a href="counters/C00065.md">C00065 Reduce political targeting</a></td>
 <td><a href="counters/C00014.md">C00014 Real-time updates to fact-checking database</a></td>
 <td><a href="counters/C00090.md">C00090 Fake engagement system</a></td>
@@ -31,7 +31,7 @@
 <td><a href="counters/C00140.md">C00140 "Bomb" link shorteners with lots of calls</a></td>
 </tr>
 <tr>
-<td><a href="counters/C00006.md">C00006 Censorship</a></td>
+<td><a href="counters/C00008.md">C00008 Create shared fact-checking database</a></td>
 <td><a href="counters/C00011.md">C00011 Media literacy. Games to identify fake news</a></td>
 <td><a href="counters/C00036.md">C00036 Infiltrate the in-group to discredit leaders (divide)</a></td>
 <td><a href="counters/C00052.md">C00052 Infiltrate platforms</a></td>
@@ -45,7 +45,7 @@
 <td><a href="counters/C00148.md">C00148 Add random links to network graphs</a></td>
 </tr>
 <tr>
-<td><a href="counters/C00008.md">C00008 Create shared fact-checking database</a></td>
+<td><a href="counters/C00010.md">C00010 Enhanced privacy regulation for social media</a></td>
 <td><a href="counters/C00028.md">C00028 Make information provenance available</a></td>
 <td><a href="counters/C00040.md">C00040 third party verification for people</a></td>
 <td><a href="counters/C00053.md">C00053 Delete old accounts / Remove unused social media accounts</a></td>
@@ -59,12 +59,12 @@
 <td><a href="counters/C00149.md">C00149 Poison the monitoring & evaluation data</a></td>
 </tr>
 <tr>
-<td><a href="counters/C00010.md">C00010 Enhanced privacy regulation for social media</a></td>
+<td><a href="counters/C00012.md">C00012 Platform regulation</a></td>
 <td><a href="counters/C00029.md">C00029 Create fake website to issue counter narrative and counter narrative through physical merchandise</a></td>
 <td><a href="counters/C00042.md">C00042 Address truth contained in narratives</a></td>
-<td><a href="counters/C00056.md">C00056 Get off social media</a></td>
+<td><a href="counters/C00056.md">C00056 Encourage people to leave social media</a></td>
 <td><a href="counters/C00178.md">C00178 Fill information voids with non-disinformation content</a></td>
-<td><a href="counters/C00072.md">C00072 Remove non-relevant content from special interest groups – not recommended</a></td>
+<td><a href="counters/C00072.md">C00072 Remove non-relevant content from special interest groups - not recommended</a></td>
 <td><a href="counters/C00099.md">C00099 Strengthen verification methods</a></td>
 <td><a href="counters/C00114.md">C00114 Don't engage with payloads</a></td>
 <td><a href="counters/C00124.md">C00124 Don't feed the trolls</a></td>
@@ -73,10 +73,10 @@
 <td> </td>
 </tr>
 <tr>
-<td><a href="counters/C00012.md">C00012 Platform regulation</a></td>
+<td><a href="counters/C00013.md">C00013 Rating framework for news</a></td>
 <td><a href="counters/C00030.md">C00030 Develop a compelling counter narrative (truth based)</a></td>
 <td><a href="counters/C00044.md">C00044 Keep people from posting to social media immediately</a></td>
-<td><a href="counters/C00059.md">C00059 Verification of project before posting (counters funding campaigns)</a></td>
+<td><a href="counters/C00059.md">C00059 Verification of project before posting fund requests</a></td>
 <td><a href="counters/C00216.md">C00216 Use advertiser controls to stem flow of funds to bad actors</a></td>
 <td><a href="counters/C00074.md">C00074 Identify and delete or rate limit identical content</a></td>
 <td><a href="counters/C00101.md">C00101 Create friction by rate-limiting engagement</a></td>
@@ -87,7 +87,7 @@
 <td> </td>
 </tr>
 <tr>
-<td><a href="counters/C00013.md">C00013 Rating framework for news</a></td>
+<td><a href="counters/C00016.md">C00016 Censorship</a></td>
 <td><a href="counters/C00031.md">C00031 Dilute the core narrative - create multiple permutations, target / amplify</a></td>
 <td><a href="counters/C00046.md">C00046 Marginalise and discredit extremist groups</a></td>
 <td><a href="counters/C00062.md">C00062 Free open library sources worldwide</a></td>
