@@ -92,6 +92,7 @@ class Amitt:
 
         # Create individual tables and dictionaries
         self.df_phases = metadata['phases']
+        self.df_frameworks = metadata['frameworks']
         self.df_techniques = metadata['techniques']
         self.df_tasks = metadata['tasks']
         self.df_incidents = metadata['incidents']
