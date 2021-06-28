@@ -4,7 +4,6 @@ var gridnames = ["#bluegrid", "#redgrid"];
 for (gridname in gridnames) {
 	fillGrid(gridname)
 }
-
 function fillGrid(gridname) {
 
 
