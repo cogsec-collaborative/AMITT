@@ -127,12 +127,18 @@ class Amitt:
         # Create the data table for each framework file
         self.num_tactics = len(self.df_tactics)
 
-        # Create counters cross-tables
+        # Create counters and detections cross-tables
         self.cross_counterid_techniqueid = self.create_cross_table(self.df_counters[['amitt_id', 'techniques']], 
                                                                    'techniques', 'technique', '\n')        
         self.cross_counterid_resourceid = self.create_cross_table(self.df_counters[['amitt_id', 'resources_needed']], 
                                                                   'resources_needed', 'resource', ',')
         self.cross_counterid_actortypeid = self.create_cross_table(self.df_counters[['amitt_id', 'actortypes']], 
+                                                                  'actortypes', 'actortype', ',')
+        self.cross_detectionid_techniqueid = self.create_cross_table(self.df_detections[['amitt_id', 'techniques']], 
+                                                                   'techniques', 'technique', '\n')        
+        self.cross_detectionid_resourceid = self.create_cross_table(self.df_detections[['amitt_id', 'resources_needed']], 
+                                                                  'resources_needed', 'resource', ',')
+        self.cross_detectionid_actortypeid = self.create_cross_table(self.df_detections[['amitt_id', 'actortypes']], 
                                                                   'actortypes', 'actortype', ',')
 
 
