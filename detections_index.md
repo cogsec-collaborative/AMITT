@@ -20,7 +20,7 @@
 <tr>
 <td><a href="detections/F00002.md">F00002</a></td>
 <td>Analyse viral fizzle</td>
-<td></td>
+<td>We have no idea what this means.  Is it something to do with the way a viral story spreads? </td>
 <td></td>
 <td>TA01 Strategic Planning</td>
 <td>D1 Detect</td>
@@ -44,7 +44,7 @@
 <tr>
 <td><a href="detections/F00005.md">F00005</a></td>
 <td>SWOT Analysis of Cognition in Various Groups</td>
-<td></td>
+<td>Strengths, Weaknesses, Opportunities, Threats analysis of groups and audience segments. </td>
 <td></td>
 <td>TA01 Strategic Planning</td>
 <td>D1 Detect</td>

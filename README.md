@@ -40,13 +40,13 @@ We love any and all suggestions for improvements, comments and offers of help - 
 ## Using the Raw Data file
 
 AMITT is open source.  If you want to do your own thing with AMITT data, these will help:
-* all the master data for it is in directory [AMITT_MASTER_DATA](AMITT_MASTER_DATA). Look for the [AMITT_TTPs_MASTER.xlsx](AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx) spreadsheet. This contains disinformation creators' tactics, techniques, tasks, phases, and counters. 
+* all the master data for it is in directory [AMITT_MASTER_DATA](AMITT_MASTER_DATA). Look for the [AMITT_FRAMEWORKS_MASTER.xlsx](AMITT_MASTER_DATA/AMITT_FRAMEWORKS_MASTER.xlsx) spreadsheet. This contains disinformation creators' tactics, techniques, tasks, phases, and counters. 
 
 * The [AMITT TTP Guide](https://docs.google.com/document/d/1Kc0O7owFyGiYs8N8wSq17gRUPEDQsD5lLUL_3KGCgRE/edit#) has more detailed information on each technique. 
 
 * The code to create all the HTML datasheets is in directory [HTML_GENERATING_CODE](HTML_GENERATING_CODE): you'll need generate_amitt_ttps.py and all the template files. 
 
-If you have your own version of this repository and update AMITT_TTPs_MASTER.xlsx, typing "python generate_amitt_ttps.py" will update all the files above from it. 
+If you have your own version of this repository and update AMITT_FRAMEWORKS_MASTER.xlsx, typing "python generate_amitt_ttps.py" will update all the files above from it. 
 
 
 ## Who's Responsible for AMITT

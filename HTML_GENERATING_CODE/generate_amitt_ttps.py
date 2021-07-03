@@ -1,7 +1,8 @@
 ''' Manage AMITT metadata
 
 The AMITT github repo at https://github.com/cogsec-collaborative/AMITT serves multiple purposes:
-* Holds the master copy of AMITT (in excel file AMITT_TTPs_MASTER.xlsx)
+* Holds the master copy of AMITT (in excel file AMITT_FRAMEWORK_MASTER.xlsx)
+* Holds the master copy of AMITT data (in excel file AMITT_DATA_MASTER.xlsx)
 * Holds detailed notes on each phase, tactic, technique, incident, task and counter in
   AMITT.  These notes are markdown pages that people are free to suggest edits to, using git's 
   fork mechanisms. 
@@ -21,7 +22,7 @@ It creates this:
 
 Here are the file inputs and outputs associated with that work: 
 
-Reads 1 excel file: ../AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx with sheets: 
+Reads 1 excel file: ../AMITT_MASTER_DATA/AMITT_FRAMEWORKS_MASTER.xlsx with sheets: 
 * phases
 * techniques
 * tasks
@@ -81,11 +82,16 @@ from sklearn.feature_extraction.text import CountVectorizer
 class Amitt:
 
     
-    def __init__(self, infile = '../AMITT_MASTER_DATA/AMITT_TTPs_MASTER.xlsx'):
+    def __init__(self, frameworkfile = '../AMITT_MASTER_DATA/AMITT_FRAMEWORKS_MASTER.xlsx', datafile='../AMITT_MASTER_DATA/AMITT_DATA_MASTER.xlsx'):
         
         # Load metadata from file
         metadata = {}
-        xlsx = pd.ExcelFile(infile)
+        xlsx = pd.ExcelFile(frameworkfile)
+        for sheetname in xlsx.sheet_names:
+            metadata[sheetname] = xlsx.parse(sheetname)
+            metadata[sheetname].fillna('', inplace=True)
+
+        xlsx = pd.ExcelFile(datafile)
         for sheetname in xlsx.sheet_names:
             metadata[sheetname] = xlsx.parse(sheetname)
             metadata[sheetname].fillna('', inplace=True)
