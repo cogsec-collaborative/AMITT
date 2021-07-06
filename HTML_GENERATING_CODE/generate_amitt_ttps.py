@@ -102,6 +102,8 @@ class Amitt:
         self.df_techniques = metadata['techniques']
         self.df_tasks = metadata['tasks']
         self.df_incidents = metadata['incidents']
+        self.df_groups = metadata['groups']
+        self.df_tools = metadata['tools']
         self.df_counters = metadata['countermeasures'].sort_values('amitt_id')
         self.df_counters[['tactic_id', 'tactic_name']] = self.df_counters['tactic'].str.split(' ', 1, expand=True)
         self.df_counters[['metatechnique_id', 'metatechnique_name']] = self.df_counters['metatechnique'].str.split(' ', 1, expand=True)
