@@ -51,7 +51,7 @@ If you have your own version of this repository and update AMITT_FRAMEWORKS_MAST
 
 ## Who's Responsible for AMITT
 
-* **[CogSecCollab](http://cogsec-collab.org/)** maintains and updates the AMITT family of models: AMITT-STIX, the AMITT Red framework (of disinformation creation), and the AMITT Blue framework (of disinformation countermeasures and mitigations). We've used AMITT in the CTI League's Covid19 responses, and tested it in trials with NATO, the EU, and several other countries' disinformation units. Pablo Breuer and SJ Terp are the current design authorities for the AMITT models.
+* **[CogSecCollab](http://cogsec-collab.org/)** maintains and updates the AMITT family of models: AMITT-STIX, the AMITT Red framework (of disinformation creation), and the AMITT Blue framework (of disinformation countermeasures and mitigations). We've used AMITT in the CTI League's Covid19 responses, and tested it in trials with NATO, the EU, and several other countries' disinformation units. Pablo Breuer and  are the current design authorities for the AMITT models.
 
 * **MisinfosecWG**, aka the Credibility Coalition's [Misinfosec working group](https://github.com/credcoalition/community-site/wiki/Working-Groups) created the original AMITT frameworks. The Red Framework was started in December 2018, and refined in a Credibility Coalition Misinfosec seminar; the Blue Framework was started as a collection of potential disinformation countermeasures, at a Coalition Misinfosec seminar in November 2019. CogSecCollab is the nonprofit that spun out of MisinfosecWG. 
 
