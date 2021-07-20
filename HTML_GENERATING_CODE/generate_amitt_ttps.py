@@ -104,6 +104,7 @@ class Amitt:
         self.df_incidents = metadata['incidents']
         self.df_groups = metadata['groups']
         self.df_tools = metadata['tools']
+        self.df_examples = metadata['examples']
         self.df_counters = metadata['countermeasures'].sort_values('amitt_id')
         self.df_counters[['tactic_id', 'tactic_name']] = self.df_counters['tactic'].str.split(' ', 1, expand=True)
         self.df_counters[['metatechnique_id', 'metatechnique_name']] = self.df_counters['metatechnique'].str.split(' ', 1, expand=True)
@@ -116,6 +117,7 @@ class Amitt:
         self.df_metatechniques = metadata['metatechniques']
         self.it = self.create_incident_technique_crosstable(metadata['incidenttechniques'])
         self.df_tactics = metadata['tactics']
+        self.df_playbooks = metadata['playbooks']
 
         # Add columns containing lists of techniques and counters to the tactics dataframe
         self.df_techniques_per_tactic = self.df_techniques.groupby('tactic_id')['amitt_id'].apply(list).reset_index().rename({'amitt_id':'technique_ids'}, axis=1)
