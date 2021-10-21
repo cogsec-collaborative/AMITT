@@ -3,12 +3,12 @@
 <table border="1">
 <tr>
 <td> </td>
-    <td>D2 Deny</td>
-<td>D3 Disrupt</td>
-<td>D4 Degrade</td>
-<td>D5 Deceive</td>
-<td>D6 Destroy</td>
-<td>D7 Deter</td>
+    <td>D02</td>
+<td>D03</td>
+<td>D04</td>
+<td>D05</td>
+<td>D06</td>
+<td>D07</td>
 <td>TOTALS</td></tr><tr>
 <td><a href="../metatechniques/M001.md">M001 resilience</a></td>
 <td>5</td>

@@ -4,9 +4,9 @@
 <tr>
 <th>amitt_id</th>
 <th>name</th>
-<th>type</th>
+<th>objecttype</th>
 <th>year_started</th>
-<th>to_country</th>
+<th>found_in_country</th>
 <th>found_via</th>
 </tr>
 <tr>

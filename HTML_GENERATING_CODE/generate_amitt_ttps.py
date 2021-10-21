@@ -269,10 +269,10 @@ class Amitt:
 | ----------- | ------- |
 '''
         counter_actortypes = self.cross_counterid_actortypeid[self.cross_counterid_actortypeid['amitt_id']==counter_id]
-        counter_actortypes = pd.merge(counter_actortypes, self.df_actortypes[['amitt_id', 'name', 'sector']], left_on='actortype_id', right_on='amitt_id')
+        counter_actortypes = pd.merge(counter_actortypes, self.df_actortypes[['amitt_id', 'name', 'sector_ids']], left_on='actortype_id', right_on='amitt_id')
         row_string = '| [{0} {1}](../actortypes/{0}.md) | {2} |\n'
         for index, row in counter_actortypes.sort_values('actortype_id').iterrows():
-            table_string += row_string.format(row['actortype_id'], row['name'], row['sector'])
+            table_string += row_string.format(row['actortype_id'], row['name'], row['sector_ids'])
         return table_string
 
     def create_actortype_counters_string(self, actortype_id):
@@ -407,17 +407,17 @@ class Amitt:
             'tactic': ['name', 'summary', 'phase_id'],
             'technique': ['name', 'summary', 'tactic_id'],
             'task': ['name', 'summary', 'tactic_id'],
-            'incident': ['name', 'type', 'year_started', 'to_country', 'found_via'],
+            'incident': ['name', 'objecttype', 'year_started', 'found_in_country', 'found_via'],
             'counter': ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
             'detection': ['name', 'summary', 'metatechnique', 'tactic', 'responsetype'],
             'responsetype': ['name', 'summary'],
             'metatechnique': ['name', 'summary'],
-            'actortype': ['name', 'summary', 'sector'],
+            'actortype': ['name', 'summary', 'sector_ids'],
             'resource': ['name', 'summary', 'resource type']
         }
         
         for objecttype, df in metadata.items():
-
+            print('Temp: objecttype {}'.format(objecttype))
             # Create objecttype directory if needed.  Create index file for objecttype
             objecttypeplural = objecttype + 's'
             objecttypedir = '../{}'.format(objecttypeplural)
@@ -477,17 +477,17 @@ class Amitt:
                                                incidents=self.create_counter_incidents_string(row['amitt_id']))
                 if objecttype == 'incident':
                     metatext = template.format(type = 'Incident', id=row['amitt_id'], name=row['name'],
-                                               incidenttype=row['type'], summary=row['summary'],
+                                               incidenttype=row['objecttype'], summary=row['summary'],
                                                yearstarted=row['year_started'], 
-                                               fromcountry=row['from_country'],
-                                               tocountry=row['to_country'],
+                                               fromcountry=row['attributions_seen'],
+                                               tocountry=row['found_in_country'],
                                                foundvia=row['found_via'],
                                                dateadded=row['when_added'],
                                                techniques=self.create_incident_techniques_string(row['amitt_id']))
                 if objecttype == 'actortype':
                     metatext = template.format(type = 'Actor', id=row['amitt_id'], name=row['name'], 
-                                               summary=row['summary'], sector=row['sector'],
-                                               viewpoint=row['viewpoint'],
+                                               summary=row['summary'], sector=row['sector_ids'],
+                                               viewpoint=row['framework_ids'],
                                                counters=self.create_actortype_counters_string(row['amitt_id']))
                 if objecttype == 'resource':
                     metatext = template.format(type = 'Resource', id=row['amitt_id'], name=row['name'], 

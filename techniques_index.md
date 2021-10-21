@@ -16,19 +16,19 @@
 <tr>
 <td><a href="techniques/T0002.md">T0002</a></td>
 <td>Facilitate State Propaganda</td>
-<td>Organize citizens around pro-state messaging. Paid or volunteer groups coordinated to push state propaganda (examples include 2016 Diba Facebook Expedition, coordinated to overcome China’s Great Firewall, to flood the Facebook pages of Taiwanese politicians and news agencies with a pro-PRC message).</td>
+<td>Organize citizens around pro-state messaging. Coordinate paid or volunteer groups to push state propaganda.</td>
 <td>TA01</td>
 </tr>
 <tr>
 <td><a href="techniques/T0003.md">T0003</a></td>
 <td>Leverage Existing Narratives</td>
-<td>Use or adapt existing narrative themes, where narratives are the baseline stories of a target audience. Narratives form the bedrock of our worldviews. New information is understood through a process firmly grounded in this bedrock. If new information is not consitent with the prevailing narratives of an audience, it will be ignored. Effective campaigns will frame their misinformation in the context of these narratives. Highly effective campaigns will make extensive use of audience-appropriate archetypes and meta-narratives throughout their content creation and amplifiction practices. Examples include midwesterners are generous, Russia is under attack from outside.</td>
+<td>Use or adapt existing narrative themes, where narratives are the baseline stories of a target audience. Narratives form the bedrock of our worldviews. New information is understood through a process firmly grounded in this bedrock. If new information is not consitent with the prevailing narratives of an audience, it will be ignored. Effective campaigns will frame their misinformation in the context of these narratives. Highly effective campaigns will make extensive use of audience-appropriate archetypes and meta-narratives throughout their content creation and amplifiction practices. </td>
 <td>TA01</td>
 </tr>
 <tr>
 <td><a href="techniques/T0004.md">T0004</a></td>
 <td>Competing Narratives</td>
-<td>Advance competing narratives connected to same issue ie: on one hand deny incident while at same time expresses dismiss. MH17 (example) "Russian Foreign Ministry again claimed that “absolutely groundless accusations are put forward against the Russian side, which are aimed at discrediting Russia in the eyes of the international community" (deny); "The Dutch MH17 investigation is biased, anti-Russian and factually inaccurate" (dismiss). 
+<td>Advance competing narratives connected to same issue ie: on one hand deny incident while at same time expresses dismiss. 
 
 Suppressing or discouraging narratives already spreading requires an alternative. The most simple set of narrative techniques in response would be the construction and promotion of contradictory alternatives centered on denial, deflection, dismissal, counter-charges, excessive standards of proof, bias in prohibition or enforcement, and so on.
 
@@ -44,14 +44,7 @@ These competing narratives allow loyalists cover, but are less compelling to opp
 <tr>
 <td><a href="techniques/T0006.md">T0006</a></td>
 <td>Create Master Narratives</td>
-<td>The promotion of beneficial master narratives is perhaps the most effective method for achieving long-term strategic narrative dominance. From a "whole of society" perpective the promotion of the society's core master narratives should occupy a central strategic role. From a misinformation campaign / cognitive security perpectve the tactics around master narratives center more precisely on the day-to-day promotion and reinforcement of this messaging. In other words, beneficial, high-coverage master narratives are a central strategic goal and their promotion consitutes an ongoing tactical struggle carried out at a whole-of-society level. 
-
-By way of example, major powers are promoting master narratives such as:
-* "Huawei is detetmined to build trustworthy networks"
-* "Russia is the victim of bullying by NATO powers"
-* "USA is guided by its founding principles of liberty and egalitarianism"
-
-Tactically, their promotion covers a broad spectrum of activities both on- and offline.</td>
+<td>The promotion of beneficial master narratives is perhaps the most effective method for achieving long-term strategic narrative dominance. From a "whole of society" perspective the promotion of the society's core master narratives should occupy a central strategic role. From a misinformation campaign / cognitive security perpectve the tactics around master narratives center more precisely on the day-to-day promotion and reinforcement of this messaging. In other words, beneficial, high-coverage master narratives are a central strategic goal and their promotion consitutes an ongoing tactical struggle carried out at a whole-of-society level.  Tactically, their promotion covers a broad spectrum of activities both on- and offline.</td>
 <td>TA02</td>
 </tr>
 <tr>
@@ -60,20 +53,19 @@ Tactically, their promotion covers a broad spectrum of activities both on- and o
 <td>Create key social engineering assets needed to amplify content, manipulate algorithms, fool public and/or specific incident/campaign targets. 
 
 Computational propaganda depends substantially on false perceptions of credibility and acceptance. By creating fake users and groups with a variety of interests and commitments, attackers can ensure that their messages both come from trusted sources and appear more widely adopted than they actually are. 
-
-Examples: Ukraine elections (2019) circumvent Facebook’s new safeguards by paying Ukrainian citizens to give a Russian agent access to their personal pages. EU Elections (2019) Avaaz reported more than 500 suspicious pages and groups to Facebook related to the three-month investigation of Facebook disinformation networks in Europe. Mueller report (2016) The IRA was able to reach up to 126 million Americans on Facebook via a mixture of fraudulent accounts, groups, and advertisements, the report says. Twitter accounts it created were portrayed as real American voices by major news outlets. It was even able to hold real-life rallies, mobilizing hundreds of people at a time in major cities like Philadelphia and Miami. </td>
+</td>
 <td>TA03</td>
 </tr>
 <tr>
 <td><a href="techniques/T0008.md">T0008</a></td>
 <td>Create fake or imposter news sites</td>
-<td>Modern computational propaganda makes use of a cadre of imposter news sites spreading globally. These sites, sometimes motivated by concerns other than propaganda--for instance, click-based revenue--often have some superficial markers of authenticity, such as naming and site-design. But many can be quickly exposed with reference to their owenership, reporting history and adverstising details. A prominent case from the 2016 era was the _Denver Guardian_, which purported to be a local newspaper in Colorado and specialized in negative stories about Hillary Clinton.</td>
+<td>Modern computational propaganda makes use of a cadre of imposter news sites spreading globally. These sites, sometimes motivated by concerns other than propaganda--for instance, click-based revenue--often have some superficial markers of authenticity, such as naming and site-design. But many can be quickly exposed with reference to their owenership, reporting history and adverstising details.</td>
 <td>TA03</td>
 </tr>
 <tr>
 <td><a href="techniques/T0009.md">T0009</a></td>
 <td>Create fake experts</td>
-<td>Stories planted or promoted in computational propaganda operations often make use of experts fabricated from whole cloth, sometimes specifically for the story itself. For example, in the Jade Helm conspiracy theory promoted by SVR in 2015, a pair of experts--one of them naming himself a “Military Intelligence Analyst / Russian Regional CME” and the other a “Geopolitical Strategist, Journalist & Author”--pushed the story heavily on LinkedIn.</td>
+<td>Stories planted or promoted in computational propaganda operations often make use of experts fabricated from whole cloth, sometimes specifically for the story itself. </td>
 <td>TA03</td>
 </tr>
 <tr>
@@ -85,15 +77,13 @@ Examples: Ukraine elections (2019) circumvent Facebook’s new safeguards by pay
 <tr>
 <td><a href="techniques/T0011.md">T0011</a></td>
 <td>Hijack legitimate account</td>
-<td>Hack or take over legimate accounts to distribute misinformation or damaging content. Examples include Syrian Electronic Army (2013) series of false tweets from a hijacked Associated Press Twitter account claiming that President Barack Obama had been injured in a series of explosions near the White House. The false report caused a temporary plunge of 143 points on the Dow Jones Industrial Average.</td>
+<td>Hack or take over legimate accounts to distribute misinformation or damaging content. </td>
 <td>TA04</td>
 </tr>
 <tr>
 <td><a href="techniques/T0012.md">T0012</a></td>
 <td>Use concealment</td>
-<td>Use anonymous social media profiles. Examples include page or group administrators, masked "whois" website directory data, no bylines connected to news article, no masthead connect to news websites. 
-
-Example is 2016 @TEN_GOP profile where the actual Tennessee Republican Party tried unsuccessfully for months to get Twitter to shut it down, and 2019 Endless Mayfly is an Iran-aligned network of inauthentic personas and social media accounts that spreads falsehoods and amplifies narratives critical of Saudi Arabia, the United States, and Israel.</td>
+<td>Use anonymous social media profiles. Examples include page or group administrators, masked "whois" website directory data, no bylines connected to news article, no masthead connect to news websites. </td>
 <td>TA04</td>
 </tr>
 <tr>
@@ -105,13 +95,13 @@ Example is 2016 @TEN_GOP profile where the actual Tennessee Republican Party tri
 <tr>
 <td><a href="techniques/T0014.md">T0014</a></td>
 <td>Create funding campaigns</td>
-<td>Generate revenue through online funding campaigns. e.g. Gather data, advance credible persona via Gofundme; Patreon; or via fake website connecting via PayPal or Stripe. (Example 2016) #VaccinateUS Gofundme campaigns to pay for Targetted facebook ads (Larry Cook, targetting Washington State mothers, $1,776 to boost posts over 9 months).</td>
+<td>Generate revenue through online funding campaigns. e.g. Gather data, advance credible persona via Gofundme; Patreon; or via fake website connecting via PayPal or Stripe.</td>
 <td>TA04</td>
 </tr>
 <tr>
 <td><a href="techniques/T0015.md">T0015</a></td>
 <td>Create hashtag</td>
-<td>Many incident-based campaigns will create a hashtag to promote their fabricated event (e.g. #ColumbianChemicals to promote a fake story about a chemical spill in Louisiana). 
+<td>Many incident-based campaigns will create a hashtag to promote their fabricated event. 
 
 Creating a hashtag for an incident can have two important effects:
 1. Create a perception of reality around an event. Certainly only "real" events would be discussed in a hashtag. After all, the event has a name!
@@ -123,7 +113,7 @@ Asset needed to direct/control/manage "conversation" connected to launching new 
 <tr>
 <td><a href="techniques/T0016.md">T0016</a></td>
 <td>Clickbait</td>
-<td>Create attention grabbing headlines (outrage, doubt, humor) required to drive traffic & engagement. (example 2016) “Pope Francis shocks world, endorses Donald Trump for president.” (example 2016) "FBI director received millions from Clinton Foundation, his brother’s law firm does Clinton’s taxes”. This is a key asset</td>
+<td>Create attention grabbing headlines (outrage, doubt, humor) required to drive traffic & engagement. This is a key asset</td>
 <td>TA05</td>
 </tr>
 <tr>
@@ -159,9 +149,7 @@ Asset needed to direct/control/manage "conversation" connected to launching new 
 <tr>
 <td><a href="techniques/T0022.md">T0022</a></td>
 <td>Conspiracy narratives</td>
-<td>"Conspiracy narratives appeal to the human desire for explanatory order, by invoking the participation of poweful (often sinister) actors in pursuit of their own political goals. These narratives are especially appealing when an audience is low-information, marginalized or otherwise inclined to reject the prevailing explanation. Conspiracy narratives are an important component of the ""firehose of falsehoods"" model. 
-
-Example: QAnon: conspiracy theory is an explanation of an event or situation that invokes a conspiracy by sinister and powerful actors, often political in motivation, when other explanations are more probable "</td>
+<td>"Conspiracy narratives appeal to the human desire for explanatory order, by invoking the participation of poweful (often sinister) actors in pursuit of their own political goals. These narratives are especially appealing when an audience is low-information, marginalized or otherwise inclined to reject the prevailing explanation. Conspiracy narratives are an important component of the ""firehose of falsehoods"" model. </td>
 <td>TA06</td>
 </tr>
 <tr>
@@ -173,15 +161,13 @@ Example: QAnon: conspiracy theory is an explanation of an event or situation tha
 <tr>
 <td><a href="techniques/T0024.md">T0024</a></td>
 <td>Create fake videos and images</td>
-<td>Create fake videos and/or images by manipulating existing content or generating new content (e.g. deepfakes). Examples include Pelosi video (making her appear drunk) and photoshoped shark on flooded streets of Houston TX.</td>
+<td>Create fake videos and/or images by manipulating existing content or generating new content (e.g. deepfakes). </td>
 <td>TA06</td>
 </tr>
 <tr>
 <td><a href="techniques/T0025.md">T0025</a></td>
 <td>Leak altered documents</td>
-<td>Obtain documents (eg by theft or leak), then alter and release, possibly among factual documents/sources. 
-
-Example (2019) DFRLab report "Secondary Infektion” highlights incident with key asset being a forged “letter” created by the operation to provide ammunition for far-right forces in Europe ahead of the election.</td>
+<td>Obtain documents (eg by theft or leak), then alter and release, possibly among factual documents/sources. </td>
 <td>TA06</td>
 </tr>
 <tr>
@@ -209,7 +195,7 @@ These competing narratives allow loyalists cover, but are less compelling to opp
 <tr>
 <td><a href="techniques/T0029.md">T0029</a></td>
 <td>Manipulate online polls</td>
-<td>Create fake online polls, or manipulate existing online polls. Examples: flooding FCC with comments; creating fake engagement metrics of Twitter/Facebook polls to manipulate perception of given issue. Data gathering tactic to target those who engage, and potentially their networks of friends/followers as well</td>
+<td>Create fake online polls, or manipulate existing online polls. Data gathering tactic to target those who engage, and potentially their networks of friends/followers as well</td>
 <td>TA07</td>
 </tr>
 <tr>
@@ -305,9 +291,7 @@ When messaging makes use of factual reporting to promote these adjustments in th
 <tr>
 <td><a href="techniques/T0044.md">T0044</a></td>
 <td>Seed distortions</td>
-<td>Incident creators often try a wide variety of messages in the early hours surrounding an incident or event in order to give a misleading account or impression. 
-
-Examples: (2019) China formally arrests Canadians Spavor and Kovrig, accuses them of spying (in retaliation to detention of Hauwei CFO). (2018) The Russian ministry of defence put out a press release, claiming that they had intelligence Syrian rebel forces were about to gas their own people in Idlib province as part of a “false flag” operation to frame the Syrian government.</td>
+<td>Try a wide variety of messages in the early hours surrounding an incident or event, to give a misleading account or impression. </td>
 <td>TA08</td>
 </tr>
 <tr>
@@ -325,71 +309,67 @@ Examples: (2019) China formally arrests Canadians Spavor and Kovrig, accuses the
 <tr>
 <td><a href="techniques/T0047.md">T0047</a></td>
 <td>Muzzle social media as a political force</td>
-<td>Use political influence or the power of state to stop critical social media comments. Government requested/driven content take downs (see Google Transperancy reports. (Example 20190 Singapore Protection from Online Falsehoods and Manipulation Bill would make it illegal to spread "false statements of fact" in Singapore, where that information is "prejudicial" to Singapore's security or "public tranquility." Or India/New Delhi has cut off services to Facebook and Twitter in Kashmir 28 times in the past five years, and in 2016, access was blocked for five months -- on the grounds that these platforms were being used for anti-social and "anti-national" purposes.</td>
+<td>Use political influence or the power of state to stop critical social media comments. Government requested/driven content take downs (see Google Transperancy reports.</td>
 <td>TA09</td>
 </tr>
 <tr>
 <td><a href="techniques/T0048.md">T0048</a></td>
 <td>Cow online opinion leaders</td>
-<td>Intimidate, coerce, threaten critics/dissidents/journalists via trolling, doxing. Examples: Philippines, Maria Ressa and Rappler journalists targeted Duterte regime, lawsuits, trollings, banned from the presidential palace where press briefings take place; 2017 bot attack on five ProPublica Journalists.</td>
+<td>Intimidate, coerce, threaten critics/dissidents/journalists via trolling, doxing. </td>
 <td>TA09</td>
 </tr>
 <tr>
 <td><a href="techniques/T0049.md">T0049</a></td>
 <td>Flooding</td>
-<td>Flooding and/or mobbing social media channels feeds and/or hashtag with excessive volume of content to control/shape online conversations and/or drown out opposing points of view. Bots and/or patriotic trolls are effective tools to acheive this effect. 
-
-Example (2018): bots flood social media promoting messages which support Saudi Arabia with intent to cast doubt on allegations that the kingdom was involved in Khashoggi’s death.</td>
+<td>Flooding and/or mobbing social media channels feeds and/or hashtag with excessive volume of content to control/shape online conversations and/or drown out opposing points of view. Bots and/or patriotic trolls are effective tools to acheive this effect. </td>
 <td>TA09</td>
 </tr>
 <tr>
 <td><a href="techniques/T0050.md">T0050</a></td>
 <td>Cheerleading domestic social media ops</td>
-<td>Deploy state-coordinated social media commenters and astroturfers. Both internal/domestic and external social media influence operations, popularized by China (50cent Army manage message inside the "Great Firewall") but also technique used by Chinese English-language social media influence operations are seeded by state-run media, which overwhelmingly present a positive, benign, and cooperative image of China. </td>
+<td>Deploy state-coordinated social media commenters and astroturfers. Both internal/domestic and external social media influence operations.</td>
 <td>TA09</td>
 </tr>
 <tr>
 <td><a href="techniques/T0051.md">T0051</a></td>
 <td>Fabricate social media comment</td>
-<td>Use government-paid social media commenters, astroturfers, chat bots (programmed to reply to specific key words/hashtags) influence online conversations, product reviews, web-site comment forums. (2017 example) the FCC was inundated with nearly 22 million public comments on net neutrality (many from fake accounts)</td>
+<td>Use government-paid social media commenters, astroturfers, chat bots (programmed to reply to specific key words/hashtags) influence online conversations, product reviews, web-site comment forums.</td>
 <td>TA09</td>
 </tr>
 <tr>
 <td><a href="techniques/T0052.md">T0052</a></td>
 <td>Tertiary sites amplify news</td>
-<td>Create content/news/opinion web-sites to cross-post stories. Tertiary sites circulate and amplify narratives. Often these sites have no masthead, bylines or attribution. 
-
-Examples of tertiary sites include Russia Insider, The Duran, geopolitica.ru, Mint Press News, Oriental Review, globalresearch.ca. Examples: (2019, Domestic news): Snopes reveals Star News Digital Media, Inc. may look like a media company that produces local news, but operates via undisclosed connections to political activism. (2018) FireEye reports on Iranian campaign that created between April 2018 and March 2019 sites used to spread inauthentic content from websites such as Liberty Front Press (LFP), US Journal, and Real Progressive Front during the 2018 US mid-terms.</td>
+<td>Create content/news/opinion web-sites to cross-post stories. Tertiary sites circulate and amplify narratives. Often these sites have no masthead, bylines or attribution. </td>
 <td>TA09</td>
 </tr>
 <tr>
 <td><a href="techniques/T0053.md">T0053</a></td>
 <td>Twitter trolls amplify and manipulate</td>
-<td>Use trolls to amplify narratives and/or manipulate narratives. Fake profiles/sockpuppets operating to support individuals/narratives from the entire political spectrum (left/right binary). Operating with increased emphasis on promoting local content and promoting real Twitter users generating their own, often divisive political content, as it's easier to amplify existing content than create new/original content. Trolls operate where ever there's a socially divisive issue (issues that can/are be politicized) e.g. BlackLivesMatter or MeToo</td>
+<td>Use trolls to amplify narratives and/or manipulate narratives. Fake profiles/sockpuppets operating to support individuals/narratives from the entire political spectrum (left/right binary). Operating with increased emphasis on promoting local content and promoting real Twitter users generating their own, often divisive political content, as it's easier to amplify existing content than create new/original content. Trolls operate where ever there's a socially divisive issue (issues that can/are be politicized).</td>
 <td>TA09</td>
 </tr>
 <tr>
 <td><a href="techniques/T0054.md">T0054</a></td>
 <td>Twitter bots amplify</td>
-<td>Use bots to amplify narratives above algorithm thresholds. Bots are automated/programmed profiles designed to amplify content (ie: automatically retweet or like) and give appearance it's more "popular" than it is. They can operate as a network, to function in a coordinated/orchestrated manner. In some cases (more so now) they are an inexpensive/disposable assets used for minimal deployment as bot detection tools improve and platforms are more responsive.(example 2019) #TrudeauMustGo </td>
+<td>Use bots to amplify narratives above algorithm thresholds. Bots are automated/programmed profiles designed to amplify content (ie: automatically retweet or like) and give appearance it's more "popular" than it is. They can operate as a network, to function in a coordinated/orchestrated manner. In some cases (more so now) they are an inexpensive/disposable assets used for minimal deployment as bot detection tools improve and platforms are more responsive.</td>
 <td>TA09</td>
 </tr>
 <tr>
 <td><a href="techniques/T0055.md">T0055</a></td>
 <td>Use hashtag</td>
-<td>Use a dedicated hashtag for the incident (e.g. #PhosphorusDisaster) - either create a campaign/incident specific hashtag, or take over an existing hashtag.</td>
+<td>Use a dedicated hashtag for the incident - either create a campaign/incident specific hashtag, or take over an existing hashtag.</td>
 <td>TA09</td>
 </tr>
 <tr>
 <td><a href="techniques/T0056.md">T0056</a></td>
 <td>Dedicated channels disseminate information pollution</td>
-<td>Output information pollution (e.g. articles on an unreported false story/event) through channels controlled by or related to the incident creator. Examples include RT/Sputnik or antivax websites seeding stories.</td>
+<td>Output information pollution (e.g. articles on an unreported false story/event) through channels controlled by or related to the incident creator. </td>
 <td>TA09</td>
 </tr>
 <tr>
 <td><a href="techniques/T0057.md">T0057</a></td>
 <td>Organise remote rallies and events</td>
-<td>Coordinate and promote real-world events across media platforms, e.g. rallies, protests, gatherings in support of incident narratives. Example: Facebook groups/pages coordinate/more divisive/polarizing groups and actvities into the public space. (Example) Mueller's report, highlights, the IRA organized political rallies in the U.S. using social media starting in 2015 and continued to coordinate rallies after the 2016 election</td>
+<td>Coordinate and promote real-world events across media platforms, e.g. rallies, protests, gatherings in support of incident narratives. </td>
 <td>TA10</td>
 </tr>
 <tr>
@@ -402,7 +382,7 @@ Examples of tertiary sites include Russia Insider, The Duran, geopolitica.ru, Mi
 <td><a href="techniques/T0059.md">T0059</a></td>
 <td>Play the long game</td>
 <td>Play the long game can mean a couple of things:
-1. To plan messaging and allow it to grow organically without conducting your own amplification. This is methodical and slow and requires years for the message to take hold (e.g. China and its constant messaging that Taiwan and Hong Kong are part of one China).
+1. To plan messaging and allow it to grow organically without conducting your own amplification. This is methodical and slow and requires years for the message to take hold
 2. To develop a series of seemingly disconnected messaging narratives that eventually combine into a new narrative.</td>
 <td>TA11</td>
 </tr>

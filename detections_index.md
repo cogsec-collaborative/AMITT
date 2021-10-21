@@ -15,7 +15,7 @@
 <td>Examine failed campaigns. How did they fail? Can we create useful activities that increase these failures? </td>
 <td></td>
 <td>TA01 Strategic Planning</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00002.md">F00002</a></td>
@@ -23,7 +23,7 @@
 <td>We have no idea what this means.  Is it something to do with the way a viral story spreads? </td>
 <td></td>
 <td>TA01 Strategic Planning</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00003.md">F00003</a></td>
@@ -31,7 +31,7 @@
 <td></td>
 <td></td>
 <td>TA01 Strategic Planning</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00004.md">F00004</a></td>
@@ -39,7 +39,7 @@
 <td></td>
 <td></td>
 <td>TA01 Strategic Planning</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00005.md">F00005</a></td>
@@ -47,7 +47,7 @@
 <td>Strengths, Weaknesses, Opportunities, Threats analysis of groups and audience segments. </td>
 <td></td>
 <td>TA01 Strategic Planning</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00006.md">F00006</a></td>
@@ -55,7 +55,7 @@
 <td></td>
 <td></td>
 <td>TA01 Strategic Planning</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00007.md">F00007</a></td>
@@ -63,7 +63,7 @@
 <td></td>
 <td></td>
 <td>TA02 Objective Planning</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00008.md">F00008</a></td>
@@ -71,7 +71,7 @@
 <td></td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00009.md">F00009</a></td>
@@ -79,7 +79,7 @@
 <td></td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00010.md">F00010</a></td>
@@ -87,7 +87,7 @@
 <td></td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00011.md">F00011</a></td>
@@ -95,7 +95,7 @@
 <td></td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00012.md">F00012</a></td>
@@ -103,7 +103,7 @@
 <td></td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00013.md">F00013</a></td>
@@ -111,7 +111,7 @@
 <td></td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00014.md">F00014</a></td>
@@ -119,7 +119,7 @@
 <td>for e.g. fake news sites</td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00015.md">F00015</a></td>
@@ -127,7 +127,7 @@
 <td>I include Fake Experts as they may use funding campaigns such as Patreon to fund their operations and so these should be watched.</td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00016.md">F00016</a></td>
@@ -137,7 +137,7 @@
 In TA08-11, the engagement level of victims could be identified to detect and respond to increasing engagement.</td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00017.md">F00017</a></td>
@@ -145,7 +145,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00018.md">F00018</a></td>
@@ -153,7 +153,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td>track funding sources</td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00019.md">F00019</a></td>
@@ -161,7 +161,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA04 Develop Networks</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00020.md">F00020</a></td>
@@ -169,7 +169,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA04 Develop Networks</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00021.md">F00021</a></td>
@@ -177,7 +177,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA04 Develop Networks</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00022.md">F00022</a></td>
@@ -185,7 +185,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA04 Develop Networks</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00023.md">F00023</a></td>
@@ -193,7 +193,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA04 Develop Networks</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00024.md">F00024</a></td>
@@ -201,7 +201,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA04 Develop Networks</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00025.md">F00025</a></td>
@@ -209,7 +209,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA05 Microtargeting</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00026.md">F00026</a></td>
@@ -217,7 +217,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA05 Microtargeting</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00027.md">F00027</a></td>
@@ -225,7 +225,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA05 Microtargeting</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00028.md">F00028</a></td>
@@ -233,7 +233,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00029.md">F00029</a></td>
@@ -241,7 +241,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00030.md">F00030</a></td>
@@ -249,7 +249,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00031.md">F00031</a></td>
@@ -257,7 +257,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td>Strategic planning included as innoculating population has strategic value.</td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00032.md">F00032</a></td>
@@ -265,7 +265,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td>DUPLICATE - DELETE </td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00033.md">F00033</a></td>
@@ -273,7 +273,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00034.md">F00034</a></td>
@@ -281,7 +281,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00035.md">F00035</a></td>
@@ -289,7 +289,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00036.md">F00036</a></td>
@@ -297,7 +297,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 <td></td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00037.md">F00037</a></td>
@@ -307,7 +307,7 @@ In TA08-11, the engagement level of victims could be identified to detect and re
 Technique should be in terms of "strategic innoculation", raising the standards of what people expect in terms of evidence when consuming news.</td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00038.md">F00038</a></td>
@@ -315,7 +315,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td>Unsure I understood the original intention or what it applied to. Therefore the techniques listed (10, 39, 43, 57, 61) are under my interpretation - which is that we want to track ignorant agents who fall into the enemy's trap and show a cost to financing/reposting/helping the adversary via public shaming or other means.</td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00039.md">F00039</a></td>
@@ -323,7 +323,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00040.md">F00040</a></td>
@@ -331,7 +331,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA06 Develop Content</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00041.md">F00041</a></td>
@@ -339,7 +339,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td>Not technically left of boom</td>
 <td></td>
 <td>TA07 Channel Selection</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00042.md">F00042</a></td>
@@ -347,7 +347,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td>Use T00029, but against the creators</td>
 <td></td>
 <td>TA07 Channel Selection</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00043.md">F00043</a></td>
@@ -355,7 +355,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td>Platform companies and some information security companies (e.g. ZeroFox) do this. </td>
 <td></td>
 <td>TA07 Channel Selection</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00044.md">F00044</a></td>
@@ -363,7 +363,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td>Can be used in all phases for all techniques.</td>
 <td></td>
 <td>TA08 Pump Priming</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00045.md">F00045</a></td>
@@ -371,7 +371,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td>Can be used in all phases for all techniques.</td>
 <td></td>
 <td>TA08 Pump Priming</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00046.md">F00046</a></td>
@@ -379,7 +379,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA08 Pump Priming</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00047.md">F00047</a></td>
@@ -387,7 +387,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA08 Pump Priming</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00048.md">F00048</a></td>
@@ -395,7 +395,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA08 Pump Priming</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00049.md">F00049</a></td>
@@ -403,7 +403,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA08 Pump Priming</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00050.md">F00050</a></td>
@@ -411,7 +411,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA08 Pump Priming</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00051.md">F00051</a></td>
@@ -419,7 +419,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA09 Exposure</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00052.md">F00052</a></td>
@@ -427,7 +427,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td>Discovering the sponsors behind a campaign, narrative, bot, a set of accounts, or a social media comment, or anything else is useful.</td>
 <td></td>
 <td>TA09 Exposure</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00053.md">F00053</a></td>
@@ -435,7 +435,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA09 Exposure</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00054.md">F00054</a></td>
@@ -443,7 +443,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA09 Exposure</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00055.md">F00055</a></td>
@@ -451,7 +451,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA09 Exposure</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00056.md">F00056</a></td>
@@ -459,7 +459,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA09 Exposure</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00057.md">F00057</a></td>
@@ -467,7 +467,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 <td></td>
 <td></td>
 <td>TA09 Exposure</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00058.md">F00058</a></td>
@@ -477,7 +477,7 @@ Technique should be in terms of "strategic innoculation", raising the standards 
 For example, other ways of deplatforming people include attacking their sources of funds, their allies, their followers, etc.</td>
 <td></td>
 <td>TA10 Go Physical</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00059.md">F00059</a></td>
@@ -485,7 +485,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>All techniques provide or are susceptible to being countered by, or leveraged for, knowledge about user demographics.</td>
 <td></td>
 <td>TA10 Go Physical</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00060.md">F00060</a></td>
@@ -493,7 +493,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>I assume this was a transcript error. Otherwise, "Identify Susceptible Influences" as in the various methods of influences that may work against a victim could also be a technique. Nope, wasn't a transcript error: original note says influencers, as in find people of influence that might be targetted. </td>
 <td></td>
 <td>TA10 Go Physical</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00061.md">F00061</a></td>
@@ -501,7 +501,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA10 Go Physical</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00062.md">F00062</a></td>
@@ -509,7 +509,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA11 Persistence</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00063.md">F00063</a></td>
@@ -517,7 +517,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA11 Persistence</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00064.md">F00064</a></td>
@@ -525,7 +525,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA11 Persistence</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00065.md">F00065</a></td>
@@ -533,7 +533,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA11 Persistence</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00066.md">F00066</a></td>
@@ -541,7 +541,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA11 Persistence</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00067.md">F00067</a></td>
@@ -549,7 +549,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00068.md">F00068</a></td>
@@ -557,7 +557,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>a developing methodology for identifying statistical differences in how social groups use language and quantifying how common those statistical differences are within a larger population. In essence, it hypothesizes how much affinity might exist for a specific group within a general population, based on the language its members employ</td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00069.md">F00069</a></td>
@@ -565,7 +565,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>To effectively counter Russian propaganda, it will be critical to track Russian influence efforts. The information requirements are varied and include the following: • Identify fake-news stories and their sources. • Understand narrative themes and content that pervade various Russian media sources. • Understand the broader Russian strategy that underlies tactical propaganda messaging.</td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00070.md">F00070</a></td>
@@ -573,7 +573,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>ALL</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00071.md">F00071</a></td>
@@ -581,7 +581,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>Local influencers detected via Twitter networks are likely local influencers in other online and off-line channels as well. In addition, the content and themes gleaned from Russia and Russia-supporting populations, as well as anti-Russia activists, likely swirl in other online and off-line mediums as well.</td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00072.md">F00072</a></td>
@@ -589,7 +589,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>It is possible that some of these are bots or trolls and could be flagged for suspension for violating Twitter’s terms of service.</td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00073.md">F00073</a></td>
@@ -597,7 +597,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>Players at the level of covert attribution, referred to as “black” in the grayscale of deniability, produce content on user-generated media, such as YouTube, but also add fear-mongering commentary to and amplify content produced by others and supply exploitable content to data dump websites. These activities are conducted by a network of trolls, bots, honeypots, and hackers. </td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00074.md">F00074</a></td>
@@ -605,7 +605,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>brand ambassador programs could be used with influencers across a variety of social media channels. It could also target other prominent experts, such as academics, business leaders, and other potentially prominent people. Authorities must ultimately take care in implementing such a program given the risk that contact with U.S. or NATO authorities might damage influencer reputations. Engagements must consequently be made with care, and, if possible, government interlocutors should work through local NGOs.</td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00075.md">F00075</a></td>
@@ -613,7 +613,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>significant amounts of quality open-source information are now available and should be leveraged to build products and analysis prior to problem prioritization in the areas of observation, attribution, and intent. Successfully distinguishing the gray zone campaign signal through the global noise requires action through the entirety of the national security community. Policy, process, and tools must all adapt and evolve to detect, discern, and act upon a new type of signal</td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00076.md">F00076</a></td>
@@ -622,7 +622,7 @@ For example, other ways of deplatforming people include attacking their sources 
 </td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00077.md">F00077</a></td>
@@ -630,7 +630,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>Bot account: action based, people. Unsure which AMITT techniques.</td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00078.md">F00078</a></td>
@@ -638,7 +638,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>All techniques benefit from careful analysis and monitoring of activities on social network.</td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00079.md">F00079</a></td>
@@ -646,7 +646,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA05 Microtargeting</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00080.md">F00080</a></td>
@@ -654,7 +654,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td>Two wrongs don't make a right? But if you hack your own polls, you do learn how it could be done, and learn what to look for</td>
 <td></td>
 <td>TA07 Channel Selection</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00081.md">F00081</a></td>
@@ -662,7 +662,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA09 Exposure</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00082.md">F00082</a></td>
@@ -670,7 +670,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA11 Persistence</td>
-<td>D3 Disrupt</td>
+<td>D03</td>
 </tr>
 <tr>
 <td><a href="detections/F00083.md">F00083</a></td>
@@ -678,7 +678,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA11 Persistence</td>
-<td>D5 Deceive</td>
+<td>D05</td>
 </tr>
 <tr>
 <td><a href="detections/F00084.md">F00084</a></td>
@@ -686,7 +686,7 @@ For example, other ways of deplatforming people include attacking their sources 
 <td></td>
 <td></td>
 <td>TA03 Develop People</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00085.md">F00085</a></td>
@@ -705,7 +705,7 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>Develop an intelligence-based understanding of foreign actors’ motivations, psychologies, and societal and geopolitical contexts. Leverage artificial intelligence to identify patterns and infer competitors’ intent</td>
 <td></td>
 <td>TA02 Objective planning</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00087.md">F00087</a></td>
@@ -713,7 +713,7 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>United States has not adequately adapted its information indicators and thresholds for warning policymakers to account for gray zone tactics. Competitors have undertaken a marked shift to slow-burn, deceptive, non-military, and indirect challenges to U.S. interests. Relative to traditional security indicators and warnings, these are more numerous and harder to detect and make it difficult for analysts to infer intent.</td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00088.md">F00088</a></td>
@@ -721,7 +721,7 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>Recognize campaigns from weak signals, including rivals’ intent, capability, impact, interactive effects, and impact on U.S. interests... focus on adversarial covert action aspects of campaigning.</td>
 <td></td>
 <td></td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00089.md">F00089</a></td>
@@ -729,7 +729,7 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>"Gray zone" is second level of content producers and circulators, composed of outlets with uncertain attribution. This category covers conspiracy websites, far-right or far-left websites, news aggregators, and data dump websites</td>
 <td></td>
 <td>TA04 Develop Networks</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00090.md">F00090</a></td>
@@ -737,7 +737,7 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>Bring private sector and civil society into accord on U.S. interests</td>
 <td></td>
 <td>TA01 Strategic Planning</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00091.md">F00091</a></td>
@@ -745,7 +745,7 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>This might include working with relevant technology firms to ensure that contracted analytic support is available. Contracted support is reportedly valuable because technology to monitor social media data is continually evolving, and such firms can provide the expertise to help identify and analyze trends, and they can more effectively stay abreast of the changing systems and develop new models as they are required</td>
 <td></td>
 <td>TA01 Strategic Planning</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00092.md">F00092</a></td>
@@ -753,7 +753,7 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>Warn social media companies about an ongoing campaign (e.g. antivax sites).  Anyone with datasets or data summaries can help with this</td>
 <td></td>
 <td>TA09 Exposure</td>
-<td>D1 Detect</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00093.md">F00093</a></td>
@@ -761,7 +761,7 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td>S4D is a way to separate out different speakers in text, audio. </td>
 <td>M004 - friction</td>
 <td>TA03 Develop People</td>
-<td>D3 Disrupt</td>
+<td>D01</td>
 </tr>
 <tr>
 <td><a href="detections/F00094.md">F00094</a></td>
@@ -769,6 +769,14 @@ Intent: judgement of adversarial intent to conduct gray zone activity. Indeed, t
 <td></td>
 <td>M003 - daylight</td>
 <td>TA07 Channel Selection</td>
-<td>D2 Deny</td>
+<td>D01</td>
+</tr>
+<tr>
+<td><a href="detections/F00095.md">F00095</a></td>
+<td>Fact checking</td>
+<td>Process suspicious artifacts, narratives, and incidents</td>
+<td></td>
+<td>TA09 Exposure</td>
+<td>D01</td>
 </tr>
 </table>
